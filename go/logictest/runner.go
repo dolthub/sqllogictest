@@ -1,4 +1,4 @@
-// Copyright 2019 Liquidata, Inc.
+// Copyright 2019-2020 Dolthub, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,11 +22,12 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"runtime/debug"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/liquidata-inc/sqllogictest/go/logictest/parser"
+	"github.com/dolthub/sqllogictest/go/logictest/parser"
 )
 
 var currTestFile string
@@ -319,6 +320,7 @@ func execute(ctx context.Context, harness Harness, record *parser.Record) (schem
 				toLog = strings.ReplaceAll(err.Error(), "\n", " ")
 			}
 			logResult(ctx, NotOk, "Caught panic: %v", toLog)
+			fmt.Println("stacktrace from panic: \n" + string(debug.Stack()))
 			cont = true
 		}
 	}()

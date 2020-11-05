@@ -1,5 +1,5 @@
 
-// Copyright 2019 Liquidata, Inc.
+// Copyright 2019-2020 Dolthub, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
+	"github.com/dolthub/sqllogictest/go/logictest"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/liquidata-inc/sqllogictest/go/logictest"
 	"strings"
 )
 
