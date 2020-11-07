@@ -23,6 +23,7 @@ import (
 	"os"
 	"path/filepath"
 	"runtime/debug"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -374,7 +375,7 @@ func verifyResults(ctx context.Context, record *parser.Record, schema string, re
 		return
 	}
 
-	results = normalizeResults(results, schema)
+	results = normalizeResults(results, record.Schema())
 	results = record.SortResults(results)
 
 	if record.IsHashResult() {
@@ -394,10 +395,13 @@ func normalizeResults(results []string, schema string) []string {
 	for i := range results {
 		typ := schema[i%len(schema)]
 		if typ == 'R' && !strings.Contains(results[i], ".") {
-			newResults[i] = results[i] + ".000"
-		} else {
-			newResults[i] = results[i]
+			_, err := strconv.Atoi(results[i])
+			if err == nil {
+				newResults[i] = results[i] + ".000"
+				continue
+			}
 		}
+		newResults[i] = results[i]
 	}
 	return newResults
 }
