@@ -2,6 +2,8 @@
 
 This is an unofficial mirror of the sqllogictests provided by SQLite, available at https://www.sqlite.org/sqllogictest/doc/trunk/about.wiki. In addition to the tests themselves, this repository also provides a go parser and runner for executing the tests against a database of your choice. Simply provide a test harness, then point the runner at a file or directory containing the subset of the sqllogictests you want to run.
 
+Additionally, we found that the tests did not match the values returned by modern MySQL (8.x), principally the return schemas. They have been regenerated to conform to what MySQL returns.
+
 # Parser
 
 The parser for sqllogictest files can be found in [parser.go](go/logictest/parser/parser.go). The parser supports reading all records for test files in this unofficial mirror, with the exception of hash-threshold control records, which are ignored.
@@ -53,15 +55,4 @@ For [dolt](https://github.com/liquidata-inc/dolt), we periodically publish dolt'
 
 # MySQL results
 
-We've also written a MySQL harness, primarily for comparision purposes. In principle the MySQL harness should have 100% correctness, but we have found that, at least on the latest release of MySQL Community Server for Windows 10, this number is actually about 90%. The reason for this discrepancy is unclear as of this writing, but at least some large subset of the failures are due to changed syntax for some statements, e.g. creating triggers. You can find the full results for MySQL [here](https://www.dolthub.com/repositories/Liquidata/dolt-sqllogictest-results/data/master/mysql_results).
-
-```
-% dolt sql -q "select result, count(*) from mysql_results group by 1"
-+---------+----------+
-| result  | COUNT(*) |
-+---------+----------+
-| skipped | 1315547  |
-| ok      | 4450267  |
-| not ok  | 536198   |
-+---------+----------+
-```
+The tests were regenerated to conform to what MySQL 8.x returns. The exceptions are some stored procedures and views, where MySQL made breaking changes to the syntax. Those tests fail against MySQL currently.
