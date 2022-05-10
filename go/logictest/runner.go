@@ -124,7 +124,7 @@ func generateTestFile(harness Harness, f string) {
 	wr := bufio.NewWriter(generatedFile)
 
 	defer func() {
-		err  = wr.Flush()
+		err = wr.Flush()
 		if err != nil {
 			panic(err)
 		}
@@ -151,7 +151,7 @@ func generateTestFile(harness Harness, f string) {
 		}
 
 		// Copy until we get to the line before the query we executed (e.g. "query IIRT no-sort")
-		for scanner.Scan() && scanner.LineNum < record.LineNum() - 1 {
+		for scanner.Scan() && scanner.LineNum < record.LineNum()-1 {
 			line := scanner.Text()
 			writeLine(wr, line)
 		}
@@ -237,7 +237,7 @@ func skipUntilEndOfRecord(scanner *parser.LineScanner, wr *bufio.Writer) {
 }
 
 type loggingLock struct {
-	mux sync.Mutex
+	mux    sync.Mutex
 	logged bool
 }
 
@@ -279,10 +279,10 @@ func runTestFile(harness Harness, file string) {
 }
 
 type R struct {
-	schema string
+	schema  string
 	results []string
-	cont bool
-	err error
+	cont    bool
+	err     error
 }
 
 // Executes a single record and returns whether execution of records should continue
@@ -293,10 +293,10 @@ func executeRecord(ctx context.Context, cancel context.CancelFunc, harness Harne
 	go func() {
 		schema, results, cont, err := execute(ctx, harness, record)
 		rc <- &R{
-			schema: schema,
+			schema:  schema,
 			results: results,
-			cont: cont,
-			err: err,
+			cont:    cont,
+			err:     err,
 		}
 	}()
 
@@ -472,7 +472,7 @@ func verifySchema(ctx context.Context, record *parser.Record, schemaStr string) 
 
 func compatibleSchemaTypes(expected, actual rune) bool {
 	if expected != actual {
-		if expected == 'R' && actual == 'I'{
+		if expected == 'R' && actual == 'I' {
 			return true
 		} else {
 			return false
