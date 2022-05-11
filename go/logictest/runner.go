@@ -136,6 +136,8 @@ func generateTestFile(harness Harness, f string) {
 	}()
 
 	for _, record := range testRecords {
+		currRecord = record
+
 		ctx, cancel := context.WithTimeout(context.Background(), timeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
