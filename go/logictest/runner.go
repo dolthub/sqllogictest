@@ -91,11 +91,21 @@ func GenerateTestFiles(harness Harness, paths ...string) {
 	testFiles := collectTestFiles(paths)
 
 	for _, file := range testFiles {
-		generateTestFile(harness, file)
+		generateTestFile(harness, file, false)
 	}
 }
 
-func generateTestFile(harness Harness, f string) {
+// Generates the specified test files by executing statements and queries, filtering out any failed tests, and replacing
+// expected results with the ones from the test run. Files written will have the .generated suffix.
+func GenerateTestFilesWithFailedTestsExcluded(harness Harness, paths ...string) {
+	testFiles := collectTestFiles(paths)
+
+	for _, file := range testFiles {
+		generateTestFile(harness, file, true)
+	}
+}
+
+func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 	currTestFile = f
 
 	err := harness.Init()
@@ -143,6 +153,13 @@ func generateTestFile(harness Harness, f string) {
 
 		schema, records, _, err := executeRecord(lockCtx, cancel, harness, record)
 
+		// If there was an error and we're filtering out failed tests, skip copying
+		// this record over to the generated test file and continue to the next record.
+		if err != nil && filterOutFailedTests {
+			skipUntilEndOfRecord(scanner, wr)
+			continue
+		}
+
 		// If there was an error or we skipped this test, then just copy output until the next record.
 		if err != nil || !record.ShouldExecuteForEngine(harness.EngineStr()) {
 			copyUntilEndOfRecord(scanner, wr) // advance until the next record
@@ -161,7 +178,8 @@ func generateTestFile(harness Harness, f string) {
 		// Copy statements directly
 		if record.Type() == parser.Statement {
 			writeLine(wr, scanner.Text())
-		// Fill in the actual query result schema
+			copyUntilEndOfRecord(scanner, wr)
+			// Fill in the actual query result schema
 		} else if record.Type() == parser.Query {
 			var label string
 			if record.Label() != "" {
