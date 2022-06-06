@@ -175,12 +175,12 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 			writeLine(wr, line)
 		}
 
-		// Copy statements directly
 		if record.Type() == parser.Statement {
+			// Copy statements directly
 			writeLine(wr, scanner.Text())
 			copyUntilEndOfRecord(scanner, wr)
-			// Fill in the actual query result schema
 		} else if record.Type() == parser.Query {
+			// Fill in the actual query result schema
 			var label string
 			if record.Label() != "" {
 				label = " " + record.Label()
