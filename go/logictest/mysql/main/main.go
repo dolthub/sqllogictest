@@ -47,7 +47,7 @@ func main() {
 
 	args := os.Args[1:]
 
-	harness := mysql.NewMysqlHarness("sqllogictest:password@tcp(127.0.0.1:3307)/sqllogictest")
+	harness := mysql.NewMysqlHarness("sqllogictest:password@tcp(127.0.0.1:3306)/sqllogictest")
 
 	mode := args[0]
 	switch mode {
