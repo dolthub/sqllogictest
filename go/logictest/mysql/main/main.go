@@ -23,6 +23,7 @@ import (
 
 // MySQL test runner. Assumes a local MySQL with user sqllogictest, password "password". Adjust as necessary. Uses the
 // database "sqllogictest" for all operations, and will drop all tables in this database routinely.
+//
 // Sample setup commands:
 //       create database sqllogictest;
 //       create user sqllogictest@localhost identified by "password";
@@ -34,8 +35,9 @@ import (
 //  directories are descended recursively, and all files with the .test extension will be added to the list of tests.
 // generate: Runs tests as verify does, but also produces a new version of each test file, named $testfile.generated,
 //  with the results of this test run.
-// filter: Runs the tests and produces a new version  of each test file, just like generate, but any tests that
-//  fail are filtered out and not included in the generated files.
+// filter: Runs the tests and produces a new version of each test file, just like generate, but any tests that
+//  fail are filtered out and not included in the generated files. This mode is useful when validating a new batch of
+//  fuzzed statements against a test oracle to filter out statements that don't execute correctly.
 //
 // Usage: go run main.go (verify|generate|filter) testfile1 [testfile2 ...]
 func main() {
