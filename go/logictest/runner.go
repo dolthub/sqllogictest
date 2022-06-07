@@ -95,8 +95,9 @@ func GenerateTestFiles(harness Harness, paths ...string) {
 	}
 }
 
-// Generates the specified test files by executing statements and queries, filtering out any failed tests, and replacing
-// expected results with the ones from the test run. Files written will have the .generated suffix.
+// GenerateTestFilesWithFailedTestsExcluded generates the specified test files by executing statements and queries,
+// filtering out any failed tests, and replacing expected results with the ones from the test run. Files written will
+// have the .generated suffix.
 func GenerateTestFilesWithFailedTestsExcluded(harness Harness, paths ...string) {
 	testFiles := collectTestFiles(paths)
 
@@ -105,6 +106,8 @@ func GenerateTestFilesWithFailedTestsExcluded(harness Harness, paths ...string) 
 	}
 }
 
+// generateTestFile generates a test file by executing the statements in the specified file, including the query
+// results in the generated file, and optionally filtering out any statements that don't execute correctly.
 func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 	currTestFile = f
 
@@ -146,6 +149,7 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 	}()
 
 	for _, record := range testRecords {
+		// currRecord is used by logMessagePrefix, so needs to be set as we iterate
 		currRecord = record
 
 		ctx, cancel := context.WithTimeout(context.Background(), timeout)
