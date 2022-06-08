@@ -24,14 +24,27 @@ import (
 // MySQL test runner. Assumes a local MySQL with user sqllogictest, password "password". Adjust as necessary. Uses the
 // database "sqllogictest" for all operations, and will drop all tables in this database routinely.
 //
-// Two modes, controlled by the first argument:
+// Sample setup commands:
+//       create database sqllogictest;
+//       create user sqllogictest@localhost identified by "password";
+//       grant all on sqllogictest.* to sqllogictest@localhost;
+//
+// Three modes, controlled by the first argument:
 // verify: Runs the test files given, outputting a pass / fail line to STDOUT for each test record. All arguments after
 //  the first are interpreted as test files or directories, which contain tests to be run. For directory arguments,
 //  directories are descended recursively, and all files with the .test extension will be added to the list of tests.
 // generate: Runs tests as verify does, but also produces a new version of each test file, named $testfile.generated,
 //  with the results of this test run.
-// Usage: go run main.go (verify|generate) testfile1 [testfile2 ...]
+// filter: Runs the tests and produces a new version of each test file, just like generate, but any tests that
+//  fail are filtered out and not included in the generated files. This mode is useful when validating a new batch of
+//  fuzzed statements against a test oracle to filter out statements that don't execute correctly.
+//
+// Usage: go run main.go (verify|generate|filter) testfile1 [testfile2 ...]
 func main() {
+	if len(os.Args) == 0 {
+		exitWithUsage()
+	}
+
 	args := os.Args[1:]
 
 	harness := mysql.NewMysqlHarness("sqllogictest:password@tcp(127.0.0.1:3306)/sqllogictest")
@@ -42,8 +55,14 @@ func main() {
 		logictest.RunTestFiles(harness, args[1:]...)
 	case "generate":
 		logictest.GenerateTestFiles(harness, args[1:]...)
+	case "filter":
+		logictest.GenerateTestFilesWithFailedTestsExcluded(harness, args[1:]...)
 	default:
-		fmt.Println("Usage: main (verify|generate) testfile1 [testfiles2 ...] ")
-		os.Exit(1)
+		exitWithUsage()
 	}
+}
+
+func exitWithUsage() {
+	fmt.Println("Usage: sqllogictest (verify|generate|filter) testfile1 [testfiles2 ...] ")
+	os.Exit(1)
 }

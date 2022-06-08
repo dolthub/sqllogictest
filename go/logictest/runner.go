@@ -91,11 +91,24 @@ func GenerateTestFiles(harness Harness, paths ...string) {
 	testFiles := collectTestFiles(paths)
 
 	for _, file := range testFiles {
-		generateTestFile(harness, file)
+		generateTestFile(harness, file, false)
 	}
 }
 
-func generateTestFile(harness Harness, f string) {
+// GenerateTestFilesWithFailedTestsExcluded generates the specified test files by executing statements and queries,
+// filtering out any failed tests, and replacing expected results with the ones from the test run. Files written will
+// have the .generated suffix.
+func GenerateTestFilesWithFailedTestsExcluded(harness Harness, paths ...string) {
+	testFiles := collectTestFiles(paths)
+
+	for _, file := range testFiles {
+		generateTestFile(harness, file, true)
+	}
+}
+
+// generateTestFile generates a test file by executing the statements in the specified file, including the query
+// results in the generated file, and optionally filtering out any statements that don't execute correctly.
+func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 	currTestFile = f
 
 	err := harness.Init()
@@ -124,7 +137,7 @@ func generateTestFile(harness Harness, f string) {
 	wr := bufio.NewWriter(generatedFile)
 
 	defer func() {
-		err  = wr.Flush()
+		err = wr.Flush()
 		if err != nil {
 			panic(err)
 		}
@@ -136,10 +149,20 @@ func generateTestFile(harness Harness, f string) {
 	}()
 
 	for _, record := range testRecords {
+		// currRecord is used by logMessagePrefix, so needs to be set as we iterate
+		currRecord = record
+
 		ctx, cancel := context.WithTimeout(context.Background(), timeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		schema, records, _, err := executeRecord(lockCtx, cancel, harness, record)
+
+		// If there was an error and we're filtering out failed tests, skip copying
+		// this record over to the generated test file and continue to the next record.
+		if err != nil && filterOutFailedTests {
+			skipUntilEndOfRecord(scanner, wr)
+			continue
+		}
 
 		// If there was an error or we skipped this test, then just copy output until the next record.
 		if err != nil || !record.ShouldExecuteForEngine(harness.EngineStr()) {
@@ -151,16 +174,17 @@ func generateTestFile(harness Harness, f string) {
 		}
 
 		// Copy until we get to the line before the query we executed (e.g. "query IIRT no-sort")
-		for scanner.Scan() && scanner.LineNum < record.LineNum() - 1 {
+		for scanner.Scan() && scanner.LineNum < record.LineNum()-1 {
 			line := scanner.Text()
 			writeLine(wr, line)
 		}
 
-		// Copy statements directly
 		if record.Type() == parser.Statement {
+			// Copy statements directly
 			writeLine(wr, scanner.Text())
-		// Fill in the actual query result schema
+			copyUntilEndOfRecord(scanner, wr)
 		} else if record.Type() == parser.Query {
+			// Fill in the actual query result schema
 			var label string
 			if record.Label() != "" {
 				label = " " + record.Label()
@@ -237,7 +261,7 @@ func skipUntilEndOfRecord(scanner *parser.LineScanner, wr *bufio.Writer) {
 }
 
 type loggingLock struct {
-	mux sync.Mutex
+	mux    sync.Mutex
 	logged bool
 }
 
@@ -279,10 +303,10 @@ func runTestFile(harness Harness, file string) {
 }
 
 type R struct {
-	schema string
+	schema  string
 	results []string
-	cont bool
-	err error
+	cont    bool
+	err     error
 }
 
 // Executes a single record and returns whether execution of records should continue
@@ -293,10 +317,10 @@ func executeRecord(ctx context.Context, cancel context.CancelFunc, harness Harne
 	go func() {
 		schema, results, cont, err := execute(ctx, harness, record)
 		rc <- &R{
-			schema: schema,
+			schema:  schema,
 			results: results,
-			cont: cont,
-			err: err,
+			cont:    cont,
+			err:     err,
 		}
 	}()
 
@@ -472,7 +496,7 @@ func verifySchema(ctx context.Context, record *parser.Record, schemaStr string) 
 
 func compatibleSchemaTypes(expected, actual rune) bool {
 	if expected != actual {
-		if expected == 'R' && actual == 'I'{
+		if expected == 'R' && actual == 'I' {
 			return true
 		} else {
 			return false
