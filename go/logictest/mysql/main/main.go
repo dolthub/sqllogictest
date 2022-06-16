@@ -38,8 +38,10 @@ import (
 // filter: Runs the tests and produces a new version of each test file, just like generate, but any tests that
 //  fail are filtered out and not included in the generated files. This mode is useful when validating a new batch of
 //  fuzzed statements against a test oracle to filter out statements that don't execute correctly.
+// analyze: Analyzes all test statements in the specified test files and prints out a usage count for various statement
+//  types (e.g. SELECT, CREATE TABLE, CREATE INDEX).
 //
-// Usage: go run main.go (verify|generate|filter) testfile1 [testfile2 ...]
+// Usage: go run main.go (analyze|filter|generate|verify) testfile1 [testfile2 ...]
 func main() {
 	if len(os.Args) == 0 {
 		exitWithUsage()
@@ -57,6 +59,8 @@ func main() {
 		logictest.GenerateTestFiles(harness, args[1:]...)
 	case "filter":
 		logictest.GenerateTestFilesWithFailedTestsExcluded(harness, args[1:]...)
+	case "analyze":
+		logictest.AnalyzeStatements(harness, args[1:]...)
 	default:
 		exitWithUsage()
 	}
