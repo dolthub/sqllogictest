@@ -4,6 +4,10 @@ This is an unofficial mirror of the sqllogictests provided by SQLite, available 
 
 Additionally, we found that the tests did not match the values returned by modern MySQL (8.x), principally the return schemas. They have been regenerated to conform to what MySQL returns.
 
+# How Dolt uses sqllogictest
+
+To measure [Dolt's](https://docs.dolthub.com/introduction/what-is-dolt) SQL correctness, we test each release of Dolt against the sqllogictest SQL test suite. This suite consists of 5.9 million SQL queries and the results of running them against MySQL. Here are our [most recent benchmarks and metrics](https://docs.dolthub.com/sql-reference/benchmarks).
+
 # Parser
 
 The parser for sqllogictest files can be found in [parser.go](go/logictest/parser/parser.go). The parser supports reading all records for test files in this unofficial mirror, with the exception of hash-threshold control records, which are ignored.
