@@ -6,7 +6,7 @@ Additionally, we found that the tests did not match the values returned by moder
 
 # How Dolt uses sqllogictest
 
-To measure [Dolt's](https://docs.dolthub.com/introduction/what-is-dolt) SQL correctness, we test each release of Dolt against a SQL testing suite called sqllogictest. This suite consists of 5.9 million SQL queries and their results, using the results returned by MySQL as a reference. Here are our most (benchmarchs and metrics.)[https://docs.dolthub.com/sql-reference/benchmarks]
+To measure [Dolt's](https://docs.dolthub.com/introduction/what-is-dolt) SQL correctness, we test each release of Dolt against the sqllogictest SQL test suite. This suite consists of 5.9 million SQL queries and the results of running them against MySQL. Here are our [most recent benchmarks and metrics](https://docs.dolthub.com/sql-reference/benchmarks).
 
 # Parser
 
