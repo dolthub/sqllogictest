@@ -3226,7 +3226,7 @@ SELECT * FROM t9
 ----
 588 values hashing to be47bb47837e44b32abdcfb5f1645153
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE a1 in (767,433,637,363,776,109,451)
       OR c1 in (683,531,654,246,3,876,309,284)
@@ -3266,7 +3266,7 @@ UNION
 ----
 41 values hashing to bbf619d1c2aae1fc385fb08bddcae829
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE d8 in (883,523,81,667,20,690,124,2)
       OR e8 in (608,874,592,632)
@@ -3302,7 +3302,7 @@ EXCEPT
 ----
 9 values hashing to 0242ff524f6efe4a8115ad23f4d8659a
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE d4 in (481,449,617,989,356,681,136,86,821,968,249,628,889,794)
       OR a4 in (952,337,373,74,248)
@@ -3325,7 +3325,7 @@ EXCEPT
 ----
 20 values hashing to 3766301bf3fa068cbcf5df057f20b1b4
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (264=e9)
       OR (608=d9 AND 245=b9 AND 365=a9)
@@ -3351,7 +3351,7 @@ EXCEPT
 736
 788
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (c6=528 AND d6=991)
       OR d6 in (196,453,931,337,60,667,73,493,66)
@@ -3360,7 +3360,7 @@ INTERSECT
    WHERE NOT ((149=b1 AND a1=776))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (d1=806 AND 289=c1)
       OR c1 in (788,481,771,805,534)
@@ -3398,7 +3398,7 @@ UNION ALL
 ----
 54 values hashing to a67a5b11c1b84f9a132ad71cec377cbc
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE c7 in (375,672,280,853,145,729,518,206,301,238,257)
       OR c7 in (467,80,364)
@@ -3437,7 +3437,7 @@ UNION
 ----
 27 values hashing to aeaaf7203a02879f27361a8532cf76ef
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE b5 in (878,391,640,320,609,998,858,495,306)
 UNION
@@ -3468,7 +3468,7 @@ EXCEPT
 ----
 18 values hashing to 8bdfd70f5413bea85e8826e9587834a9
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (a1=996 AND 177=c1 AND e1=602 AND 577=d1 AND 297=b1)
       OR (a1=536)
@@ -3527,7 +3527,7 @@ UNION ALL
 ----
 67 values hashing to f98c2d4d2a39578f3cf26a31dce5817a
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE e1 in (268,312,896,95,504,763,795,110,558,125,813,523)
       OR (483=e1 OR c1=607)
@@ -3554,7 +3554,7 @@ UNION ALL
 ----
 33 values hashing to fc2abaf4ef7388669cda23f4133b75de
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (272=e3 AND 303=a3 AND 779=b3)
       OR b3 in (321,616,914)
@@ -3581,7 +3581,7 @@ UNION
 ----
 50 values hashing to 9a533062bf7ea86aed6fe94d816fd73d
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE c8 in (501,74,979,692,907)
       OR (325=b8 AND 792=e8 AND c8=418)
@@ -3606,7 +3606,7 @@ EXCEPT
 ----
 9 values hashing to b79423199aa8eb9f210d3da7b70c2bcb
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE a4 in (373,990,234,228)
       OR (a4=447 AND e4=151 AND c4=703 AND 983=d4 AND 653=b4)
@@ -3640,7 +3640,7 @@ UNION
 ----
 30 values hashing to 26b7338cd3c4153e158aabc6f7c1697e
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE (c5=471 OR 642=a5 OR e5=888)
       OR (818=c5)
@@ -3662,7 +3662,7 @@ EXCEPT
 ----
 18 values hashing to b5f5121cd33b589a7c1faab9e49a32ac
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (b3=740 AND 406=e3 AND 644=a3 AND 482=d3)
       OR (958=d3 OR 423=d3 OR 614=a3)
@@ -3678,7 +3678,7 @@ EXCEPT
 ----
 21 values hashing to 4d066eac2b56fa3445b905774d53c2d6
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (243=b6)
       OR (673=e6 OR e6=286 OR 839=a6)
@@ -3750,7 +3750,7 @@ UNION
 ----
 38 values hashing to f73c9b6c421b82aff3603ecc86cbd48f
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE b9 in (228,16,66,819,239,262,680,751,2,64,568,348,12)
       OR (953=a9)
@@ -3763,7 +3763,7 @@ INTERSECT
 ----
 657
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE b8 in (52,366,673,397)
       OR (561=e8)
@@ -3797,7 +3797,7 @@ UNION
 835
 93
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE b2 in (329,674,509)
       OR (a2=916 AND d2=86)
@@ -3824,7 +3824,7 @@ UNION ALL
 ----
 47 values hashing to bcb6d61e9a1c9b7f05e468da3966a1d1
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (e5=154 OR 771=b5 OR 971=b5)
       OR (c5=147)
@@ -3861,7 +3861,7 @@ EXCEPT
 ----
 24 values hashing to 3c1a34d3c1ef00132a3573821a6fc675
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (c9=110 OR 646=d9)
 UNION ALL
@@ -3876,7 +3876,7 @@ EXCEPT
 ----
 9 values hashing to 57f08f2834649d3c0742f51693e28c6d
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (731=e1)
 INTERSECT
@@ -3893,7 +3893,7 @@ UNION
 ----
 9 values hashing to 3c03d2e18d1097f7b0d2d24609a53b73
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE c7 in (174,931,575,441,843,249,857,305,770,260)
 UNION
@@ -3921,7 +3921,7 @@ EXCEPT
 ----
 17 values hashing to a4682f3ddc8f9f22429f63279901899f
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (c5=978 AND d5=280 AND e5=655 AND 597=a5 AND 389=b5)
 UNION
@@ -3957,7 +3957,7 @@ UNION
 ----
 41 values hashing to ca625b6d2b6fe8890d1edb33bf94ab08
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (b6=507 AND 821=a6 AND 751=c6 AND d6=35 AND 257=e6)
       OR e6 in (634,241,847,431,972)
@@ -3993,7 +3993,7 @@ UNION ALL
 ----
 50 values hashing to b8293b5642614e554890f5cacc142ef2
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE a7 in (134,795,806)
       OR e7 in (122,89,27,319,988,782,506,553,860,827,793,67,689)
@@ -4027,7 +4027,7 @@ EXCEPT
 ----
 27 values hashing to b58882b6b4221de44db9f7bee1d1d540
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (a9=824)
       OR c9 in (834,332,579,857,809)
@@ -4065,7 +4065,7 @@ EXCEPT
 836
 995
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE b7 in (896,30,396,921,426,266,973,867,670,804,220,832)
 UNION
@@ -4091,7 +4091,7 @@ EXCEPT
 ----
 11 values hashing to f825735d72a46d9f44d2a68fe96283a0
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (e9=657 OR 834=c9 OR 19=e9)
       OR (764=c9 AND a9=389)
@@ -4112,7 +4112,7 @@ UNION
 834
 936
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE b9 in (171,893,13,578)
 UNION
@@ -4144,7 +4144,7 @@ EXCEPT
 ----
 9 values hashing to f8235437c31d21e22bf6b9afeff29f46
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (a5=667 AND e5=232 AND c5=797 AND 495=d5)
       OR (e5=764 OR c5=634 OR 522=a5)
@@ -4170,7 +4170,7 @@ UNION ALL
 ----
 24 values hashing to 09951fcb097cdfd6251650ee51e6707a
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE a3 in (265,499,777)
       OR (c3=887 AND 333=e3 AND 584=b3)
@@ -4191,7 +4191,7 @@ UNION
 869
 916
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE b7 in (670,480,396,234,562,495,855,693,166,979,409,804)
       OR (d7=105)
@@ -4207,7 +4207,7 @@ EXCEPT
 ----
 31 values hashing to 21a38b5ca1d7cde124e628f9dc39127e
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (e2=783)
       OR b2 in (640,228,811)
@@ -4242,7 +4242,7 @@ UNION ALL
 707
 811
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE c5 in (747,44,820,72,934,734,299,733,601,723,625,210,384,855)
 EXCEPT
@@ -4268,7 +4268,7 @@ UNION
 ----
 65 values hashing to b0a3898e4cf9e6395ec980681a39e428
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (b4=888 OR 844=d4 OR 422=c4)
       OR (e4=565 OR d4=889)
@@ -4309,7 +4309,7 @@ UNION
 ----
 49 values hashing to dc64241390944e12d20ffb4146e1129b
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (841=a8 OR 696=b8)
 EXCEPT
@@ -4325,7 +4325,7 @@ EXCEPT
 ----
 494
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (337=d6)
       OR c6 in (572,620,832,673,287,430,292,543)
@@ -4371,7 +4371,7 @@ UNION ALL
 511
 634
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE c5 in (824,147,923)
       OR (749=e5 OR d5=810)
@@ -4403,7 +4403,7 @@ EXCEPT
 ----
 23 values hashing to ea13e2d506aed36acc3f51eaf8909705
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE e2 in (812,981,659,654,125,621,463,815,629,841)
       OR a2 in (718,898,680)
@@ -4448,7 +4448,7 @@ UNION ALL
 ----
 28 values hashing to 954b4dda890271eda9f40468fa738bf3
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (c6=673 AND 91=e6)
       OR a6 in (469,731,811,33,392,255,384,966,64,474)
@@ -4479,7 +4479,7 @@ UNION ALL
 ----
 32 values hashing to 5e5770f9a8ad39106da8bcfd54fb49f6
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE b6 in (490,351,512,390,348,267,583,350,281,882)
 UNION
@@ -4511,7 +4511,7 @@ UNION ALL
 ----
 24 values hashing to 0dd544159b89cad7bc211836a1736026
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE b6 in (507,229,967,421,716,989,92,974,512,834,511)
       OR (6=b6 OR 296=b6)
@@ -4543,7 +4543,7 @@ EXCEPT
 ----
 36 values hashing to 4b2fd76347a131710f2ef1acde2cf558
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (d8=630 OR b8=665)
       OR b8 in (690,461,806,487,386,9,889,466,352,796,563,704,313,98)
@@ -4571,7 +4571,7 @@ EXCEPT
 ----
 35 values hashing to e119ffe25db051d6bab2819c75a39e14
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (12=c5 OR 708=e5)
 UNION
@@ -4585,7 +4585,7 @@ EXCEPT
 ----
 17 values hashing to 0c14b9e5d2837a014f52ef2b3d8c477c
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE e9 in (704,965,251,672,477,477,161,788,301,968,936)
       OR (c9=751 AND a9=378)
@@ -4601,7 +4601,7 @@ EXCEPT
 ----
 13 values hashing to 83ece101bf7035182a8427bb8ed89a39
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (b7=360 AND 439=a7 AND c7=948)
       OR b7 in (495,514,221,321,861,506,360,280,488,660,83)
@@ -4642,7 +4642,7 @@ UNION
 ----
 20 values hashing to f5ef1cc9499c56f8a16da1074d0482d1
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE a2 in (966,779,279,10,718,691)
       OR (c2=87)
@@ -4672,7 +4672,7 @@ EXCEPT
 ----
 16 values hashing to 8e7bb7ec64ebe2f0c4c94dc88c52b4c9
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (b7=129)
 UNION ALL
@@ -4691,7 +4691,7 @@ EXCEPT
 ----
 18 values hashing to 84d145a13d9c678f3b885e5300a5bb4e
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (e1=288 OR 733=e1)
 UNION
@@ -4721,7 +4721,7 @@ UNION
 ----
 47 values hashing to ff0145c9db9643db10e52853aa694f4d
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE d8 in (989,889,14,624,845,636,96,899,743,192)
       OR (624=b8 AND d8=667 AND 864=a8 AND 956=e8 AND c8=821)
@@ -4751,7 +4751,7 @@ UNION ALL
 ----
 39 values hashing to a5df9620e306263d9a37d4d4c4fb717c
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE e7 in (988,122,970,48,793,280,156,462,436,851,605,144,31,827)
 EXCEPT
@@ -4797,7 +4797,7 @@ UNION ALL
 ----
 42 values hashing to b434eb6726d46fb3f51df3e2c2a48dec
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (b2=897 OR e2=223 OR b2=820)
       OR (813=d2)
@@ -4832,7 +4832,7 @@ EXCEPT
 ----
 21 values hashing to a4f17e983f20abe402899302fae7feca
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE c8 in (231,250,693,501,117,394,225,935,691)
       OR c8 in (374,799,899,321,136,851,119)
@@ -4866,7 +4866,7 @@ UNION ALL
 702
 992
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (696=a6)
 UNION
@@ -4879,7 +4879,7 @@ EXCEPT
 ----
 628
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (29=e4 OR 719=e4)
       OR (220=b4 OR b4=357)
@@ -4899,7 +4899,7 @@ UNION
 ----
 19 values hashing to 7a4193d407c6e05b34b01b41ad1ff27f
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE a8 in (359,72,920,250,653,129,563,795,597,637,47,838,822)
       OR b8 in (487,34,459,704)
@@ -4919,7 +4919,7 @@ EXCEPT
 ----
 18 values hashing to 65458cc9744f7a7431a83cd1247fe87d
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE e9 in (936,477,486,368,704,575,264,251,619)
       OR d9 in (147,554,686,332)
@@ -4952,7 +4952,7 @@ EXCEPT
 ----
 23 values hashing to ab33e63adc541620b4948dec8419d079
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (d1=662 OR 876=c1)
       OR (746=a1)
@@ -4981,7 +4981,7 @@ UNION ALL
 ----
 47 values hashing to aaa3dc7798208effa1eb480f2cfcef94
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (c7=729 OR e7=302)
       OR (c7=376 OR b7=832)
@@ -5010,7 +5010,7 @@ EXCEPT
 ----
 29 values hashing to a1808ab7b79429ad416519eb6f0b8a2a
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (837=e3 AND 737=d3)
 UNION ALL
@@ -5036,7 +5036,7 @@ UNION ALL
 ----
 19 values hashing to 6f4e6da3aba0b3138970c6092113e3a3
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (323=b7 AND c7=589)
       OR e7 in (462,6,79,887,89,201,816,439)
@@ -5062,7 +5062,7 @@ UNION ALL
 ----
 35 values hashing to b738fc28b26ae7a6a92253af8f79cf61
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (c6=480 AND 186=d6 AND 128=a6 AND 588=e6)
       OR (768=c6 OR 85=a6 OR d6=561)
@@ -5092,7 +5092,7 @@ UNION ALL
 936
 979
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE e4 in (236,184,543,835)
 UNION ALL
@@ -5124,7 +5124,7 @@ EXCEPT
 ----
 16 values hashing to 739cd8e48a603f19a3b54381a0c6031b
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (525=a1 AND c1=670)
       OR (574=d1 OR 255=b1)
@@ -5148,7 +5148,7 @@ EXCEPT
 ----
 9 values hashing to d8d786d98118f80ec7add228db2acbfe
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (283=c8 OR b8=253)
       OR (e8=272 OR 741=b8)
@@ -5194,7 +5194,7 @@ UNION ALL
 954
 963
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE e2 in (114,936,696)
       OR e2 in (524,682,945,788,294,445,548,411,955)
@@ -5232,7 +5232,7 @@ UNION ALL
 701
 844
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE d2 in (398,328,80,256,315,669,682,367,332)
       OR (851=a2)
@@ -5257,7 +5257,7 @@ EXCEPT
 ----
 18 values hashing to 13489ec2b75fd7dfc7cb1525c17f0a4e
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (378=b6 AND 946=e6 AND d6=901 AND 585=a6)
 UNION ALL
@@ -5289,7 +5289,7 @@ EXCEPT
 ----
 20 values hashing to f9a7943c052ccced9c0b4c2e074668e1
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE b5 in (606,605,424,544,846,82,113,98,403,69,326,723,84,336)
       OR a5 in (800,851,81,330,335,392,958,785,904,339,429,369)
@@ -5330,7 +5330,7 @@ UNION ALL
 ----
 45 values hashing to 5f03e3ba729d6098d3ac0437a0c0d64d
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (270=c6 AND d6=151)
       OR (84=c6)
@@ -5359,7 +5359,7 @@ EXCEPT
 ----
 23 values hashing to 8f309beab5beedf73aa6b2f203335a1a
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE a2 in (123,283,471,159,442,664,93,922,574,254,139,735,588,175)
 UNION ALL
@@ -5374,7 +5374,7 @@ EXCEPT
 ----
 16 values hashing to 1f5912f2ce327e982aeb0fc270a197ed
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE c9 in (253,476,800,180)
       OR c9 in (834,534,853,575,95,222,662,39,975,531)
@@ -5426,7 +5426,7 @@ UNION ALL
 ----
 18 values hashing to 5ff5ed7bd08a7e769f39be58a4fa44e6
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (285=a7 AND c7=564 AND 250=b7 AND 841=e7 AND 500=d7)
       OR (397=c7 OR a7=722)
@@ -5465,7 +5465,7 @@ UNION ALL
 ----
 42 values hashing to dd754e6c2499d191472f904d96eb7e1b
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE a1 in (23,524,668)
       OR a1 in (629,553,853,88,931,895,972,189,767,267,591)
@@ -5505,7 +5505,7 @@ UNION ALL
 ----
 40 values hashing to ceed9a0d3b1e499447da346b53a67ccc
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (737=d3 AND 454=b3 AND e3=837 AND 836=a3 AND 339=c3)
       OR (516=c3 AND d3=641 AND 551=a3)
@@ -5549,7 +5549,7 @@ UNION
 ----
 51 values hashing to c846e8e69915ff831ff077b19505f37d
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (427=c8 AND 487=b8)
 UNION ALL
@@ -5588,7 +5588,7 @@ UNION ALL
 ----
 16 values hashing to 14be769842d5ce20504627c45ba64bb1
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (415=c6 OR 258=c6 OR b6=281)
 UNION ALL
@@ -5638,7 +5638,7 @@ UNION ALL
 ----
 57 values hashing to ef7716ca47576dddfc0ec1cd12bfabc0
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE a3 in (965,184,594,548,282,560,429,637,181,135,145,379)
       OR (b3=827)
@@ -5687,7 +5687,7 @@ UNION
 ----
 32 values hashing to 9f0d7449f428cbab8bdad13cd7744268
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE e8 in (806,179,864,463,223,981)
 UNION
@@ -5709,7 +5709,7 @@ EXCEPT
 ----
 20 values hashing to 282ee696866f5316001d25468c591645
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (575=c9 OR d9=270 OR b9=118)
       OR (56=a9 AND d9=660 AND c9=643 AND b9=171)
@@ -5744,7 +5744,7 @@ EXCEPT
 ----
 42 values hashing to 9505df376c50bc3572b2f09d5abedb08
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (e5=72 AND b5=412 AND c5=598)
       OR b5 in (609,186,321,393,424,951)
@@ -5774,7 +5774,7 @@ UNION
 ----
 37 values hashing to 594e2bdf9f8b6794b7a597f9431e54e3
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE c2 in (996,967,964,509,220,107,83,557,807,625,22,411,692)
       OR (812=e2 OR d2=241)
@@ -5795,7 +5795,7 @@ EXCEPT
 ----
 46 values hashing to 944b34bab4d0c3ca1c458aa659fa8c51
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE c6 in (187,615,648,411,45,454,122,572,534,123,415,161,65)
       OR (489=d6 OR d6=493 OR d6=929)
@@ -5809,7 +5809,7 @@ EXCEPT
 ----
 17 values hashing to f8e1db98f83b50cbabef4ad1a8376e94
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (a8=127 OR 844=c8 OR 683=c8)
       OR e8 in (485,199,411,260,592,221,440)
@@ -5847,7 +5847,7 @@ UNION ALL
 ----
 29 values hashing to 7457e72fa9f780de96092233b93869ae
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (449=b6 OR d6=647 OR b6=512)
 UNION
@@ -5906,7 +5906,7 @@ UNION ALL
 726
 779
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (290=e7)
 EXCEPT
@@ -5943,7 +5943,7 @@ EXCEPT
 ----
 15 values hashing to 0751fee5cb037d422c0367e047760930
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (355=d3 AND e3=854)
       OR (281=e3)
@@ -5977,7 +5977,7 @@ UNION ALL
 ----
 34 values hashing to ac54f565024d8355cb6afabdb40f07b6
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (a3=499 AND 651=e3 AND b3=665)
 INTERSECT
@@ -6006,7 +6006,7 @@ UNION
 ----
 14 values hashing to 904024ba71940e8528a83271729e4d4d
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (c9=75 AND a9=847 AND 129=d9 AND 19=b9 AND e9=549)
 EXCEPT
@@ -6032,7 +6032,7 @@ UNION
 888
 921
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (769=d8 AND c8=266 AND 306=a8)
       OR (474=d8 AND 182=b8 AND e8=46 AND c8=908 AND a8=913)
@@ -6069,7 +6069,7 @@ EXCEPT
 ----
 37 values hashing to 08b3db67eb4edff7c569f6b8a8f48c7f
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (d9=960 AND 834=c9 AND e9=704 AND a9=776 AND b9=680)
 UNION ALL
@@ -6116,7 +6116,7 @@ EXCEPT
 775
 776
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE e4 in (958,415,63,1,372,296,575,290)
       OR a4 in (170,234,450,210,473)
@@ -6147,7 +6147,7 @@ EXCEPT
 ----
 19 values hashing to 70e141c40c1105455f9b4fac988071bb
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (c2=182)
 EXCEPT
@@ -6167,7 +6167,7 @@ EXCEPT
 ----
 182
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (127=e7 AND 159=b7)
 EXCEPT
@@ -6203,7 +6203,7 @@ UNION ALL
 ----
 25 values hashing to 623ac60450e95676316cce5d5a4b6170
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE b2 in (592,985,635)
       OR e2 in (564,521,307,322,118,386,217,572)
@@ -6235,7 +6235,7 @@ EXCEPT
 ----
 25 values hashing to af9e3b28cc120e6d765410fb981d68f5
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (e3=818 AND a3=41)
 EXCEPT
@@ -6271,7 +6271,7 @@ EXCEPT
 ----
 14 values hashing to 5ffaf7de058cff4d51ebc2d0deb7c418
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (7=b8 AND e8=955 AND c8=998 AND 876=d8)
       OR (862=b8 AND a8=312)
@@ -6294,7 +6294,7 @@ EXCEPT
 84
 998
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (955=c1 AND 222=a1 AND e1=87 AND b1=440)
 INTERSECT
@@ -6321,7 +6321,7 @@ UNION ALL
 ----
 22 values hashing to 080ffaa2dd4cd20516a11ae91c0fe218
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE d7 in (787,828,599,974)
       OR a7 in (950,665,744,288,452,642,869,982,87,114,982,995,452,865)
@@ -6338,7 +6338,7 @@ EXCEPT
 ----
 23 values hashing to 37786cb8db201a25423bd01542a8ce16
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE d9 in (678,55,145,987,790,383,360,389,224,682,258)
       OR (a9=240 OR b9=595 OR e9=723)
@@ -6359,7 +6359,7 @@ UNION
 ----
 17 values hashing to 12755f1ba5727688f5d0e388d5e11eb2
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE b2 in (357,8,414,549,888,857,820,285,846,784,93,938,649)
       OR (d2=351 AND e2=223 AND c2=779)
@@ -6402,7 +6402,7 @@ UNION ALL
 ----
 22 values hashing to 4c5fa283e9b663bbd85446d141d4518d
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (b7=306 AND 238=c7 AND 139=d7 AND a7=90)
 EXCEPT
@@ -6411,7 +6411,7 @@ EXCEPT
 ----
 306
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (159=b5 AND 556=a5 AND 756=c5 AND d5=269 AND e5=436)
 UNION
@@ -6449,7 +6449,7 @@ EXCEPT
 ----
 24 values hashing to 7fa9fee68831d034715824768742f149
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (e1=89 OR c1=39 OR 525=b1)
       OR (a1=668)
@@ -6471,7 +6471,7 @@ UNION
 569
 766
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (166=c8 AND 981=b8 AND a8=502 AND 918=e8)
       OR a8 in (822,591,127,848,256,445)
@@ -6488,7 +6488,7 @@ UNION ALL
 ----
 11 values hashing to df1f3e84c69b1b22292c9844bc1651f6
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (c4=455)
       OR (e4=600 OR 35=e4)
@@ -6509,7 +6509,7 @@ EXCEPT
 ----
 10 values hashing to 5c757965762832ad5bc52708243eb9d4
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE b8 in (609,52,244,656,351,773,325,870,105,365)
       OR (a8=900)
@@ -6545,7 +6545,7 @@ UNION
 907
 969
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE a2 in (304,123,135,691,262,954,495,863,336,93,442,922)
       OR b2 in (527,264,805,228,519,297,226,311,776)
@@ -6587,7 +6587,7 @@ UNION ALL
 ----
 61 values hashing to 83d28a8a37d9e1ce393c66fad7c8780e
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (818=b2 OR e2=339)
 UNION
@@ -6625,7 +6625,7 @@ UNION ALL
 ----
 74 values hashing to ee5b4adbbe7369ee11ab261160bd9b9d
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE e4 in (677,38,9,592,482,312,252,350,958)
 EXCEPT
@@ -6653,7 +6653,7 @@ EXCEPT
 ----
 25 values hashing to 956e8df3a6a8d209ae3a72bf1d9a5353
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE e2 in (720,499,899,428,981,692,151,647,945,147,535,547,433)
       OR b2 in (60,784,725,818,634,681,592,380,799,546,754,264)
@@ -6667,7 +6667,7 @@ EXCEPT
 ----
 31 values hashing to 8865e7e1f9c94932e766c5ce4523818b
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE a4 in (469,502,847,621)
 UNION
@@ -6692,7 +6692,7 @@ EXCEPT
 ----
 14 values hashing to 2e658db4781fa5b68a6d596cd70e6663
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (b3=665 OR 710=b3 OR 988=d3)
       OR (b3=617 OR 701=b3)
@@ -6731,7 +6731,7 @@ EXCEPT
 ----
 23 values hashing to e005282cf9e005fa2820aab6ccd9c0c5
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (b4=653 OR c4=758)
       OR d4 in (481,546,973,197,146,356,713,185,905,212,901,617)
@@ -6786,7 +6786,7 @@ UNION ALL
 ----
 73 values hashing to 7a7514e6e27b86f3b6ebf04cd7054088
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (262=a3)
       OR (25=e3 OR 984=d3)
@@ -6813,7 +6813,7 @@ UNION
 ----
 19 values hashing to 3f4cfe26729dcb9292bd6b7a7a3164e0
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (e8=918 OR 7=b8)
       OR a8 in (504,127,359)
@@ -6833,7 +6833,7 @@ UNION
 ----
 15 values hashing to e1627e3b569c880dd9ec9b1f31207524
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (661=d4)
       OR (799=c4 AND 546=e4)
@@ -6876,7 +6876,7 @@ UNION
 ----
 12 values hashing to 15949cc35d463fc17b3f884225ddaf35
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE a2 in (574,785,93,538,131,669,324,10,185,564)
       OR (e2=535)
@@ -6907,7 +6907,7 @@ UNION
 ----
 48 values hashing to cb23bc086f1cca5f872ded73160cef54
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (c6=807 OR 595=e6)
 UNION ALL
@@ -6944,7 +6944,7 @@ UNION
 ----
 29 values hashing to bb525730cae750ddea0820212dccb485
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (288=a7 AND 142=d7 AND e7=815)
 UNION ALL
@@ -6967,7 +6967,7 @@ UNION ALL
 ----
 28 values hashing to 8c9d88cce3d13be0e09197951b922d80
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE e7 in (303,955,154,663,688,587,215,929,31)
 EXCEPT
@@ -7006,7 +7006,7 @@ EXCEPT
 ----
 38 values hashing to ff5721e3de0fca179ac72aa3e6ca4dcf
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (b1=674 AND 395=a1 AND e1=442 AND 277=d1 AND 915=c1)
 UNION
@@ -7039,7 +7039,7 @@ EXCEPT
 ----
 34 values hashing to ba5501756c56aae7a971048724c31f38
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (e1=146 AND d1=275 AND a1=371 AND 871=c1)
       OR (e1=222 AND b1=5 AND a1=972 AND d1=662)
@@ -7069,7 +7069,7 @@ UNION
 ----
 31 values hashing to d5e29d5949fc7afd0eff7130160aa8cb
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE b8 in (773,366,313,975,640,493,300,259,219,677,155,205,725)
       OR (e8=186)
@@ -7107,7 +7107,7 @@ EXCEPT
 ----
 41 values hashing to b904f3bebd2ccf944a0f539453443744
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (e2=671 OR d2=749 OR a2=217)
       OR (b2=729 AND 35=a2 AND d2=292)
@@ -7129,7 +7129,7 @@ UNION ALL
 98
 998
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (e9=621)
 INTERSECT
@@ -7163,7 +7163,7 @@ UNION
 ----
 11 values hashing to d91d6b27d40a304be150797cc7babc15
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (774=e3 AND 806=c3 AND a3=244 AND d3=314)
       OR (c3=800 AND b3=70 AND d3=170 AND e3=303 AND 197=a3)
@@ -7179,7 +7179,7 @@ EXCEPT
 ----
 18 values hashing to e0fe313f1924510546e2b4f9f7b77896
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (319=a5 AND 544=b5)
       OR d5 in (255,919,479,271,521,369,731)
@@ -7211,7 +7211,7 @@ UNION ALL
 ----
 39 values hashing to 5582beb38a313a58e4474a6cf19b2882
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (81=a4 OR 31=a4 OR a4=451)
       OR d4 in (988,794,364,844,910,713,199,777,821,60,481,877,549,31)
@@ -7230,7 +7230,7 @@ UNION ALL
 ----
 18 values hashing to ec4cf41f3ce6b71486668c9649f54349
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (d4=498)
       OR (c4=904)
@@ -7249,7 +7249,7 @@ UNION ALL
 ----
 23 values hashing to f544cf1e67329931e0e2160eda80e264
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (452=a6)
       OR (d6=901 OR 565=b6 OR c6=25)
@@ -7268,7 +7268,7 @@ UNION
 ----
 17 values hashing to 36f92dfda5468e040515ab3ffcd98f9b
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE b2 in (628,170,357,527,784,279,932,811,820)
       OR (e2=554 AND 925=c2 AND a2=564 AND d2=152 AND 139=b2)
@@ -7302,7 +7302,7 @@ UNION
 ----
 24 values hashing to e9f341546ed6894ff118e90d7aa4c66a
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (d1=274)
       OR e1 in (158,779,181,146,522,166,95)
@@ -7338,7 +7338,7 @@ EXCEPT
 ----
 33 values hashing to 8a44a8fbecb0b91e0dbe0e352b564e7a
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (a3=899 OR c3=472)
       OR (550=e3)
@@ -7357,7 +7357,7 @@ UNION ALL
 ----
 12 values hashing to e5e5b6f727ee08861a17ea4d037a1d56
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (c3=244)
       OR b3 in (617,202,411,480,226,434,317)
@@ -7372,7 +7372,7 @@ EXCEPT
    WHERE NOT (e7 in (455,827,929,462,590,503))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE d6 in (196,405,942,66,223)
       OR c6 in (807,413,187,637,963,677,717,752)
@@ -7398,7 +7398,7 @@ EXCEPT
 ----
 21 values hashing to 6c77756faf85d95767012aa523f79db2
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (955=c9 AND 535=a9)
 UNION ALL
@@ -7422,7 +7422,7 @@ EXCEPT
 ----
 13 values hashing to 1776d086beeb1455eb31ea6d1b1b97c1
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (98=b8 OR e8=881)
       OR d8 in (474,192,899,849,627,953)
@@ -7447,7 +7447,7 @@ EXCEPT
 579
 881
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (e8=381 OR 422=d8 OR 954=a8)
       OR (b8=790 OR e8=204)
@@ -7497,7 +7497,7 @@ UNION ALL
 ----
 71 values hashing to 8073c342fc058ad95015453079bf6e3a
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (e4=476)
 UNION ALL
@@ -7517,7 +7517,7 @@ EXCEPT
 249
 997
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (499=a3)
 EXCEPT
@@ -7531,7 +7531,7 @@ EXCEPT
 211
 459
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (e7=234)
       OR (e7=248 AND b7=735)
@@ -7575,7 +7575,7 @@ UNION
 ----
 13 values hashing to 5b21d8c785bccfe06c0baf49c3f5e0fc
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (c3=317 OR b3=350 OR c3=641)
 INTERSECT
@@ -7596,7 +7596,7 @@ EXCEPT
            OR (365=a9 OR d9=720 OR 804=b9))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE e6 in (353,237,154,754,668,230,211,809,225,622,283)
 UNION
@@ -7609,7 +7609,7 @@ EXCEPT
 ----
 16 values hashing to 0a9c40013f959177cf27906aa3fc282c
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (142=d9 AND 694=e9 AND 15=b9 AND a9=356)
       OR c9 in (992,751,853,224,711,767,257)
@@ -7639,7 +7639,7 @@ UNION ALL
 ----
 50 values hashing to 5689a9366ab2f369fd578670024aed9b
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (a1=604 AND c1=681 AND e1=443 AND d1=121 AND b1=788)
       OR (c1=537 OR 716=c1)
@@ -7675,7 +7675,7 @@ EXCEPT
 ----
 34 values hashing to 2c165a751129d74967ef7b0ca4baad58
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (d1=900 OR 146=e1)
       OR d1 in (17,96,803)
@@ -7697,7 +7697,7 @@ UNION ALL
 ----
 26 values hashing to 0119db0141a6f08676efeb4ea811db51
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE c5 in (797,672,442,734,941,844,856,868,147,598,185,756,681)
       OR (336=b5 AND 147=c5)
@@ -7717,7 +7717,7 @@ UNION
 ----
 13 values hashing to bf3a15b22668dae97a24bbe8085617c1
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (e7=553)
 EXCEPT
@@ -7727,7 +7727,7 @@ EXCEPT
 ----
 514
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (146=c9 AND 942=e9 AND d9=467 AND 297=a9 AND b9=848)
       OR (d9=274 AND a9=160 AND 269=b9 AND e9=943 AND 923=c9)
@@ -7743,7 +7743,7 @@ UNION
 ----
 11 values hashing to 784a98fc66dfa14dd1be7b168f7eec92
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (776=a1 OR 139=e1 OR 382=a1)
       OR (b1=283)
@@ -7759,7 +7759,7 @@ EXCEPT
 ----
 12 values hashing to 093619954d4f7573e51243b7cf9eb084
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (c8=74 OR a8=15)
       OR (794=a8)
@@ -7802,7 +7802,7 @@ EXCEPT
 350
 85
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (d4=236)
 INTERSECT
@@ -7862,7 +7862,7 @@ UNION ALL
 ----
 22 values hashing to 90b467a9f075379a60ee6901b76a64f1
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (c9=240 AND e9=944)
       OR (a9=847 OR 14=a9)
@@ -7903,7 +7903,7 @@ UNION ALL
 887
 972
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE b2 in (674,161,846,292,376,729,681,501,168)
 UNION ALL
@@ -7937,7 +7937,7 @@ UNION
 ----
 11 values hashing to 79d64f4174aacd9de9e5cd2bd7a77ad3
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (c4=513 AND 568=d4)
       OR (c4=768 OR b4=901)
@@ -7960,7 +7960,7 @@ UNION
 ----
 11 values hashing to 68d943b4d081c4fe87ecad5eada70cd2
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (761=d1 AND 330=a1)
       OR (988=a1 AND 130=d1 AND e1=962 AND 88=c1)
@@ -7992,7 +7992,7 @@ UNION
 ----
 52 values hashing to a42a5dc9abe77c73906b2db127704043
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE c6 in (65,242,146)
 EXCEPT
@@ -8008,7 +8008,7 @@ UNION ALL
 ----
 20 values hashing to b7d0664d504b7a75715c30671219816a
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE d4 in (728,86,317,491,661,907,105,950,658,901,166,136)
 INTERSECT
@@ -8044,7 +8044,7 @@ EXCEPT
 835
 901
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (a5=599)
 UNION ALL
@@ -8068,7 +8068,7 @@ UNION
 ----
 9 values hashing to 0ce7fceafe35ea2c32a1484291102d4d
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (e5=727)
 INTERSECT
@@ -8087,7 +8087,7 @@ EXCEPT
 ----
 376
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (d7=457 OR 183=e7)
       OR (156=e7 OR 851=e7)
@@ -8126,7 +8126,7 @@ EXCEPT
 ----
 15 values hashing to c2d1ab2e6b7fb35089328997da5df721
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE b4 in (966,961,260,286,319,802,294,389,563,635,721)
 INTERSECT
@@ -8141,7 +8141,7 @@ INTERSECT
            OR (d6=885 OR b6=232 OR c6=749))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (213=e2 AND 722=c2 AND 262=a2 AND d2=843 AND b2=823)
       OR (e2=131 AND c2=374)
@@ -8174,7 +8174,7 @@ UNION ALL
 ----
 20 values hashing to 93c09c2ec67fced3f6e35171b2ca384e
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (d9=878)
       OR c9 in (534,146,923,62,323,332)
@@ -8196,7 +8196,7 @@ UNION ALL
 ----
 10 values hashing to 3707e497851dc09c4e76b0fd312e80c1
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE (846=b5 AND e5=499 AND 960=a5 AND 542=d5 AND 927=c5)
       OR a5 in (114,342,685,796,50,163,24,319,301,362)
@@ -8246,7 +8246,7 @@ UNION
 ----
 19 values hashing to c3a28be455c9c92c7aa3c2d72d534e8b
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (c4=215 AND a4=318)
 INTERSECT
@@ -8272,7 +8272,7 @@ UNION
 ----
 18 values hashing to 22e8ab8532b1d27e81dca0959582ec11
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (172=d1)
 INTERSECT
@@ -8295,7 +8295,7 @@ UNION ALL
 ----
 34 values hashing to 5c9a2d3ae76d751c2874b553ed9e4274
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE b5 in (26,874,390,855,230,774,234,161,569,661)
       OR (c5=261 OR d5=810 OR a5=602)
@@ -8322,7 +8322,7 @@ UNION
 ----
 26 values hashing to ecbaf991ed7694eb00238d2cef492745
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (c2=87 OR d2=547 OR 594=a2)
 UNION
@@ -8341,7 +8341,7 @@ EXCEPT
 ----
 26 values hashing to f96188eaf33b71968040afa2d8f79556
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE a2 in (966,936,637,522,869)
       OR (654=d2 AND 182=c2 AND 853=a2 AND b2=864 AND 548=e2)
@@ -8364,7 +8364,7 @@ EXCEPT
 788
 838
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE e2 in (40,812,294,205,428,427,564,123,217,572,441,117,131,37)
       OR e2 in (294,579,148)
@@ -8394,7 +8394,7 @@ UNION
 ----
 47 values hashing to 79293f57e9cb3b9eae4a7499afbea804
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (b8=365 AND a8=774 AND 442=e8 AND c8=230)
       OR (638=a8)
@@ -8419,7 +8419,7 @@ EXCEPT
 ----
 18 values hashing to 5fedcb5d694ddaab37f2447c39b0523d
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE b4 in (627,919,288,982,888,387,243,884,802,938,721,653,847,892)
       OR e4 in (977,719,1,778,476,185,486,837,546,390,511)
@@ -8454,7 +8454,7 @@ UNION
 ----
 10 values hashing to 13757b45283baff21d03896da9ce3284
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE c1 in (548,788,685,272,681,48,636,62,284)
       OR (b1=766 AND e1=731 AND d1=807 AND 294=a1)
@@ -8492,7 +8492,7 @@ UNION ALL
 ----
 22 values hashing to fc6074f693c379939b67e9aeb8a7f64f
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (d9=763 AND 587=c9)
       OR (e9=353 OR a9=959 OR d9=347)
@@ -8516,7 +8516,7 @@ UNION
 ----
 16 values hashing to 454ad32007c52cf12fbd95744dcf64bf
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (b2=326 OR 253=a2)
       OR (c2=722 OR 228=c2 OR 806=d2)
@@ -8531,7 +8531,7 @@ UNION
 ----
 9 values hashing to 7f2c68d2c5d42ab9aeabf099fa37237c
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (239=e9 OR c9=767)
       OR (41=a9 AND b9=262 AND 495=d9)
@@ -8554,7 +8554,7 @@ UNION
 ----
 9 values hashing to 26370c0b2e83ae880b6f96036285b119
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE e4 in (237,600,217,820,767,405,122,132,596)
       OR (a4=952)
@@ -8589,7 +8589,7 @@ UNION ALL
 ----
 31 values hashing to 966a2dfdee4401a4a4c26470dd34ce71
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE a8 in (794,239,920,241,47)
       OR d8 in (101,93,889,814)
@@ -8609,7 +8609,7 @@ UNION
 916
 93
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE b5 in (759,179,26,230,424)
 UNION ALL
@@ -8660,7 +8660,7 @@ UNION
 ----
 20 values hashing to b12a6d46ea2d5214bf292f1f9a36a801
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE a1 in (268,241,477,32,879,738,746,517)
 EXCEPT
@@ -8676,7 +8676,7 @@ UNION
 ----
 10 values hashing to 2219fa5b82b96f38c54b2b510de110ed
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (b7=867 OR e7=900 OR 508=c7)
       OR (31=a7 AND 931=c7 AND 590=e7 AND 30=b7 AND 886=d7)
@@ -8720,7 +8720,7 @@ UNION
 ----
 71 values hashing to e7fc3c0a39ade70b9134a520abd6ad86
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE a4 in (841,448,29,502,451,661,160,997,919,31)
       OR c4 in (690,840,39,752)
@@ -8758,7 +8758,7 @@ EXCEPT
 ----
 36 values hashing to 34125c448148289ce43c67174b1ccd17
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE a6 in (604,255,692,696,452,801)
       OR (6=b6 AND 942=d6 AND 725=a6 AND 439=e6)
@@ -8786,7 +8786,7 @@ UNION ALL
 ----
 23 values hashing to 49b6596ec6e58628b1e969ca470dc8bb
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (979=a3 OR 890=d3)
       OR e3 in (120,818,365,724,896)
@@ -8807,7 +8807,7 @@ EXCEPT
 ----
 19 values hashing to 43e76fd28b148a07e06ed567b1d7a592
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE e5 in (364,716,902,655,689,697,802,764,554,585,180)
       OR (390=b5 AND 782=d5 AND e5=522)
@@ -8821,7 +8821,7 @@ EXCEPT
 ----
 21 values hashing to a05cd16081cc0660ce261c8b6b360db2
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (853=a2 OR 544=a2)
 UNION ALL
@@ -8843,7 +8843,7 @@ EXCEPT
 ----
 26 values hashing to d1cab18f9faeddf698945f886e061758
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (d9=601 AND 122=b9 AND a9=815 AND 935=c9 AND 858=e9)
 UNION ALL
@@ -8860,7 +8860,7 @@ EXCEPT
 436
 858
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE d1 in (432,837,662,96,47,902,900,939,175,761,942,223,726,571)
       OR b1 in (570,993,226,49,91,432,468,674,310,350,589,862,620)
@@ -8894,7 +8894,7 @@ UNION ALL
 ----
 42 values hashing to 69f9864b090784b1c8af8adcd4429412
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (295=a9 AND 525=d9)
       OR (a9=349 OR 685=a9)
@@ -8913,7 +8913,7 @@ EXCEPT
 685
 919
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE e2 in (556,434,140)
       OR (131=e2)
@@ -8932,7 +8932,7 @@ UNION ALL
 71
 812
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (a3=992 OR 710=a3)
       OR (305=c3)
@@ -8946,7 +8946,7 @@ UNION ALL
 ----
 16 values hashing to 5ac0a5375605a969aab41c8b6520a393
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (c9=402 OR 151=c9 OR b9=26)
       OR b9 in (759,152,421,50)
@@ -8977,7 +8977,7 @@ EXCEPT
 ----
 30 values hashing to b069929734d462e3a13f52663d72767d
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE b7 in (59,517,234,52,396,627)
       OR (d7=315 OR 12=c7)
@@ -9015,7 +9015,7 @@ EXCEPT
 ----
 9 values hashing to 39f4dbfb7b144ad480820d996e6d1309
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (d6=797 OR 993=b6 OR 173=a6)
       OR (a6=436 OR 270=c6 OR 128=a6)
@@ -9052,7 +9052,7 @@ EXCEPT
 ----
 23 values hashing to 351e6367013bbd76fa11f47da9c1b93c
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE d5 in (858,360,787,772,940,964,114,413,782,841,738,479)
       OR (a5=413 AND 18=c5 AND d5=24 AND e5=287 AND 499=b5)
@@ -9090,7 +9090,7 @@ UNION
 ----
 53 values hashing to 9f7c12ee62c892f4ed012b78fad03edb
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (e6=798 AND d6=376)
       OR a6 in (211,293,696,537,818,474,452)
@@ -9131,7 +9131,7 @@ UNION ALL
 ----
 28 values hashing to 0349b941bd797b33e0c8a092b8939f21
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (130=a7)
       OR c7 in (249,682,397,482,672,781,725,770,317,692,661,635,206)
@@ -9167,7 +9167,7 @@ UNION
 ----
 23 values hashing to 65f07956bd7b553aa3cd1307776790aa
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE e1 in (221,683,904,858,139,763,688,921,602,367)
       OR (979=c1 OR d1=504)
@@ -9201,7 +9201,7 @@ UNION ALL
 ----
 17 values hashing to 5441659075deb5b2861adf6998821283
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE c4 in (201,489,860,297,660,840,609,319,993,671)
 EXCEPT
@@ -9227,7 +9227,7 @@ EXCEPT
 ----
 21 values hashing to 986214feb70fcd2e5cae3789e01f476b
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE e1 in (51,695,221,255,904,558,110,997,646,534,363,949,531)
       OR c1 in (289,876,309,36,69,531,865,379,246,585,388,758)
@@ -9271,7 +9271,7 @@ UNION ALL
 ----
 56 values hashing to 13dfb0ffaedf9a913675c7746768bf9c
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (e7=436)
       OR (606=c7 AND 996=b7 AND 894=a7)
@@ -9295,7 +9295,7 @@ EXCEPT
 ----
 894
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE d4 in (25,988,349,146,797,907,236,86,328,917,150,55)
       OR (442=d4 AND e4=38)
@@ -9316,7 +9316,7 @@ EXCEPT
 ----
 33 values hashing to 80ee5159e5177196903c5e768470fa95
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (608=c1 OR 52=a1)
       OR (a1=847 AND e1=534 AND c1=637)
@@ -9338,7 +9338,7 @@ UNION ALL
 ----
 13 values hashing to 9443e0a039686cfb6c6c977e67602e7d
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (988=c2 AND 577=d2 AND 679=e2 AND b2=640)
       OR e2 in (37,125,965,220,788,815)
@@ -9371,7 +9371,7 @@ UNION
 ----
 33 values hashing to 7d94e7b0dbfdcb16b18567102ea2abb4
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE b7 in (750,804,506,655,305,24,407,234,979,820,129,841)
 EXCEPT
@@ -9381,7 +9381,7 @@ EXCEPT
 ----
 10 values hashing to 0bce86719e346356aed9f182578fff59
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (d8=116 AND 239=a8)
       OR b8 in (963,6,466,807,677,397,469,454,656,862)
@@ -9421,7 +9421,7 @@ EXCEPT
 ----
 44 values hashing to 6960951e1e5588c55d596636d450e6c1
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE d4 in (979,794,929,626,409,770,364,574,593,777,349,736)
       OR (e4=677 AND 513=a4 AND b4=634 AND c4=319 AND d4=929)
@@ -9433,7 +9433,7 @@ INTERSECT
            OR (d1=154))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (c6=938 OR b6=267)
       OR d6 in (269,277,711,647,34,942,778,924)
@@ -9474,7 +9474,7 @@ EXCEPT
 ----
 33 values hashing to aaea8a72c52118678b5d3fbb18975758
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (492=d1 OR 295=b1 OR 508=d1)
       OR (737=e1 OR d1=298 OR 571=d1)
@@ -9499,7 +9499,7 @@ UNION
 ----
 16 values hashing to c47db80eda9cde6ca296877d2941afc7
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE a8 in (328,822,961,774,54,579,129)
       OR (a8=327 AND c8=419)
@@ -9532,7 +9532,7 @@ UNION
 750
 841
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE d3 in (826,582,115,524)
       OR (478=a3 OR 577=b3)
@@ -9551,7 +9551,7 @@ EXCEPT
 ----
 20 values hashing to fe1d7eeb7b049300e860d1188ce88d46
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (a4=752)
       OR (c4=178 AND a4=894 AND 551=b4 AND 1=e4)
@@ -9585,7 +9585,7 @@ UNION
 549
 9
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (648=c6 AND 825=a6 AND 392=b6 AND 225=e6 AND d6=424)
 INTERSECT
@@ -9606,7 +9606,7 @@ UNION
 856
 858
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (e3=87)
       OR (b3=616)
@@ -9627,7 +9627,7 @@ EXCEPT
 ----
 18 values hashing to 1fe5672ea7874f5b552c1234c42ef31b
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE d1 in (662,335,432,798,936,217,492,679,717,949)
 UNION ALL
@@ -9669,7 +9669,7 @@ UNION
 ----
 24 values hashing to adb6a3515428251e341377135eabe8a5
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE c4 in (758,220,119,675,214,732,162,806)
 INTERSECT
@@ -9694,7 +9694,7 @@ UNION ALL
 ----
 46 values hashing to 1662d5eae706bdfbf12ca95874b658c2
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (769=b8 AND c8=907 AND a8=586 AND e8=874 AND d8=141)
 EXCEPT
@@ -9704,7 +9704,7 @@ EXCEPT
 ----
 769
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (e6=91)
       OR (b6=967 OR 657=a6)
@@ -9736,7 +9736,7 @@ UNION ALL
 ----
 36 values hashing to c8a0e396c6e0a9ba5bf3b3ea74b47d8c
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (736=b5 OR 626=a5)
 UNION
@@ -9757,7 +9757,7 @@ EXCEPT
 ----
 11 values hashing to 1782bc8710ab6dbfad366f8a95192202
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (a1=742 AND b1=836)
       OR (b1=619)
@@ -9793,7 +9793,7 @@ EXCEPT
 761
 964
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (234=d1 OR a1=76)
 EXCEPT
@@ -9819,7 +9819,7 @@ EXCEPT
 200
 420
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (942=c6 OR a6=128 OR a6=825)
       OR a6 in (692,2,132,396,839)
@@ -9846,7 +9846,7 @@ EXCEPT
 929
 991
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE d5 in (772,313,858,344,343)
       OR c5 in (443,44,599,625,809,747,696)
@@ -9877,7 +9877,7 @@ EXCEPT
 ----
 9 values hashing to 67484e6ec8a05ecb9d5e737935a45a73
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (420=d9 OR b9=342 OR 739=a9)
 UNION ALL
@@ -9892,7 +9892,7 @@ EXCEPT
 ----
 18 values hashing to 320d376d922ecf0f175eb412d99a2ce7
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (e8=221 OR 386=a8)
       OR d8 in (511,48,761,439,190)
@@ -9915,7 +9915,7 @@ UNION ALL
 ----
 23 values hashing to 4d7492c9dff8a594ecc3475918e27054
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE a4 in (74,894,502,558,605,509,651,997,990,804)
       OR (619=c4)
@@ -9951,7 +9951,7 @@ UNION ALL
 ----
 29 values hashing to f220317eed95443fd920fee1fdd71a5e
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (11=a7 OR d7=712 OR 816=e7)
       OR (612=b7 OR 430=a7 OR 356=a7)
@@ -9974,7 +9974,7 @@ EXCEPT
 ----
 15 values hashing to 6b68025e0700d88cc303da5cd1946395
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (a1=109 OR 951=d1)
       OR (d1=618 OR 346=d1)
@@ -10001,7 +10001,7 @@ UNION
 ----
 23 values hashing to 373e5c65af48e22299f827e12741c08a
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (c2=22 OR 509=c2)
 EXCEPT
@@ -10027,7 +10027,7 @@ EXCEPT
 635
 888
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE d6 in (393,929,223,271,269,458,664,489,2,778,797,36,172,35)
       OR (572=a6 OR 428=d6)
@@ -10053,7 +10053,7 @@ UNION
 ----
 17 values hashing to bd295e3a8d903f56beeb55d956b5a400
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (d1=602)
       OR (462=b1 AND d1=407 AND e1=72)
@@ -10086,7 +10086,7 @@ EXCEPT
 ----
 23 values hashing to d6d7440278c9ecc3ae24397bb85e752e
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (b7=735)
 UNION
@@ -10121,7 +10121,7 @@ EXCEPT
 ----
 53 values hashing to 5a449dcb9a6168db9b97552f34c4ecc1
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (919=a4 AND 631=e4 AND 433=c4 AND 524=d4)
 UNION
@@ -10156,7 +10156,7 @@ EXCEPT
 ----
 17 values hashing to 804085a825892ee5095523866446fc7b
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE e9 in (845,239,978,486,647,127,383,255,418)
       OR (d9=553 OR c9=843)
@@ -10185,7 +10185,7 @@ UNION
 ----
 43 values hashing to 51bcb19cb4ea1e5b178b60ae70d6d497
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (b3=203 OR 333=e3 OR 437=b3)
       OR (986=c3 AND e3=929 AND 882=b3 AND a3=560)
@@ -10198,7 +10198,7 @@ EXCEPT
 425
 720
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (a7=896 AND e7=7)
       OR (b7=579)
@@ -10218,7 +10218,7 @@ EXCEPT
 ----
 25 values hashing to 11d6fb1087576a4521b8a106f55cd541
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE d9 in (129,489,919,744,591,912,965,987,668)
 EXCEPT
@@ -10251,7 +10251,7 @@ EXCEPT
 ----
 17 values hashing to d90cb32d46df286bfd4c2e480a0e7de8
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (656=c3 OR c3=265)
 UNION
@@ -10287,7 +10287,7 @@ EXCEPT
 ----
 22 values hashing to b77abbfba6f7f14d5e6649720652069d
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (963=b6 AND a6=811)
       OR (d6=2)
@@ -10325,7 +10325,7 @@ UNION ALL
 ----
 36 values hashing to 11dbeaa0dda808d38680b8dce3123332
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (d7=924 OR e7=48)
       OR (b7=306 OR 105=b7)
@@ -10368,7 +10368,7 @@ UNION ALL
 ----
 17 values hashing to b7c8efbd4d3a06c39b805d691678261b
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (413=c6)
 UNION
@@ -10383,7 +10383,7 @@ EXCEPT
 ----
 10 values hashing to d689c9f46de4a70ca9d5f235358103f5
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE c2 in (551,24,557,933)
       OR (434=e2 OR 336=a2 OR 751=a2)
@@ -10401,7 +10401,7 @@ EXCEPT
 ----
 11 values hashing to 55e2b5ab0ad0b9a7dd87362980c6e7da
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE b5 in (695,526,878,159,391,759,183,26,587,860,782,822)
       OR (c5=989 OR a5=301)
@@ -10416,7 +10416,7 @@ UNION ALL
 ----
 16 values hashing to 3879412a172d041589e2a25565bac807
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE c8 in (32,321,866,979,61,961,136,693,448,790)
 UNION
@@ -10434,7 +10434,7 @@ EXCEPT
 ----
 16 values hashing to 45ddb00cd57bfb254b9e88bdb024dd84
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (948=a4)
 UNION
@@ -10457,7 +10457,7 @@ UNION ALL
 ----
 26 values hashing to ba0491b7cc3f6af3db502e0fe247fc48
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (c7=565)
       OR e7 in (851,983,27,590,248,31,689,900,31,302,422)
@@ -10474,7 +10474,7 @@ EXCEPT
 ----
 24 values hashing to a6e07ee104fcd28ed7132f412b17f72f
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (104=d9)
       OR (18=a9 AND d9=166 AND b9=496)
@@ -10496,7 +10496,7 @@ UNION
 ----
 151
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE b8 in (105,469,34,454,704,461,503,792,365,308,324,394,992)
       OR (d8=534 OR c8=973)
@@ -10518,7 +10518,7 @@ UNION
 ----
 29 values hashing to e09fef7711c975570a5cdd3ca1bf470d
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE e5 in (9,971,440,68,287,446,655,441)
       OR (d5=738 OR a5=730)
@@ -10543,7 +10543,7 @@ EXCEPT
 ----
 18 values hashing to d28c31a6e9bbdfbbe374564cccaa8616
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE a7 in (361,90,386,707,651,542,757,97,233,452,865,442,748,62)
       OR (c7=376)
@@ -10566,7 +10566,7 @@ UNION
 ----
 56 values hashing to 14f58df57e7009871910868ed7acb38d
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (b4=58 AND 449=d4 AND 480=e4 AND 170=a4 AND c4=188)
 EXCEPT
@@ -10590,7 +10590,7 @@ UNION
 ----
 32 values hashing to 18749c676476628b89220a3814b40533
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (c7=553 OR c7=843)
       OR d7 in (108,276,974,549)
@@ -10616,7 +10616,7 @@ EXCEPT
 ----
 31 values hashing to 67479d68826dc2238511438c0a71da8c
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (510=e2 OR 87=c2 OR c2=148)
 UNION ALL
@@ -10637,7 +10637,7 @@ EXCEPT
 765
 783
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (c8=283 AND 981=e8 AND a8=961 AND 81=d8 AND b8=511)
 INTERSECT
@@ -10670,7 +10670,7 @@ UNION ALL
 ----
 16 values hashing to b4e43b95ee196c92a098fa8d2c8c65ce
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (e7=904 OR 508=e7)
       OR (d7=79 OR 280=b7)
@@ -10684,7 +10684,7 @@ EXCEPT
 688
 795
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (138=e3)
       OR (b3=127)
@@ -10724,7 +10724,7 @@ EXCEPT
 ----
 30 values hashing to 7d394ca17d83dc70ffe4e96387d77beb
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (b3=720 AND 524=d3 AND a3=393 AND 192=e3)
       OR (a3=784 AND 336=d3)
@@ -10755,7 +10755,7 @@ UNION ALL
 ----
 36 values hashing to 10162f748e784e6891922b557a3cd2bc
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (854=e9 AND 305=d9)
       OR a9 in (104,959,177,685,468,41,553)
@@ -10792,7 +10792,7 @@ EXCEPT
 ----
 21 values hashing to 25ae26ef20cd62f66304563456570df5
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (e6=738)
       OR b6 in (449,158,54,583,601,392,662,427,223)
@@ -10845,7 +10845,7 @@ UNION
 ----
 13 values hashing to d8ea7094991ee86af0a2a1806864424a
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (e3=993 OR c3=647 OR 246=b3)
       OR (260=d3 OR 147=e3)
@@ -10872,7 +10872,7 @@ EXCEPT
 ----
 15 values hashing to 30aefb18f98adbd763084fbfb46feb96
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (d6=321 OR 135=c6)
 UNION
@@ -10915,7 +10915,7 @@ UNION
 ----
 15 values hashing to 48ed19890f70a4d95ea0fbafd2608b94
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (713=d4 OR 482=d4 OR 81=a4)
       OR a4 in (990,72,422,746,756,16)
@@ -10939,7 +10939,7 @@ EXCEPT
 ----
 21 values hashing to 4ece54a29bf5ceea54774adf431bd388
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE d5 in (369,616,280,789,276,59,309,521,805)
 UNION ALL
@@ -10980,7 +10980,7 @@ EXCEPT
 ----
 38 values hashing to 1962cb428237c53e1ca6b6311e670fda
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (134=c3 OR 727=a3 OR a3=929)
       OR (a3=754)
@@ -10999,7 +10999,7 @@ EXCEPT
 754
 929
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE e6 in (972,617,585,750,511,766,40,794,67,634,6,747)
       OR (34=d6 OR 351=b6)
@@ -11025,7 +11025,7 @@ UNION ALL
 ----
 23 values hashing to 9c60df3940d860f01f01274ae3980a2c
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (531=a6 AND d6=729)
 EXCEPT
@@ -11044,7 +11044,7 @@ UNION ALL
 ----
 18 values hashing to da71c8a0d35b558355283a5b37289362
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE a1 in (524,981,732,23,276)
       OR (556=b1 OR 976=c1 OR 355=b1)
@@ -11080,7 +11080,7 @@ EXCEPT
 ----
 24 values hashing to 39a19f66db70c1ef76aa77cc337dcee0
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (d9=679)
       OR (e9=133 OR 764=a9 OR d9=987)
@@ -11116,7 +11116,7 @@ UNION ALL
 50
 544
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE b7 in (820,129,392,510,813)
 INTERSECT
@@ -11154,7 +11154,7 @@ UNION ALL
 ----
 22 values hashing to 43269fb25ff9d58c0cb46fb6ddd810ec
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (c2=981)
       OR e2 in (788,706,428,123,936,37)
@@ -11188,7 +11188,7 @@ EXCEPT
 ----
 22 values hashing to d3c029b4eb7abc33629b77de67bf01d2
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (c9=60 OR 240=a9)
 EXCEPT
@@ -11228,7 +11228,7 @@ EXCEPT
 ----
 20 values hashing to 76e508dc44a68a4f6b6a1a8b3281ca77
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE d7 in (79,391,265,666,781,603,325,399,902,183)
       OR (e7=302 OR b7=250 OR 341=d7)
@@ -11247,7 +11247,7 @@ EXCEPT
 ----
 24 values hashing to 723f7415859108eb6f29a8100ff108f5
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (822=b5 OR 9=a5 OR 758=e5)
 EXCEPT
@@ -11287,7 +11287,7 @@ UNION ALL
 ----
 48 values hashing to cc06bd39f60b99c5736e3125a4a9e1a9
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (e2=852)
       OR b2 in (676,279,634,414,532,585,729,888,414,805,554,285,543)
@@ -11302,7 +11302,7 @@ UNION
 ----
 18 values hashing to 615a8a395a4096685d20b835967504c7
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (639=c9 OR 335=a9)
 UNION ALL
@@ -11343,7 +11343,7 @@ UNION
 ----
 49 values hashing to e137c8ecf7375bc7a9ea7f6ec17e7940
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE b2 in (442,181,640,226,592,113,501,674,148,546,714,796,211,632)
 UNION
@@ -11378,7 +11378,7 @@ EXCEPT
 ----
 31 values hashing to 83248851264e52c0deec94854c1d9d9e
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE (b5=391 OR 758=e5 OR a5=556)
       OR e5 in (894,902,887,758,232,589,716)
@@ -11397,7 +11397,7 @@ EXCEPT
 ----
 37 values hashing to 1e006bc097742c4f2d5b23ecfe7f3477
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (273=e4 OR a4=469)
 INTERSECT
@@ -11414,7 +11414,7 @@ UNION ALL
 ----
 14 values hashing to 3ebaeea6559b6bd6bdfa77ee906b9917
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE d3 in (889,797,386,444,314,896)
       OR (c3=145)
@@ -11434,7 +11434,7 @@ EXCEPT
 ----
 13 values hashing to c58e4e9e9efc6b21339249cafc12cb39
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE c6 in (320,28,718,328)
 UNION ALL
@@ -11469,7 +11469,7 @@ EXCEPT
 ----
 31 values hashing to fe5dae988cb0a1ee303a03415cb1622c
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (45=a6 OR e6=6)
       OR (d6=60 AND b6=963 AND 595=e6 AND 295=c6)
@@ -11491,7 +11491,7 @@ UNION ALL
 ----
 25 values hashing to 9fc5f67ec16ab9568255b896808f2e74
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (b1=55 AND 693=e1 AND d1=459)
       OR a1 in (785,678,499,498,20,936,637,371,451,591)
@@ -11516,7 +11516,7 @@ EXCEPT
 ----
 19 values hashing to 794dcdc1430e1358fa61ae4dbc885e5e
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE c6 in (677,620,528)
       OR c6 in (910,729,864,123)
@@ -11542,7 +11542,7 @@ EXCEPT
 ----
 18 values hashing to e26b9d38172087364d39c426d1361e13
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE e9 in (954,943,995,264,978,868,647,19,445,621,736,418)
       OR (150=e9)
@@ -11561,7 +11561,7 @@ UNION
 ----
 13 values hashing to 13e7558d952a6090609e20e38e695838
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (b4=644 AND 82=a4 AND 617=d4)
       OR (c4=319)
@@ -11603,7 +11603,7 @@ EXCEPT
 810
 964
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (594=b1)
       OR e1 in (87,113,858,646,158,546,299,166)
@@ -11635,7 +11635,7 @@ UNION ALL
 ----
 16 values hashing to 2074764de192d28c4078d7dc77609d58
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (374=b7 OR 688=c7)
       OR (c7=729 OR d7=328 OR 717=b7)
@@ -11661,7 +11661,7 @@ UNION
 ----
 16 values hashing to 34c1d1715d13000bb50a76d3572f8ce0
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (d6=613 OR e6=24)
       OR (b6=906 OR 604=a6)
@@ -11718,7 +11718,7 @@ UNION ALL
 ----
 14 values hashing to 50c310244eed628c752e060185728870
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE e1 in (125,146,89,615,504,546)
 INTERSECT
@@ -11759,7 +11759,7 @@ UNION
 ----
 28 values hashing to 357f9d31b9a5ca17d08dc9400b01748f
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (788=c1 OR 346=c1 OR 899=d1)
       OR (148=e1 OR a1=249 OR d1=376)
@@ -11804,7 +11804,7 @@ UNION
 617
 812
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (e2=228 OR b2=211 OR d2=546)
 EXCEPT
@@ -11836,7 +11836,7 @@ EXCEPT
 ----
 28 values hashing to 2da2446ce5f5ef55b427f27ac62f4d97
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (692=e2)
       OR (e2=777 OR 177=c2)
@@ -11857,7 +11857,7 @@ EXCEPT
 ----
 11 values hashing to d02ba841e80481d12978271a4ecc9c95
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (843=c9 OR 251=e9 OR 653=e9)
       OR c9 in (257,643,457,601,639,587,732,391)
@@ -11879,7 +11879,7 @@ UNION ALL
 ----
 36 values hashing to 44a0cf0130015d0195eabce7901f0f52
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (a9=69 OR d9=763)
       OR (995=e9 AND d9=270 AND c9=579 AND 426=b9)
@@ -11907,7 +11907,7 @@ UNION ALL
 ----
 12 values hashing to b2944464551d5eefe3aa2d2b937b366f
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE e5 in (894,470,25,311)
 INTERSECT
@@ -11942,7 +11942,7 @@ EXCEPT
 ----
 49 values hashing to df2d79507a6ad29631c6c3221a1b775f
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (c3=134 OR 986=c3)
       OR (865=a3)
@@ -11976,7 +11976,7 @@ EXCEPT
 844
 929
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (b2=846)
 INTERSECT
@@ -12004,7 +12004,7 @@ UNION ALL
 ----
 22 values hashing to ec091e5f0dfa5434ab5690c30c014909
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (a7=130 OR 691=a7)
       OR (22=a7)
@@ -12034,7 +12034,7 @@ UNION ALL
 ----
 28 values hashing to 6adb02548aa30184f3e9d0f5534bc09e
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE d6 in (366,911,21,667,852,807,424,885,767,405)
 UNION
@@ -12070,7 +12070,7 @@ EXCEPT
 ----
 17 values hashing to 156b786c1e3477ede9655f4c5d244890
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (310=d2 OR 360=c2)
       OR (d2=80 OR 812=b2 OR b2=799)
@@ -12107,7 +12107,7 @@ UNION
 299
 558
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (696=e2 AND b2=968 AND d2=10 AND c2=61)
       OR a2 in (223,853,98)
@@ -12124,7 +12124,7 @@ UNION
 ----
 17 values hashing to 5ea51fac2034e07ec371745671ba2a13
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (633=e6 AND 351=b6 AND a6=1 AND c6=424 AND 729=d6)
       OR (798=e6 OR c6=424 OR e6=531)
@@ -12154,7 +12154,7 @@ UNION ALL
 805
 993
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (548=e2 OR e2=777 OR 307=e2)
 INTERSECT
@@ -12176,7 +12176,7 @@ UNION ALL
 806
 853
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (b6=601 AND 269=d6 AND 540=a6 AND e6=431)
 INTERSECT
@@ -12194,7 +12194,7 @@ UNION
 296
 921
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (115=a9)
       OR (864=b9 AND d9=568 AND 955=c9)
@@ -12216,7 +12216,7 @@ EXCEPT
 ----
 13 values hashing to 94c5a09c478260687c2a37704bc7e079
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (351=b6 AND a6=1 AND 729=d6 AND c6=424 AND e6=633)
       OR (882=b6 OR d6=500 OR d6=428)
@@ -12237,7 +12237,7 @@ UNION ALL
 ----
 34 values hashing to 733854d00530bfad0121c88c2c58705f
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (843=c7 AND d7=842 AND 945=e7 AND a7=684)
       OR (552=e7 AND 702=d7)
@@ -12277,7 +12277,7 @@ UNION ALL
 ----
 25 values hashing to 33457dd3121b635d6d6a007af7a8ec51
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE a8 in (341,882,553,386,150,66)
 UNION
@@ -12315,7 +12315,7 @@ EXCEPT
 ----
 44 values hashing to 5cfb7e0e7edeed99a5ba5bd534833439
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (b1=682 OR d1=519)
 INTERSECT
@@ -12347,7 +12347,7 @@ UNION ALL
 703
 743
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE d2 in (225,215,8,158,749,334)
 INTERSECT
@@ -12379,7 +12379,7 @@ UNION
 ----
 42 values hashing to 654290ba7bcd07553359e7ff58a7bf8d
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (c5=101 OR a5=929)
       OR d5 in (255,69,42,171,557)
@@ -12402,7 +12402,7 @@ EXCEPT
 847
 934
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (725=e5 AND d5=479)
       OR (d5=858 OR 320=b5)
@@ -12426,7 +12426,7 @@ UNION
 ----
 19 values hashing to df16ae1898a0802276478482cebf82cc
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE e6 in (554,585,67,808,466,731,40,24,595,261)
 INTERSECT
@@ -12492,7 +12492,7 @@ UNION ALL
 503
 818
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (299=c1 AND 781=b1 AND e1=300)
 INTERSECT
@@ -12519,7 +12519,7 @@ EXCEPT
 ----
 16 values hashing to fda9e4e7274d7de7f03bfe19ecb7794e
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (330=a1 OR d1=186)
 UNION ALL
@@ -12537,7 +12537,7 @@ EXCEPT
 623
 959
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (a8=954)
       OR a8 in (957,386,807,994,150,826)
@@ -12551,7 +12551,7 @@ INTERSECT
            OR d3 in (624,354,403,983,483,118,38,415))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE b8 in (705,665,324,624,564,677,647,300,454,365)
       OR (d8=486 AND 127=a8)
@@ -12561,7 +12561,7 @@ EXCEPT
 ----
 10 values hashing to ce491ed272fe01c6e9fbc369aafb1f81
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (c4=971 AND 366=d4)
       OR (605=a4 AND 184=b4 AND e4=760 AND c4=2 AND 507=d4)
@@ -12602,7 +12602,7 @@ EXCEPT
 ----
 20 values hashing to 31a358fd9e98ec935828a0ecb3329846
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (731=d5 AND c5=249 AND b5=620 AND a5=882 AND 225=e5)
       OR (589=e5 AND 335=a5 AND 343=d5)
@@ -12626,7 +12626,7 @@ UNION
 ----
 38 values hashing to 70bf14ea1842b40fef6ef040ed7e6d35
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (773=a7 AND 798=b7 AND e7=462 AND c7=906 AND 772=d7)
 UNION ALL
@@ -12649,7 +12649,7 @@ EXCEPT
 798
 824
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (c4=293)
       OR (136=d4 AND a4=558 AND 465=e4 AND b4=442 AND 712=c4)
@@ -12677,7 +12677,7 @@ EXCEPT
 ----
 11 values hashing to 75c4906182ded0f043f93d910735ad94
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE b5 in (620,674,321,511,412,975,390)
       OR (476=a5 OR e5=729)
@@ -12698,7 +12698,7 @@ EXCEPT
 ----
 11 values hashing to 4e756e1993b8e0b6ba74f2a98ca45f77
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (108=d8)
       OR (e8=561 OR 431=e8)
@@ -12724,7 +12724,7 @@ UNION
 ----
 27 values hashing to 9f3f472bd2522b6524d1253a404e23d7
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (e1=55 OR 846=c1)
       OR c1 in (762,523,465,683,871,864,905,67,776,39,607)
@@ -12745,7 +12745,7 @@ EXCEPT
 ----
 18 values hashing to db400eb8c2aeb597101896332f82ec69
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE c7 in (709,729,344,78,488,262,249,22,92,931,498,98,206,238)
       OR (e7=122 AND a7=691 AND 409=b7)
@@ -12757,7 +12757,7 @@ INTERSECT
 ----
 98
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (960=d9)
       OR (a9=297)
@@ -12782,7 +12782,7 @@ UNION
 ----
 9 values hashing to 9e89893c98f45f0279978259a543b295
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE a7 in (982,285,386)
       OR (c7=135 OR 924=d7 OR d7=722)
@@ -12810,7 +12810,7 @@ UNION ALL
 ----
 32 values hashing to dc42ed5c2e42e1272bece64162ba42c2
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (696=a6 AND d6=970 AND c6=543 AND 1=e6 AND 144=b6)
 UNION
@@ -12839,7 +12839,7 @@ UNION
 ----
 11 values hashing to dd23ca0cb2d78589b9f967cfed81f64c
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (d6=277 AND 34=c6 AND 267=b6 AND 300=a6 AND 95=e6)
       OR (e6=24 AND 399=c6 AND d6=321 AND b6=650)
@@ -12883,7 +12883,7 @@ UNION ALL
 ----
 18 values hashing to 9e0e5a28bb42c3c67b1a50a0832f55ce
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (932=b2)
       OR (a2=304)
@@ -12907,7 +12907,7 @@ UNION
 ----
 23 values hashing to c80223a8b081ba354a1800a9203d8c12
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (c8=77)
 UNION
@@ -12939,7 +12939,7 @@ UNION
 ----
 28 values hashing to 05a0096a585de0785b70d7cf5a8fa872
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (c3=75)
       OR (984=e3 OR a3=145 OR 806=c3)
@@ -12965,7 +12965,7 @@ UNION
 ----
 20 values hashing to c55b98a757baf941b10cdb607867ead1
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (596=e3 AND 456=b3 AND a3=895)
       OR (743=d3 OR 392=b3)
@@ -12992,7 +12992,7 @@ EXCEPT
 ----
 13 values hashing to 82b45f7a23590a8e2edf5ea1a01423a8
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (916=d7 AND 913=b7 AND a7=361)
       OR (c7=498 OR 950=a7 OR a7=240)
@@ -13009,7 +13009,7 @@ UNION
 ----
 16 values hashing to 4a34d2dbfbeede73d909653d8ba20e4a
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (d6=192 AND 384=a6 AND c6=928 AND 92=b6 AND 840=e6)
       OR (223=d6 OR a6=452)
@@ -13041,7 +13041,7 @@ EXCEPT
 ----
 16 values hashing to 32013961af4d7c20e7ae1e676ec939a7
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (594=e5 AND 219=d5 AND c5=613)
 UNION ALL
@@ -13081,7 +13081,7 @@ UNION ALL
 ----
 23 values hashing to a07d6387c477453aecbbaeaaff188ada
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (517=b7 AND 184=e7)
       OR c7 in (813,659,770,302,691,22,565,142,970)
@@ -13123,7 +13123,7 @@ EXCEPT
 ----
 32 values hashing to 30849ab0539164f8086dfebed74ca924
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (712=e3)
 UNION
@@ -13155,7 +13155,7 @@ EXCEPT
 827
 896
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE b1 in (226,211,307,736,242,88,956)
 UNION ALL
@@ -13188,7 +13188,7 @@ UNION
 ----
 39 values hashing to 16b4ca2ca3d1fb7b112f801d00ce5df1
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE e2 in (294,282,524)
       OR d2 in (723,854,152,10)
@@ -13199,7 +13199,7 @@ INTERSECT
            OR (b5=338 AND c5=924))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (129=d6 AND a6=653 AND 915=e6)
       OR a6 in (128,718,764,531,33)
@@ -13236,7 +13236,7 @@ EXCEPT
 ----
 36 values hashing to 13b5c735a54f5b71df031e148469a86c
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE e4 in (739,486,217,1,237,300)
       OR (901=b4 AND 879=e4 AND 598=a4)
@@ -13270,7 +13270,7 @@ UNION
 ----
 58 values hashing to aa19c466d89fe5cdc31391d5363c3860
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (564=a2 OR b2=329)
       OR (a2=922 AND c2=318 AND 554=b2 AND e2=302)
@@ -13280,7 +13280,7 @@ INTERSECT
            OR (504=c6 OR 664=d6))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE c4 in (996,177,984,767,948)
       OR (366=d4)
@@ -13316,7 +13316,7 @@ UNION
 ----
 38 values hashing to 658c9297dbaab039c17fa3af0f61b466
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (c5=657 OR a5=342 OR d5=782)
 EXCEPT
@@ -13348,7 +13348,7 @@ UNION
 ----
 59 values hashing to 64698e23cca23767f9f5e8743a2b8c73
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (a1=451 OR 589=b1 OR b1=779)
       OR (915=c1 AND 442=e1 AND b1=674 AND a1=395 AND d1=277)
@@ -13381,7 +13381,7 @@ EXCEPT
 ----
 22 values hashing to a658a47984f6b0b8db8e4d4b8980cd24
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (752=c4 AND e4=29)
       OR (409=d4 OR b4=919 OR a4=661)
@@ -13417,7 +13417,7 @@ UNION ALL
 ----
 49 values hashing to fcde39e3498d90f3326f954543cd6451
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (a8=671 OR 624=d8 OR d8=683)
       OR (b8=454 AND 374=c8 AND d8=108)
@@ -13446,7 +13446,7 @@ EXCEPT
 ----
 29 values hashing to 0bfe4bb0546c81b40a93a99867f19a28
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (835=d8 AND e8=349)
       OR c8 in (149,534,381,486,705,692,151,461,998,321,979,230,683)
@@ -13480,7 +13480,7 @@ UNION ALL
 ----
 19 values hashing to a96075289b2b28902405b550a8982a5c
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE c1 in (771,246,62,553,765)
       OR (a1=237 AND e1=468 AND 368=c1)
@@ -13512,7 +13512,7 @@ EXCEPT
 958
 96
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (625=c2 AND 812=e2 AND a2=993)
 INTERSECT
@@ -13566,7 +13566,7 @@ UNION ALL
 ----
 49 values hashing to 0e7c2fa3022cf20050fcc96a64d0e2b1
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE d8 in (899,14,767,192,472,630,269,523,756,580,108,439)
 UNION ALL
@@ -13600,7 +13600,7 @@ EXCEPT
 ----
 31 values hashing to 2464a8edd08b572c9db9d59fd07a0d79
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (d4=821)
       OR (e4=71)
@@ -13617,7 +13617,7 @@ INTERSECT
            OR (e2=783))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE e5 in (522,802,184,923,364,772,25)
       OR (c5=601 OR 837=a5 OR 32=d5)
@@ -13654,7 +13654,7 @@ UNION
 ----
 41 values hashing to a50d7b4bec5e281c08350d302e2ff9c6
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (d4=55 AND e4=482)
 INTERSECT
@@ -13681,7 +13681,7 @@ EXCEPT
 ----
 16 values hashing to cb5063b069fd022e0b887434173e42c4
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE c2 in (807,575,268,136,653,711,45,141,318,233,823,337,560)
 UNION ALL
@@ -13705,7 +13705,7 @@ EXCEPT
 ----
 26 values hashing to 4c7663b0851fc4bba27b217e75687cc6
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (122=e1 AND c1=12 AND b1=572)
       OR (936=d1)
@@ -13739,7 +13739,7 @@ EXCEPT
 ----
 20 values hashing to 7b87d8500f2cd21b15458ee9c7ea7e27
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE b2 in (509,799,527,643,632,674,811,297,353,592,765,148,585,161)
       OR a2 in (718,131,186,189)
@@ -13751,7 +13751,7 @@ EXCEPT
 ----
 19 values hashing to f7d0d29748c096eb87ed8b827b0874c8
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (d4=973 AND c4=436 AND 450=a4 AND 23=b4 AND e4=596)
       OR b4 in (653,907,925,678)
@@ -13776,7 +13776,7 @@ EXCEPT
 ----
 13 values hashing to 6a0d705242b0e801a8e7001a40ee2ceb
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE d8 in (525,845,767,630,210,711,899,883,636,554,486,391,446)
       OR (e8=421)
@@ -13811,7 +13811,7 @@ UNION ALL
 ----
 28 values hashing to 386f3b15906ee43643793e73f3c7b393
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (a9=115 OR 811=c9)
 UNION ALL
@@ -13836,7 +13836,7 @@ UNION ALL
 ----
 29 values hashing to 79ba7facdf4cb4532c1873338c6ebb84
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (b4=964)
       OR (a4=778 AND 317=d4 AND b4=587 AND 290=e4)
@@ -13868,7 +13868,7 @@ UNION
 ----
 44 values hashing to be04d20109824f6bd599e4c5fefb4123
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (a1=213 AND 645=e1 AND b1=619 AND 837=d1 AND c1=680)
       OR (e1=463 OR d1=481)
@@ -13904,7 +13904,7 @@ UNION
 ----
 19 values hashing to e9e58947b76c1eca9df07ce6d1345027
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (c5=443)
       OR a5 in (99,332,976,867,341,339,730,320,421)
@@ -13929,7 +13929,7 @@ EXCEPT
 ----
 16 values hashing to 45addf811102371beff23a3be3d93149
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE a3 in (964,560,784,559,788)
       OR e3 in (211,272,375,138,913,989,232,586,136,765,959,83,876)
@@ -13957,7 +13957,7 @@ UNION ALL
 ----
 45 values hashing to 3fae888b235f059e3b4717cf860a384e
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (d5=602)
       OR c5 in (602,443,855,734,696,668,489,514,422,628,147,797,797)
@@ -13994,7 +13994,7 @@ EXCEPT
 ----
 23 values hashing to 6e59fabf5fc09cb14ab8110688c7c487
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (984=b6)
 EXCEPT
@@ -14024,7 +14024,7 @@ EXCEPT
 ----
 24 values hashing to cd8fd62c593ffbb466023c73078bc5f4
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE c7 in (498,482,103,243,575,887,781,142,288,305,441,688,709,260)
       OR (48=a7 OR c7=906 OR 673=d7)
@@ -14063,7 +14063,7 @@ EXCEPT
 ----
 54 values hashing to 27d10d260540599502e70f7e28c3f1b3
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE e6 in (574,617,737,257,286,431,24,261)
       OR (c6=637 OR e6=324 OR a6=121)
@@ -14078,7 +14078,7 @@ EXCEPT
 ----
 13 values hashing to a517b73a2a577074653542b4bd93e181
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (363=d3 AND b3=677)
       OR (765=e3 OR 821=e3)
@@ -14117,7 +14117,7 @@ UNION
 608
 678
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (b1=5 OR e1=602)
 INTERSECT
@@ -14127,7 +14127,7 @@ INTERSECT
            OR b8 in (397,162,705,461,704,665,790,182,677))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (746=c2 OR a2=775)
       OR (657=c2)
@@ -14171,7 +14171,7 @@ UNION
 ----
 45 values hashing to b4d6b137152dcf468a3aa15495117908
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE c7 in (781,375,661,257)
       OR (199=d7 AND 319=e7)
@@ -14194,7 +14194,7 @@ EXCEPT
 ----
 13 values hashing to 216093550a9a292ad409d96762124792
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (a7=884 AND c7=780 AND 254=e7)
 EXCEPT
@@ -14223,7 +14223,7 @@ EXCEPT
 ----
 11 values hashing to b499c65b56a280ea5cb6abfd72a6ba95
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (126=b6 OR c6=377)
       OR (175=e6)
@@ -14265,7 +14265,7 @@ UNION ALL
 ----
 11 values hashing to 802b5b9661ab997818e1c1424a0fa6f5
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (111=d9)
 INTERSECT
@@ -14292,7 +14292,7 @@ UNION ALL
 ----
 12 values hashing to 62e9ddc936ac277f8634b2b3a718ccf8
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE e2 in (366,223,604,812)
       OR (198=d2)
@@ -14328,7 +14328,7 @@ EXCEPT
 643
 654
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (702=b8 OR e8=811 OR 984=b8)
       OR (767=d8 OR a8=637 OR 422=e8)
@@ -14356,7 +14356,7 @@ UNION
 ----
 22 values hashing to 29356db569db612b7c322abfba77ef26
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE b1 in (556,788,523,993,584,944,446,432,556,525,807)
       OR (32=b1)
@@ -14387,7 +14387,7 @@ UNION ALL
 ----
 26 values hashing to 46275164a317cd04a6d66e78eeb7b785
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (430=a7 AND e7=456 AND 344=c7 AND 892=d7)
       OR (a7=995 OR 206=c7 OR 808=b7)
@@ -14423,7 +14423,7 @@ EXCEPT
 378
 793
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (605=b5 OR 513=a5)
       OR b5 in (640,33,230,736,193,855,484)
@@ -14436,7 +14436,7 @@ UNION ALL
 ----
 898
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE d3 in (355,582,850,118,866,495,444,260,737,1,944,708)
       OR e3 in (862,265,260,892,854,135,593,602,854)
@@ -14486,7 +14486,7 @@ UNION
 446
 549
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE a6 in (104,396,821,657,839,40,522,300,877)
 INTERSECT
@@ -14500,7 +14500,7 @@ UNION
 204
 442
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (e3=406 OR a3=105 OR a3=364)
 INTERSECT
@@ -14515,7 +14515,7 @@ INTERSECT
            OR (445=a5))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (b8=981)
       OR (c8=233)
@@ -14566,7 +14566,7 @@ UNION
 ----
 9 values hashing to 0f9a0f5e680993109a914b42b35a2317
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (216=d2)
 INTERSECT
@@ -14579,7 +14579,7 @@ INTERSECT
    WHERE NOT ((b9=524 OR c9=515 OR d9=967))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE d6 in (367,590,674)
 INTERSECT
@@ -14618,7 +14618,7 @@ UNION
 ----
 28 values hashing to 6d7c4686994aa264d0ecd25562bd4264
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE d8 in (58,534,48,210,466,124,384,769,2,525)
       OR (647=c8 AND 241=a8 AND 773=b8)
@@ -14645,7 +14645,7 @@ EXCEPT
 670
 862
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (534=c6 OR d6=578 OR b6=601)
 INTERSECT
@@ -14677,7 +14677,7 @@ UNION
 ----
 46 values hashing to 19317d5e3624f3616d970e956dbe9106
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (b7=510 OR d7=418)
       OR (c7=744)
@@ -14720,7 +14720,7 @@ UNION ALL
 784
 95
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (171=d5)
       OR c5 in (613,797,158,696,756,989,733,941,152,855,825,844,856,894)
@@ -14745,7 +14745,7 @@ UNION ALL
 ----
 31 values hashing to 01e22e831d43c6b9ac3f2c96d71dcd99
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (887=c3 AND a3=865)
       OR c3 in (75,869,641)
@@ -14782,7 +14782,7 @@ UNION
 ----
 17 values hashing to 96b8ddce376bd012924c98942fa5c381
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (e2=441)
 INTERSECT
@@ -14809,7 +14809,7 @@ UNION ALL
 72
 720
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (e1=816)
 INTERSECT
@@ -14845,7 +14845,7 @@ UNION ALL
 ----
 28 values hashing to 0e3d62dcbcc6599c2efe38553029d92d
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (387=b4)
 UNION
@@ -14873,7 +14873,7 @@ EXCEPT
 ----
 20 values hashing to 07829fcd35c0d758c5a1a97f8bbe94c4
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE d2 in (743,152,844,454,651,772,332,398)
 UNION
@@ -14903,7 +14903,7 @@ EXCEPT
 ----
 38 values hashing to e24407ac914188471fed523b56feb820
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE e3 in (239,145,929,592,119,254,896,536,728,774,829,87,163,844)
 INTERSECT
@@ -14934,7 +14934,7 @@ UNION ALL
 ----
 58 values hashing to 8774f6eab80f44198e6eb48d9cf9d389
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (e2=220)
 UNION
@@ -14965,7 +14965,7 @@ EXCEPT
 ----
 13 values hashing to 7473b75f980a81874eb0104c53c4bb8c
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (249=e3 AND 262=a3)
       OR e3 in (794,467,304,690,218,365,596,876,731,87,586,665,550)
@@ -14989,7 +14989,7 @@ UNION
 ----
 26 values hashing to dd687bf07f98169c283249690f39389e
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE a9 in (821,416,907,17,959,662)
       OR (b9=936 OR 14=a9)
@@ -15013,7 +15013,7 @@ EXCEPT
 ----
 22 values hashing to 73a2b61813cd8e1ccf4e9e0d8f67be75
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (720=a3)
       OR (347=a3 OR 75=a3 OR 827=b3)
@@ -15044,7 +15044,7 @@ UNION
 ----
 30 values hashing to 6fde733e4dc783deccf64602045e6054
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (744=c7 AND a7=9 AND 522=e7 AND b7=42)
       OR (249=c7 OR a7=707 OR 896=a7)
@@ -15072,7 +15072,7 @@ UNION ALL
 ----
 24 values hashing to 5f504b3f9524a219d765c9d2fbe0cde8
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (e3=281)
       OR (595=b3)
@@ -15090,7 +15090,7 @@ EXCEPT
 459
 494
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE d7 in (306,782,891,507,172,436,575,982,276,131,527,956,105)
 UNION ALL
@@ -15118,7 +15118,7 @@ EXCEPT
 ----
 30 values hashing to 42e79be01eb6df29b9d3049fef074f7a
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (d1=900 AND c1=626)
       OR (62=c1)
@@ -15154,7 +15154,7 @@ EXCEPT
 900
 96
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (220=b7 OR e7=455 OR 722=a7)
 INTERSECT
@@ -15188,7 +15188,7 @@ UNION
 ----
 24 values hashing to 5e69ce955ec48f3fc7ec9cdd6182e3eb
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (d2=80 OR a2=35)
 UNION ALL
@@ -15209,7 +15209,7 @@ UNION
 ----
 21 values hashing to 7fd041df7d0ddc47a7c9cb7e9b79f330
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE c2 in (756,83,692,837,653,449)
       OR (790=d2)
@@ -15226,7 +15226,7 @@ EXCEPT
 505
 707
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE d1 in (581,381,186)
       OR (a1=406 AND d1=955 AND b1=266)
@@ -15244,7 +15244,7 @@ UNION ALL
 ----
 17 values hashing to 7d584fb65b9baa76ee9dc2668b3ddc39
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (b5=703 OR 685=a5)
 UNION
@@ -15276,7 +15276,7 @@ UNION ALL
 ----
 44 values hashing to 897be6756ed6d062780d5852b3a679ac
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (d9=597 AND 875=a9 AND b9=858 AND 161=e9)
       OR (808=d9 OR d9=55 OR a9=548)
@@ -15313,7 +15313,7 @@ UNION ALL
 ----
 23 values hashing to 91d128a9a243bd7ff199acc9dfcd17cc
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (181=b2 AND 189=a2 AND 847=d2)
 UNION ALL
@@ -15348,7 +15348,7 @@ UNION
 ----
 38 values hashing to ee2bc83be71a110186e5254e058e3254
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (56=e2 AND c2=793 AND 706=b2)
       OR (508=a2 AND 965=e2)
@@ -15360,7 +15360,7 @@ EXCEPT
 ----
 10 values hashing to d5dc15696d5e07ab1c5af3cfbf4d3f06
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE b4 in (387,480,532)
       OR (606=b4 AND a4=876)
@@ -15399,7 +15399,7 @@ EXCEPT
 ----
 18 values hashing to 210d5adbe9031a859d48d217c65bad11
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (d3=444 OR d3=135 OR 726=d3)
       OR (913=a3 AND 139=d3 AND 73=b3 AND 986=c3)
@@ -15420,7 +15420,7 @@ EXCEPT
 913
 964
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (a2=544 OR 386=e2 OR 264=b2)
       OR (723=d2 OR e2=499)
@@ -15445,7 +15445,7 @@ EXCEPT
 592
 90
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (376=b3)
       OR (c3=134 AND d3=541 AND b3=166 AND e3=145)
@@ -15482,7 +15482,7 @@ UNION
 ----
 48 values hashing to df21e11977447acf2af0a0a575dff1df
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (c8=418 OR b8=725)
       OR (c8=866)
@@ -15511,7 +15511,7 @@ UNION ALL
 ----
 26 values hashing to 80985d1286b431c6cfe9f3cad45e80e2
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (133=e9 OR a9=28)
 UNION ALL
@@ -15525,7 +15525,7 @@ EXCEPT
 ----
 11 values hashing to de83f17f4ff5ba747f448b04f34ba54e
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE a2 in (315,80,64,853,139,944,374)
       OR (891=a2 AND d2=813)
@@ -15542,7 +15542,7 @@ UNION
 ----
 11 values hashing to eda20392ed783e90808638bfc57f7e7a
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (c9=569 OR 575=c9)
       OR b9 in (2,423,118,178,803,827,379,855,456)
@@ -15581,7 +15581,7 @@ UNION ALL
 ----
 31 values hashing to 0dcdcf98fd540dc8c19a088fddb62bce
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE e9 in (383,687,426,619,704,418,477,251,713)
       OR c9 in (836,187,809,110,992,884,240,767,62)
@@ -15601,7 +15601,7 @@ UNION
 ----
 29 values hashing to 5f9472f67ed80f17f8b4489229634610
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE c2 in (933,333,233,160,925,46,512,830,692,182,61)
       OR (c2=411 OR 691=a2 OR 813=d2)
@@ -15635,7 +15635,7 @@ EXCEPT
 ----
 16 values hashing to d7f4ff1727fb5bc6dd65505ecd553366
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE a8 in (210,406,869,474,127,822,826,963,957,894,920,386)
       OR e8 in (488,942,586,273,833,455,203,729,296,495,904)
@@ -15662,7 +15662,7 @@ EXCEPT
 ----
 43 values hashing to 7fccaf2f23adcef915b723fee5dca8b5
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE c2 in (65,150,87,894,127,511,964,728,292,688,823)
       OR (b2=799)
@@ -15712,7 +15712,7 @@ UNION
 ----
 16 values hashing to cbaa5a094b2e3e843aeed6f8bd198f28
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (287=c6 AND 962=b6 AND 185=d6 AND a6=604)
       OR (761=e6 AND 21=d6)
@@ -15733,7 +15733,7 @@ UNION
 ----
 13 values hashing to f8f66d80edcb9b98fc0fa2bf4900313d
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (433=e2 OR 228=e2 OR 415=a2)
 EXCEPT
@@ -15754,7 +15754,7 @@ EXCEPT
 ----
 17 values hashing to 8d86ec6d58b8c6b2951123db6b38fb93
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (c9=60 AND 907=a9 AND d9=164 AND e9=245)
 INTERSECT
@@ -15783,7 +15783,7 @@ UNION ALL
 ----
 15 values hashing to cb1b957654a570c8c7816d35512a227c
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE b4 in (877,551,635,94,184,319,608)
 EXCEPT
@@ -15799,7 +15799,7 @@ EXCEPT
 881
 910
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (574=d4 AND c4=998 AND e4=554 AND a4=606)
 EXCEPT
@@ -15849,7 +15849,7 @@ UNION ALL
 ----
 20 values hashing to cd05030798d1846c8f3f63cfe1a4c0de
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (c2=830 AND 418=b2 AND d2=547 AND 671=e2)
       OR (499=e2 OR 902=c2 OR d2=373)
@@ -15867,7 +15867,7 @@ UNION ALL
 ----
 254
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE e8 in (608,455,579,678,469,149,592,972,56,579)
 INTERSECT
@@ -15875,7 +15875,7 @@ INTERSECT
    WHERE NOT ((746=b9 OR a9=972 OR 686=d9))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (88=c8)
       OR (459=b8 OR 642=b8 OR d8=2)
@@ -15908,7 +15908,7 @@ EXCEPT
 ----
 10 values hashing to 1f486a12929a4e75272f92e7232b67b1
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE a1 in (492,231,460,479,195,895,862,314,981,222)
 EXCEPT
@@ -15919,7 +15919,7 @@ EXCEPT
 ----
 11 values hashing to 4ecc37578af9d86363a04f68d6a359b6
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (c8=427 AND 610=d8 AND 487=b8 AND a8=359 AND e8=242)
 EXCEPT
@@ -15950,7 +15950,7 @@ EXCEPT
 414
 487
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (c8=119 OR 984=b8 OR 9=b8)
       OR (c8=534 AND 540=b8 AND a8=869 AND 422=e8)
@@ -15977,7 +15977,7 @@ UNION ALL
 ----
 24 values hashing to 44d49186ef16adf047ee62d463a585e8
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE c5 in (960,293,437,696,441,818,598,734)
       OR e5 in (364,906,554,41,894,287)
@@ -16024,7 +16024,7 @@ UNION
 ----
 13 values hashing to 06f2e019d3da503634d74c3be56746dc
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (295=e8 OR d8=805 OR d8=880)
       OR b8 in (862,642,7)
@@ -16044,7 +16044,7 @@ UNION
 ----
 14 values hashing to 1d773ac49ebaff62095e8e0c96871663
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE d6 in (600,376,493,924,337,467,35,846,223,463,901,613,2)
       OR (d6=778 OR 678=e6)
@@ -16084,7 +16084,7 @@ EXCEPT
 ----
 16 values hashing to ee60bb2b3dd0bcd56b1ca29307157744
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE b5 in (26,784,605,782,559,861,569,609,183,320)
       OR (917=a5 AND 585=e5 AND c5=152 AND d5=437)
@@ -16116,7 +16116,7 @@ EXCEPT
 ----
 13 values hashing to f568cda0ca735ec5b3068dc4da9e0c8f
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (925=e2 AND c2=466 AND b2=599 AND 80=d2)
       OR (179=c2)
@@ -16149,7 +16149,7 @@ UNION
 ----
 9 values hashing to 44b857ee788d2cea9dea6dca9bb95e5e
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE a4 in (952,596,793,439,136,625,510,509,160,982,139)
 UNION
@@ -16176,7 +16176,7 @@ UNION ALL
 ----
 9 values hashing to 93392d24409fc16b1c5d4174f2b44263
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE c8 in (901,691,419,79,160,899,431,821,230,187)
       OR b8 in (609,741,205,359,702,642,958,102,790,725)
@@ -16213,7 +16213,7 @@ UNION
 ----
 48 values hashing to 72188aefa9bd4633969b676c05306ad1
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (e6=840)
       OR (2=a6 OR 967=b6)
@@ -16250,7 +16250,7 @@ UNION ALL
 ----
 44 values hashing to 6a54cb0c6e3c869acf573bb367e89481
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (e9=239 OR a9=104 OR 463=a9)
       OR (487=c9)
@@ -16300,7 +16300,7 @@ UNION ALL
 ----
 20 values hashing to 5153419d21e7d14a421963f67a72c218
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (792=e9 AND b9=832)
 INTERSECT
@@ -16331,7 +16331,7 @@ EXCEPT
 490
 777
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (821=c8 OR c8=419 OR d8=814)
 EXCEPT
@@ -16366,7 +16366,7 @@ UNION
 ----
 41 values hashing to c738a02f89c85d57f9d14fc9217ae936
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (e6=585 OR 424=d6)
       OR e6 in (469,225,574)
@@ -16393,7 +16393,7 @@ EXCEPT
 406
 989
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (283=c8 AND 961=a8)
       OR (730=c8 AND e8=296 AND a8=963 AND 525=d8)
@@ -16419,7 +16419,7 @@ EXCEPT
 ----
 33 values hashing to d8edcd4846d46d84ca2a20afeab4d10e
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (b8=405 AND 5=a8)
       OR a8 in (855,210,417,848,514,388,250,327)
@@ -16439,7 +16439,7 @@ EXCEPT
 ----
 28 values hashing to 8187c11b5b8d5116448e237cc7882cb7
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (b6=782 AND e6=969 AND 801=a6 AND 258=c6)
       OR c6 in (673,295,146,122,399,187,415,430,416,35,287,928)
@@ -16464,7 +16464,7 @@ EXCEPT
 ----
 23 values hashing to 30d54b037c3c4161ea4eab28ed0c8608
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE e3 in (169,552,145,341,959,303,836)
       OR (e3=138 OR 584=c3)
@@ -16489,7 +16489,7 @@ UNION
 ----
 23 values hashing to 9e99403079efe3a18212fa07303202dc
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (315=d2 OR 674=b2)
 UNION
@@ -16527,7 +16527,7 @@ UNION ALL
 ----
 57 values hashing to 375f2429e175350d96d9d735559f9673
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (788=e2)
 UNION
@@ -16566,7 +16566,7 @@ EXCEPT
 ----
 38 values hashing to 8be425d6175e80f2ddcf09cbdfaf171c
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (b7=426 OR 954=c7)
       OR (a7=452 AND e7=89 AND 599=d7 AND b7=24)
@@ -16603,7 +16603,7 @@ UNION ALL
 ----
 34 values hashing to 456ec17a51f96b1bdc9ec863cbd905a1
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (d3=184 AND e3=854 AND c3=326)
       OR (b3=382 AND 30=a3)
@@ -16636,7 +16636,7 @@ EXCEPT
 ----
 20 values hashing to 1a4de9331fb2cf08f6f7f154a9d22bc0
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (73=b3 OR 363=d3 OR d3=361)
 INTERSECT
@@ -16664,7 +16664,7 @@ UNION
 ----
 14 values hashing to f88c3d3b04e0653684be9312e9839981
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (509=a4 AND 725=c4 AND b4=434 AND 31=d4)
       OR (a4=981 OR d4=950 OR d4=889)
@@ -16706,7 +16706,7 @@ UNION
 ----
 43 values hashing to aacbf8efef3c62881f4ba1c8852f6675
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (549=b9 AND a9=764 AND 515=c9)
       OR (127=b9 OR e9=854 OR e9=133)
@@ -16726,7 +16726,7 @@ EXCEPT
 909
 926
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (855=c7 OR c7=482)
 INTERSECT
@@ -16765,7 +16765,7 @@ UNION
 ----
 21 values hashing to 653d099b7d192ca58cde082af768532f
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (e5=150 AND c5=941 AND 326=b5)
       OR (436=e5 OR 470=e5)
@@ -16787,7 +16787,7 @@ UNION
 ----
 15 values hashing to acdc8b297b43da283a5bc2a820cecc2e
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (e6=622 OR e6=237 OR 441=c6)
 EXCEPT
@@ -16843,7 +16843,7 @@ UNION ALL
 ----
 25 values hashing to 15fc39082c6fe447aa9f273e12c65e90
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (335=d1 AND c1=12 AND 314=a1)
 INTERSECT
@@ -16887,7 +16887,7 @@ UNION ALL
 833
 91
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE c6 in (864,424,961,717,34)
       OR (40=e6)
@@ -16898,7 +16898,7 @@ INTERSECT
 ----
 816
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (461=b6 OR 646=e6)
 UNION ALL
@@ -16936,7 +16936,7 @@ EXCEPT
 ----
 20 values hashing to a755868a5bb27d70b45ad27b8a552dec
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE b2 in (818,628,888,640,279,211)
       OR (448=d2 AND c2=878)
@@ -16961,7 +16961,7 @@ UNION
 ----
 14 values hashing to 547a4b4f247e9b2a5b993aa34a9b5110
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE b2 in (433,504,217,888,418,968,818,681,161,8,501,181,367,226)
       OR c2 in (449,657,421,141,337,788,773,290)
@@ -16992,7 +16992,7 @@ EXCEPT
 8
 997
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE b4 in (700,587,480,708,139,713)
       OR (971=c4)
@@ -17016,7 +17016,7 @@ UNION ALL
 65
 758
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (b2=864)
       OR b2 in (21,60,640,211,504,489,755,509,442,599,605,634,864)
@@ -17035,7 +17035,7 @@ EXCEPT
 ----
 10 values hashing to cfdf41811d0782153a5809bc17481de8
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE a3 in (697,190,478,895,197,75,964,476,947,135,822)
       OR (b3=203)
@@ -17060,7 +17060,7 @@ EXCEPT
 ----
 16 values hashing to ed453fd04421c7cedaaad5194432175c
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (a8=661 AND e8=955)
       OR e8 in (682,199,38,729,431,46,874,617,180,203)
@@ -17090,7 +17090,7 @@ EXCEPT
 ----
 26 values hashing to 4f4daf43019d0cd39535e80043eba657
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (b4=2 AND 951=e4 AND c4=936)
       OR (469=b4 OR 568=d4 OR a4=662)
@@ -17119,7 +17119,7 @@ EXCEPT
 ----
 25 values hashing to 8e57f2ec8ebb3ad276025d732bc0556e
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (968=a4 OR 792=a4)
       OR (357=b4 OR 627=b4 OR 634=b4)
@@ -17144,7 +17144,7 @@ UNION
 ----
 21 values hashing to 1036d5d70423353f18750f28dec0b898
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE b7 in (221,579,634,735,257,808,726,192,220,426,276)
       OR (a7=592 OR e7=303 OR a7=208)
@@ -17160,7 +17160,7 @@ UNION
 ----
 16 values hashing to ec904c9a579a2b5c72d1ee9db598a805
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE d5 in (271,855,965,634,419,810,361,616,960,495,555,470,814)
       OR (d5=114 AND 832=a5 AND 697=e5 AND c5=734 AND 186=b5)
@@ -17220,7 +17220,7 @@ UNION ALL
 ----
 36 values hashing to d6640e99b192b438776488c6c16077fd
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (a2=508 AND b2=170 AND c2=444 AND 723=d2)
       OR (a2=789)
@@ -17250,7 +17250,7 @@ EXCEPT
 ----
 29 values hashing to b1fdc6c1368c5a677764b6708e2af4ba
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (112=d8 OR a8=99 OR 944=e8)
       OR (469=e8)
@@ -17293,7 +17293,7 @@ UNION ALL
 688
 699
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (712=a9 AND 619=e9 AND 74=b9)
       OR d9 in (818,919,646,568,681)
@@ -17322,7 +17322,7 @@ EXCEPT
 ----
 16 values hashing to 2244785c106c20fecbc96d6b9249dc3e
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (d4=55 AND c4=904 AND b4=607)
       OR e4 in (491,543,372)
@@ -17352,7 +17352,7 @@ UNION ALL
 ----
 58 values hashing to 0a0a3b1be8179982cc2575665505975d
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (654=e6 OR b6=850 OR e6=255)
       OR (751=a6)
@@ -17378,7 +17378,7 @@ EXCEPT
 ----
 958
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (545=c5)
       OR c5 in (471,818,756,489,86,625)
@@ -17397,7 +17397,7 @@ UNION
 ----
 14 values hashing to ed484008dada3c36abc4099a040f82b9
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (b3=685 AND c3=963 AND 145=e3)
       OR c3 in (81,317,244,555,7,324,594,317,677,459,991,339,175)
@@ -17437,7 +17437,7 @@ EXCEPT
 ----
 46 values hashing to 8a88ca66b799126e9ce7879acfa86db6
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (977=b3)
 INTERSECT
@@ -17476,7 +17476,7 @@ UNION
 778
 805
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE c5 in (185,668,747,601,155,922,210,422)
 UNION ALL
@@ -17517,7 +17517,7 @@ EXCEPT
 ----
 41 values hashing to 147dd040d6eba22ff0a8537d499a8cf3
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE d3 in (797,729,782,624,231)
       OR (d3=336 AND 784=a3 AND e3=814 AND c3=966 AND 246=b3)
@@ -17551,7 +17551,7 @@ UNION ALL
 697
 7
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (c2=360)
       OR (d2=235)
@@ -17587,7 +17587,7 @@ UNION
 ----
 27 values hashing to 3627bcb359b163d36468d64714d631fe
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (326=d8)
       OR b8 in (878,7,705,211)
@@ -17620,7 +17620,7 @@ EXCEPT
 ----
 31 values hashing to 143af6edf2360c7e7688bfaf9124d2ab
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE a4 in (327,474,423,72,502,968,505,589,952,981,747)
       OR (23=b4)
@@ -17642,7 +17642,7 @@ EXCEPT
 ----
 15 values hashing to a1bfa61f51d6aa1639fe0726e41eef14
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (672=a8 OR 327=a8)
       OR a8 in (848,254,472)
@@ -17658,7 +17658,7 @@ EXCEPT
 635
 761
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (c1=608 OR 349=d1)
       OR (c1=788 OR b1=836 OR 60=b1)
@@ -17688,7 +17688,7 @@ UNION
 ----
 13 values hashing to 7071c002916522dae8c1f994842ba7b5
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (411=c2 OR 56=a2 OR 769=e2)
       OR (e2=220 AND c2=981 AND 498=d2)
@@ -17737,7 +17737,7 @@ UNION ALL
 ----
 31 values hashing to 7832ada1141f34357c48e40e6b1178f7
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (358=e4)
       OR (e4=9 AND b4=829 AND c4=513 AND d4=568)
@@ -17769,7 +17769,7 @@ UNION ALL
 ----
 12 values hashing to 2885efbd6b06b649d099d9836c52dc88
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE d3 in (720,729,501,701,981,399,503,890,896,220,711)
       OR (a3=879 AND d3=184 AND 854=e3 AND b3=355 AND c3=326)
@@ -17795,7 +17795,7 @@ UNION
 ----
 36 values hashing to b7eda30f1cf2e97900729480b0c530b8
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (a8=591 AND 705=c8 AND 548=e8 AND 542=d8 AND b8=992)
       OR (e8=320 AND 88=c8 AND 466=b8)
@@ -17839,7 +17839,7 @@ EXCEPT
 ----
 44 values hashing to 2803a2a59a39adf8e64b5402a63c4631
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (171=b9 AND c9=272 AND d9=464)
 INTERSECT
@@ -17861,7 +17861,7 @@ EXCEPT
 280
 469
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (429=a5 AND d5=132 AND c5=471)
       OR a5 in (667,369,837,514,55,929,311,413,342,637,18,904,349,373)
@@ -17895,7 +17895,7 @@ EXCEPT
 ----
 20 values hashing to bbcc52ba9453dfdfebf1c4ff57b52f3f
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE a5 in (392,743,447,55,988,270,749,335,522)
       OR e5 in (104,22,689,130,446)
@@ -17936,7 +17936,7 @@ EXCEPT
 ----
 16 values hashing to 453ec6ded199ec254eb850f31c503a9e
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (319=e3 OR 845=c3 OR e3=914)
       OR (247=d3 AND c3=117 AND e3=318 AND 317=b3 AND a3=98)
@@ -17965,7 +17965,7 @@ UNION
 ----
 15 values hashing to bec41d2927a20afd6084ea1943877d1e
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (977=b3 OR 238=d3 OR 347=a3)
 EXCEPT
@@ -17997,7 +17997,7 @@ EXCEPT
 ----
 14 values hashing to 9f91af992cdc73b1f7636d9558fe7f8f
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (a9=115 OR 235=d9)
 EXCEPT
@@ -18031,7 +18031,7 @@ UNION ALL
 ----
 30 values hashing to c14ed0e4f0acc3d3af02caa1382cc90e
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE a7 in (288,285,433,995,240)
       OR (c7=813 AND b7=396 AND 97=a7 AND 399=d7)
@@ -18065,7 +18065,7 @@ EXCEPT
 ----
 27 values hashing to ad55e32a5c6dd1e2d34ec14f4a8b7efe
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE a2 in (279,652,851,268)
       OR (223=a2 AND c2=964 AND 138=e2 AND 211=b2 AND d2=844)
@@ -18106,7 +18106,7 @@ UNION
 ----
 30 values hashing to 20e9aa368c648bcd04a5f37ee1e474be
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (376=b2 AND 728=c2 AND 374=a2)
 EXCEPT
@@ -18115,7 +18115,7 @@ EXCEPT
 ----
 374
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (c9=151 OR 148=a9 OR d9=439)
       OR (370=c9 OR b9=496)
@@ -18138,7 +18138,7 @@ UNION ALL
 ----
 60 values hashing to aed5e3962deb75fbac39675943b42a7e
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (a6=104 AND 905=b6 AND 187=c6)
       OR b6 in (629,452,0,300)
@@ -18166,7 +18166,7 @@ UNION ALL
 ----
 10 values hashing to 22d57ccdd19aacde280828e95cb185c5
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (787=d7)
       OR a7 in (912,195,706,707,490,31,416,452,952,884,916,452)
@@ -18198,7 +18198,7 @@ UNION ALL
 ----
 23 values hashing to d247cbee425529e151cf51ec69817ef3
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE d2 in (860,310,914)
 EXCEPT
@@ -18216,7 +18216,7 @@ EXCEPT
 ----
 773
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE b5 in (855,695,736,661,846,951,183,729,424,874,661)
       OR (c5=147)
@@ -18246,7 +18246,7 @@ UNION
 ----
 26 values hashing to 87642c08d3de4d4aa4d474228accbe04
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (e2=654 AND 365=d2 AND 725=b2)
 INTERSECT
@@ -18270,7 +18270,7 @@ EXCEPT
            OR (836=e3 AND c3=651 AND 214=b3))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (a9=584 OR 195=e9)
 EXCEPT
@@ -18308,7 +18308,7 @@ EXCEPT
 ----
 31 values hashing to d2095548f87d47a717f6712a3e9bd53d
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (847=b3)
 EXCEPT
@@ -18340,7 +18340,7 @@ EXCEPT
 ----
 9 values hashing to 70f1b7922a8d2229324112580237b34d
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (d5=309 OR c5=824 OR 819=c5)
 UNION
@@ -18372,7 +18372,7 @@ EXCEPT
 ----
 28 values hashing to 041afad7a60a7b3acee3ecc356364b58
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE d3 in (548,737,719,503,38,944)
       OR (685=b3 AND c3=963 AND 70=a3 AND 1=d3 AND 145=e3)
@@ -18390,7 +18390,7 @@ EXCEPT
 ----
 9 values hashing to 373467a5564680f3c455172ac7429088
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE c9 in (531,288,95,180,894,800,643,222)
       OR (a9=69)
@@ -18423,7 +18423,7 @@ EXCEPT
 ----
 36 values hashing to 065aa3adaae8e70d281446451d521e2d
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (c1=416 AND 981=a1)
       OR (b1=645 AND d1=820 AND c1=966 AND 497=e1 AND a1=702)
@@ -18461,7 +18461,7 @@ UNION
 ----
 15 values hashing to aa5a0a4b53b6a3a6ebd32a671a2be743
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (601=b6 OR 710=b6)
       OR (466=e6 AND d6=428)
@@ -18504,7 +18504,7 @@ EXCEPT
 ----
 14 values hashing to a41a2ae14bf5c446bee47a20a8fed4a5
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE b3 in (407,178,124,224,382,814,334,27)
       OR (d3=314 AND a3=244)
@@ -18515,7 +18515,7 @@ INTERSECT
            OR (a4=408 AND 157=c4))
 ----
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (300=e1 AND 299=c1 AND a1=579 AND b1=781 AND 626=d1)
       OR c1 in (736,637,882,681,458,905,62)
@@ -18553,7 +18553,7 @@ EXCEPT
 ----
 31 values hashing to 029ccee2ec164fb37b29fb0fa8c49d16
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE b3 in (847,677,814,779,240,214,998,740,57,203,411)
       OR e3 in (981,844,318,892,731,993,87)
@@ -18581,7 +18581,7 @@ EXCEPT
 ----
 17 values hashing to bc30133588d7809ae198562bcd40a694
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (233=d2 AND 560=c2 AND 676=b2)
       OR (a2=185 OR d2=351 OR a2=56)
@@ -18601,7 +18601,7 @@ EXCEPT
 ----
 13 values hashing to 9df25d86da4aeb03b33dbe1277d0e71d
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE a4 in (804,847,723,139,281,448,152)
       OR (639=d4 AND 261=a4)
@@ -18629,7 +18629,7 @@ EXCEPT
 ----
 16 values hashing to b5dcfd9d8cf4a5cd3f20629af26e9720
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE e2 in (463,505,434,499,720,117)
 UNION
@@ -18648,7 +18648,7 @@ UNION
 ----
 29 values hashing to a095e42ef49e78a961f91c91f97410c1
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (131=d7 OR d7=673)
       OR (c7=981 OR 364=d7)
@@ -18669,7 +18669,7 @@ UNION ALL
 ----
 15 values hashing to 949981173bd267696a9abfd5c52ef1f3
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE e2 in (692,940,548,629,427,899,151,463,307)
 UNION
@@ -18705,7 +18705,7 @@ UNION ALL
 ----
 69 values hashing to 1f5685a145282a08c0735bffea5f4688
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (852=d6 AND c6=454 AND b6=427)
       OR b6 in (716,984,350,6,421,232,604)
@@ -18737,7 +18737,7 @@ UNION ALL
 ----
 52 values hashing to 8a19cacdb61eacc1d924994a3558d17f
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE a1 in (996,674,382,607,109,584,981)
 EXCEPT
@@ -18774,7 +18774,7 @@ UNION
 ----
 42 values hashing to cd0140b6498bc4b8bde10aefa5cb2141
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (d4=665 AND e4=85 AND 271=b4 AND 752=a4 AND 0=c4)
       OR b4 in (589,826,184,114,810,357,372,607)
@@ -18795,7 +18795,7 @@ UNION ALL
 ----
 25 values hashing to bd9b43b5d4b28b041829300c3cffb6e9
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (275=b2)
 UNION
@@ -18824,7 +18824,7 @@ UNION ALL
 ----
 17 values hashing to 2a0dd712a6089edf1014d3895f219c8b
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE a5 in (597,988,9,69)
       OR e5 in (725,656,729,25)
@@ -18870,7 +18870,7 @@ UNION
 ----
 38 values hashing to 025b5e7ff68f03ccfbe54263f04d35dc
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE d1 in (973,213,508,223,577,55,38,432,87,17,701)
 UNION ALL
@@ -18893,7 +18893,7 @@ EXCEPT
 ----
 17 values hashing to 4819e28e969dc9de4a75fa5a1da63297
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (c3=178 OR 334=b3)
       OR (75=a3 AND 375=c3 AND 984=d3)
@@ -18911,7 +18911,7 @@ UNION
 ----
 14 values hashing to 00c83505ee3ccb2b8f146946a511788a
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE d2 in (806,265,488,332)
       OR (640=b2 OR 725=c2 OR 35=a2)
@@ -18971,7 +18971,7 @@ UNION ALL
 ----
 10 values hashing to 204da8934fd463ce22910fdf498fa07e
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (830=c2 OR 725=b2 OR a2=9)
 UNION
@@ -19010,7 +19010,7 @@ EXCEPT
 ----
 24 values hashing to 8fec22cb884992781b274b2055a35674
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (298=c8 AND a8=994 AND 384=d8 AND 370=b8)
 EXCEPT
@@ -19040,7 +19040,7 @@ EXCEPT
 ----
 17 values hashing to 7f5cc22a9ee8ceab3c07798ab9c4730f
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (211=b3 AND a3=608 AND 46=d3)
 EXCEPT
@@ -19070,7 +19070,7 @@ UNION
 ----
 26 values hashing to 9e74497164a2d9c5b4ab189db960bc6a
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (b7=924 OR e7=508 OR b7=634)
       OR d7 in (724,684,956,781,315,205,572,982,817,296)
@@ -19104,7 +19104,7 @@ UNION ALL
 ----
 42 values hashing to 0d84772d639bbea23ec96271b0509591
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (677=b3 OR 513=a3 OR e3=4)
 EXCEPT
@@ -19121,7 +19121,7 @@ EXCEPT
 ----
 13 values hashing to 233aa7705afe9652cd15870969943599
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE a3 in (727,129,383,637,727,829,697,105,490,763,929,275,913,265)
 INTERSECT
@@ -19154,7 +19154,7 @@ UNION ALL
 ----
 28 values hashing to 4d68499b1a920cfc4833a95952d194bf
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE a7 in (736,6,433,958)
       OR (523=c7 AND 979=e7 AND 177=d7)
@@ -19178,7 +19178,7 @@ UNION
 851
 971
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (942=b5 AND a5=132)
       OR a5 in (153,270,5)
@@ -19200,7 +19200,7 @@ UNION ALL
 ----
 34 values hashing to d9c0a5d30519a5a2b1d77fad26b9aa40
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE e9 in (679,542,788,146,127,841,245,418)
       OR (c9=469 AND 818=b9)
@@ -19224,7 +19224,7 @@ INTERSECT
            OR (e7=624 AND c7=22 AND a7=466 AND d7=787))
 ----
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (135=a2)
       OR (211=b2 AND d2=844)
@@ -19254,7 +19254,7 @@ UNION
 ----
 11 values hashing to b0e407116153cf8667ccdd69cc932c5a
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE e9 in (335,542,868)
       OR (868=e9 AND d9=646)
@@ -19282,7 +19282,7 @@ EXCEPT
 ----
 26 values hashing to e0daef73d01a835baf88312961a3edc8
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (230=c1 AND 683=e1 AND d1=803 AND b1=807 AND a1=433)
       OR d1 in (75,418,217,346,265,234,577,18,221,394,581,315)
@@ -19301,7 +19301,7 @@ EXCEPT
 ----
 14 values hashing to 40a278bb52e3dcb2c67bd0dccfc01455
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (c2=337 OR e2=125 OR b2=819)
       OR (c2=312 AND 264=b2)
@@ -19327,7 +19327,7 @@ UNION
 ----
 20 values hashing to 3aa5f172daa6408f40244fb05f1c7e2c
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (942=e9 AND 297=a9 AND 848=b9 AND 467=d9 AND c9=146)
       OR (d9=960)
@@ -19356,7 +19356,7 @@ EXCEPT
 ----
 26 values hashing to 1bdc3479121e32694204c9a70c6a3b74
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE e2 in (512,812,386,556,242,205,841,852,307,696)
       OR (457=a2 AND 346=c2 AND 663=d2 AND 560=e2 AND b2=932)
@@ -19396,7 +19396,7 @@ UNION ALL
 ----
 53 values hashing to 5f884b661df42ffecc21ebd1b5ccf453
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (314=a8 OR 250=c8)
       OR (e8=392 OR a8=113 OR b8=325)
@@ -19441,7 +19441,7 @@ UNION ALL
 ----
 108 values hashing to d193787840b15bf3b33770c3a8a43efd
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (653=d4 AND 707=b4 AND 301=c4 AND 737=e4 AND 260=a4)
       OR a4 in (621,804,505,579,662,723,281,589,261,637)
@@ -19458,7 +19458,7 @@ UNION
 ----
 14 values hashing to 98726083841da5d318c47af5d34f7e99
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (738=a1)
       OR (688=e1 OR 18=d1 OR 963=e1)
@@ -19481,7 +19481,7 @@ UNION ALL
 ----
 36 values hashing to 8f9aa3a348f2f42a95c3f8a952911fa8
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE d2 in (14,513,790,760,498,351,663,887,235,516,216,806)
       OR (869=a2 AND 902=c2 AND e2=114 AND d2=377)
@@ -19518,7 +19518,7 @@ EXCEPT
 ----
 40 values hashing to c081f2e94c75a874894a25c91dbefdbf
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE c6 in (270,609,534)
 UNION ALL
@@ -19547,7 +19547,7 @@ EXCEPT
 ----
 21 values hashing to fe24fbd828412985a77e00b61b43c6d8
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (e3=119 OR 386=a3 OR e3=303)
       OR b3 in (761,534,130)
@@ -19571,7 +19571,7 @@ UNION
 ----
 24 values hashing to 49110e01eb8fbccb44045ddc177b9d49
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (929=c3)
       OR a3 in (863,98,777,347,429,275)
@@ -19592,7 +19592,7 @@ EXCEPT
 ----
 11 values hashing to 0a6397320ec1fa2939577d046fb9e585
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (b9=228)
       OR b9 in (170,19,936,680,142)
@@ -19616,7 +19616,7 @@ UNION
 ----
 24 values hashing to 4c6fae035c97faf780efbe801d3a8ec4
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE a5 in (904,821,114,544,331,958,99,421,602,319,514,556,69)
       OR (526=b5 OR d5=729)
@@ -19653,7 +19653,7 @@ EXCEPT
 ----
 44 values hashing to 77fadb8e304bc6215bbde57c1b08409b
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE b6 in (915,490,781,250,984,601,290,262,461,351,463,290,92)
       OR c6 in (295,513,864,441,12,543)
@@ -19687,7 +19687,7 @@ EXCEPT
 350
 496
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (293=a6 OR a6=270 OR a6=1)
       OR (c6=717 AND e6=816 AND 173=a6)
@@ -19716,7 +19716,7 @@ EXCEPT
 ----
 28 values hashing to c72ed749b6c03447f37ad39a8fcf6ab6
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (e4=885 AND 127=c4 AND 220=b4)
 EXCEPT
@@ -19744,7 +19744,7 @@ UNION
 ----
 12 values hashing to f5ecd579fa8aadad0b4cabef749fd835
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE a5 in (958,683,297)
       OR b5 in (665,389,56,403,606,26,554,858,942,559,934,640,390)
@@ -19772,7 +19772,7 @@ EXCEPT
 ----
 13 values hashing to 4b233deaef2c80bb2573a4cf0abaaa86
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (d9=439 AND b9=64 AND a9=115)
 EXCEPT
@@ -19782,7 +19782,7 @@ EXCEPT
 ----
 439
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (200=a8)
 UNION
@@ -19808,7 +19808,7 @@ UNION ALL
 ----
 14 values hashing to 88dd8e224c531e2b19ab235ec482370f
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (a3=75 AND b3=272 AND e3=119 AND 375=c3)
       OR (d3=487 AND 984=e3 AND b3=28 AND 40=c3 AND 16=a3)
@@ -19844,7 +19844,7 @@ EXCEPT
 ----
 13 values hashing to 414f7c585d8d8310149d84e7f6759df6
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (e5=592)
 INTERSECT
@@ -19877,7 +19877,7 @@ UNION ALL
 ----
 35 values hashing to 6011219aee990d68785547959e1bf7cb
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (c6=769 AND 790=d6 AND e6=808)
       OR (a6=653 OR 829=a6 OR 223=b6)
@@ -19903,7 +19903,7 @@ EXCEPT
 777
 879
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE d2 in (152,351,195,643,19,23,669,209,663)
 INTERSECT
@@ -19940,7 +19940,7 @@ EXCEPT
 ----
 16 values hashing to 3370ab0edaf518cff1caa7a27a4ee137
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE e1 in (55,11,483,468,539)
       OR (a1=864 AND 75=b1)
@@ -19955,7 +19955,7 @@ UNION ALL
 ----
 11 values hashing to 653938ced116aba23c9d2d6c2b0fa7ce
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE c2 in (466,692,575,136,4,274,830,756)
       OR (a2=954 AND 450=c2 AND 527=b2)
@@ -19991,7 +19991,7 @@ EXCEPT
 ----
 41 values hashing to ce029deeb611551c31338332207d6533
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (c6=561 AND a6=971 AND b6=710)
       OR (458=d6 AND 262=b6 AND c6=961 AND a6=33 AND 67=e6)
@@ -20016,7 +20016,7 @@ UNION ALL
 ----
 22 values hashing to 99c9256eb2a5fdfd49bf623f415361af
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (162=e2 OR b2=60)
 INTERSECT
@@ -20045,7 +20045,7 @@ UNION
 906
 995
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (539=d7 AND b7=280 AND 688=c7)
       OR d7 in (831,199,367,346,507,172,575,131,572,391,680,418,34,687)
@@ -20076,7 +20076,7 @@ UNION ALL
 ----
 22 values hashing to 4a1c44eeaee615330f32e37c8dc6fae6
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE b9 in (759,421,50,13,680,152,170,251,379,524,142)
       OR (c9=402)
@@ -20093,7 +20093,7 @@ UNION
 ----
 14 values hashing to 338ef1f23af2af847c3e2774e37fd571
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE e7 in (280,303,31,862,272,816,31,595)
 INTERSECT
@@ -20118,7 +20118,7 @@ UNION ALL
 717
 832
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE e3 in (913,303,536,464,218,136,989,690,425,131,83,844,959,178)
       OR (e3=896 AND 827=b3 AND c3=455 AND 437=d3 AND 754=a3)
@@ -20149,7 +20149,7 @@ UNION
 ----
 46 values hashing to 10a3115654b3a7983223487c883a3325
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE c9 in (101,739,224,884,569,39,278,402)
       OR (723=e9 OR 211=b9 OR 90=c9)
@@ -20180,7 +20180,7 @@ EXCEPT
 ----
 16 values hashing to 89fd38ebc08d92acb7eea9d62a4c3289
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (717=b5 OR e5=749 OR 72=e5)
       OR (471=c5 AND d5=132)
@@ -20222,7 +20222,7 @@ UNION ALL
 ----
 15 values hashing to 50fb1c4a40884fa13fb30b2a3ae2cd2c
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE b1 in (981,387,247,350,270,807,619,942,652,211,233)
       OR (765=c1 OR c1=758)
@@ -20245,7 +20245,7 @@ UNION
 ----
 45 values hashing to 1f86ffa01756e7cdee142a330a5c47c3
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (694=d9 AND e9=445 AND a9=821 AND 857=c9 AND b9=122)
       OR (289=b9 OR 936=e9 OR e9=844)
@@ -20268,7 +20268,7 @@ EXCEPT
 ----
 11 values hashing to d625df15b97b8975e79d3fda09b76e2d
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE c6 in (729,441,258,45)
       OR (c6=267)
@@ -20285,7 +20285,7 @@ UNION
 35
 81
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (615=d3 AND e3=87 AND c3=961 AND b3=198 AND a3=615)
       OR (b3=382)
@@ -20318,7 +20318,7 @@ EXCEPT
 ----
 10 values hashing to 5e2c05299ece9eec09a7dfde18785e5d
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE d1 in (130,902,922,275,394,942,899,35,412,972,481,581,223,161)
 UNION
@@ -20332,7 +20332,7 @@ EXCEPT
 ----
 16 values hashing to cb7082e2742ff2c9b395f6007b63fcb1
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (b8=352 AND a8=579)
       OR b8 in (364,540,1)
@@ -20362,7 +20362,7 @@ UNION
 ----
 29 values hashing to cdc366790677c18e168767606cf1882d
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (d4=246)
       OR (593=b4)
@@ -20398,7 +20398,7 @@ UNION
 72
 934
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE d8 in (731,542,48,474,326)
       OR (273=c8 AND a8=553)
@@ -20429,7 +20429,7 @@ UNION
 ----
 60 values hashing to f774253c7931a8d7f9f0795b7dfb00ce
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (c4=723)
       OR (e4=188 AND 536=c4 AND d4=626 AND 563=b4 AND 502=a4)
@@ -20474,7 +20474,7 @@ UNION
 ----
 72 values hashing to ae26a660e7b23d0c09397ca5f4335757
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (d2=10 OR 511=c2)
 EXCEPT
@@ -20514,7 +20514,7 @@ UNION
 ----
 46 values hashing to 51f603637b3067a92a96511d3dae6a8f
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (a2=954 OR a2=175)
       OR (c2=346 AND d2=663)
@@ -20534,7 +20534,7 @@ UNION ALL
 ----
 9 values hashing to 2e9abe3a0ebe4cd00d77d5406bed518c
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (82=a4 AND c4=417 AND 617=d4)
 UNION
@@ -20569,7 +20569,7 @@ UNION ALL
 ----
 55 values hashing to 4f7089429ff8e5b57bbf561f30f06463
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE a4 in (74,952,919,474,185,948,82,16,580,160,847,451,922)
       OR (778=e4 AND 728=c4 AND 849=b4)
@@ -20599,7 +20599,7 @@ EXCEPT
 ----
 14 values hashing to 2e339480b8277cdc78ef4b1303870d73
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE e4 in (596,372,217,405,188)
       OR (579=a4 AND b4=961 AND e4=300)
@@ -20631,7 +20631,7 @@ UNION
 ----
 21 values hashing to 5796e4a61c45c4b2f1d67ba90a648551
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE b2 in (799,226,864,220,173,311,276,442,380,509,217,527)
       OR (256=d2)
@@ -20675,7 +20675,7 @@ EXCEPT
 ----
 24 values hashing to b4bca2d38d5de7db80884145774d077f
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (688=b9 OR 379=b9 OR 327=c9)
       OR b9 in (64,447,251,269,2,95,19,361,746,549,688)
@@ -20699,7 +20699,7 @@ UNION
 ----
 20 values hashing to 5aab643faff4c43911c05c8c4a3faad0
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (b1=283 OR d1=96)
       OR d1 in (818,96,175,163,712,655,806,25,990)
@@ -20738,7 +20738,7 @@ UNION ALL
 ----
 48 values hashing to 6fb5bb9ba2e8d0b2f85587372ffb7d3e
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE d3 in (17,647,524,582,515)
 UNION ALL
@@ -20773,7 +20773,7 @@ UNION
 ----
 41 values hashing to 53a45541b6433ba8fb5e8b3d4ba0aa0b
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE b9 in (858,103,821,423,125,2)
       OR a9 in (511,172,694,177)
@@ -20790,7 +20790,7 @@ EXCEPT
 ----
 22 values hashing to 20f90e15fb13bdd07885bdbc42c48c67
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE b6 in (226,421,850,882,629,229,606,905,716,507,350,490,923)
       OR e6 in (682,466,283,77,360,893,754,883,601,668)
@@ -20804,7 +20804,7 @@ UNION ALL
 ----
 29 values hashing to 35dd257f67deb6fbe842ea336ce68d3c
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE d2 in (749,577,654,306,953,152,404,260,256,414,669)
       OR c2 in (729,161,793)
@@ -20845,7 +20845,7 @@ EXCEPT
 ----
 47 values hashing to a3bd77c48febee2c52ce4c45314da50b
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE e7 in (971,422,428,144,408,290,506,183,970)
       OR (b7=938 AND 260=c7 AND e7=663 AND 744=a7 AND d7=572)
@@ -20869,7 +20869,7 @@ UNION ALL
 ----
 19 values hashing to 3ec1c0bb5e04fe7c744d96f7d7d0f44e
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (b8=369 AND a8=248)
       OR a8 in (289,359,250,70,671,504,894,651,5)
@@ -20909,7 +20909,7 @@ UNION
 ----
 39 values hashing to 01eb702eb2eacc60ec1308bacce3054f
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (c6=963)
       OR (2=d6 AND b6=974 AND 242=c6)
@@ -20949,7 +20949,7 @@ EXCEPT
 659
 850
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (998=a7 AND d7=722 AND c7=441)
       OR d7 in (485,549,785,777,457)
@@ -20974,7 +20974,7 @@ UNION ALL
 ----
 19 values hashing to ef338b152f9fd41837c0bffb06f90cf6
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (905=c1)
 INTERSECT
@@ -20991,7 +20991,7 @@ EXCEPT
            OR (b2=90 OR b2=217 OR e2=117))
 ----
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (384=e8 AND 330=d8 AND b8=405 AND a8=5 AND c8=461)
 UNION
@@ -21021,7 +21021,7 @@ UNION
 572
 626
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE a8 in (882,946,553,259,913,728,637,150,402,445,795)
       OR (b8=461 AND 743=d8 AND 38=e8)
@@ -21049,7 +21049,7 @@ UNION
 ----
 33 values hashing to 6f3ccc9ca3698a687e3483321ea4349d
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (a1=215 OR e1=166)
       OR (681=c1 OR d1=529)
@@ -21089,7 +21089,7 @@ UNION
 ----
 24 values hashing to b726edf6eadb5f58e7f284c9239514ac
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE a1 in (194,607,23,538,517,189,330,825,479,52,231)
       OR (e1=14 OR 213=b1)
@@ -21102,7 +21102,7 @@ EXCEPT
 ----
 14 values hashing to d40c037938b4961b06ba24b5a84c7429
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (b9=595)
       OR (680=b9 OR 214=b9)
@@ -21126,7 +21126,7 @@ UNION ALL
 ----
 29 values hashing to b7bdd1ed17ccb963555323e1e1014e33
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (a3=353)
       OR (d3=164 OR b3=28)
@@ -21143,7 +21143,7 @@ INTERSECT
            OR (d4=376 OR 667=c4 OR 996=c4))
 ----
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE c7 in (857,38,887,397,795,488,435,482,970,288,725,565,232,548)
 INTERSECT
@@ -21182,7 +21182,7 @@ UNION ALL
 ----
 26 values hashing to c301a4c30b9033c60db8214417345e98
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE c1 in (458,368,482,486)
       OR (113=e1 AND 622=a1 AND 172=d1)
@@ -21198,7 +21198,7 @@ UNION ALL
 ----
 18 values hashing to ea4045757ec82d89cd3c3142b49fb50f
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (e8=310 AND b8=155)
       OR a8 in (15,883,54,661,963,90,184,795,150,957,312,306)
@@ -21223,7 +21223,7 @@ UNION
 ----
 48 values hashing to f58c3497ea97c3719f61a6bf97b7f34d
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (278=b1 OR 442=e1)
       OR (a1=352 AND 523=b1 AND 816=e1 AND 458=c1 AND d1=87)
@@ -21254,7 +21254,7 @@ EXCEPT
 ----
 17 values hashing to 08e7f5c62fd65ea780cd34335a6c642d
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE d1 in (922,602,223,571,942,691)
       OR (717=e1)
@@ -21297,7 +21297,7 @@ UNION
 ----
 45 values hashing to c7ec61acde03eb185a82860e5a4e5cf0
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (b5=412 AND 598=c5 AND d5=521 AND e5=72 AND a5=757)
       OR d5 in (910,42,263,806,118,957,738,940,938,480,495)
@@ -21325,7 +21325,7 @@ EXCEPT
 ----
 9 values hashing to 33e4c3f5de1928085f41a31c1a4539cd
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (c6=242 AND a6=564 AND 2=d6 AND e6=100 AND 974=b6)
       OR (250=b6)
@@ -21359,7 +21359,7 @@ UNION ALL
 ----
 42 values hashing to 8ce36abf4e1d83f99ff75ad5aad9fb66
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (c5=824)
       OR (c5=50 OR c5=668)
@@ -21387,7 +21387,7 @@ EXCEPT
 563
 617
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE b7 in (517,579,562,321,693,855,340,519,159,938)
 UNION
@@ -21402,7 +21402,7 @@ EXCEPT
 ----
 32 values hashing to ad82138e09dfb5282e9a56858e14cb61
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (b1=113 AND c1=880)
 UNION
@@ -21418,7 +21418,7 @@ EXCEPT
 329
 554
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (c7=344 AND 430=a7)
 EXCEPT
@@ -21444,7 +21444,7 @@ UNION
 ----
 25 values hashing to 23dfac8f7751792177a482fee192fbb1
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE e9 in (799,383,418,944,19)
 UNION ALL
@@ -21462,7 +21462,7 @@ EXCEPT
 ----
 13 values hashing to fcfeda48ae94e3534982b721ed6b70e5
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE a6 in (355,870,966,2,680,604,731,818)
       OR (c6=768 AND e6=67 AND 500=d6 AND b6=463)
@@ -21493,7 +21493,7 @@ UNION
 ----
 51 values hashing to d279138b974e659217e04fb230e20b83
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (944=c7 AND 813=b7 AND 903=e7 AND 649=a7 AND d7=765)
       OR c7 in (635,92,232,341,648,688,725,419,174,364,565,585,102,906)
@@ -21515,7 +21515,7 @@ UNION
 ----
 20 values hashing to c251cd3154c8445c2399175a288c5a1b
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (549=b2 OR 139=a2 OR c2=509)
       OR a2 in (283,185,279,564,123,980,268,543,966,891,186,209,664)
@@ -21538,7 +21538,7 @@ EXCEPT
 ----
 18 values hashing to b354188f6a9fc1a26018559535d58166
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (a2=283 OR c2=282)
 INTERSECT
@@ -21547,7 +21547,7 @@ INTERSECT
            OR c3 in (711,986,898,763,326,555,929,844,651,10,800))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (a8=347 OR 756=d8)
 UNION ALL
@@ -21587,7 +21587,7 @@ UNION
 ----
 25 values hashing to 60d71382672b0ae08e14ff0964b7cc0b
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (326=b2 AND d2=23 AND 283=c2 AND a2=2)
 INTERSECT
@@ -21603,7 +21603,7 @@ UNION
 ----
 701
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (b6=512)
       OR b6 in (427,601,243,997)
@@ -21637,7 +21637,7 @@ EXCEPT
 ----
 18 values hashing to 8ecd9c29ebc1e4ad355bfd2bbaed971b
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (376=b3 AND c3=806 AND 244=a3)
 UNION
@@ -21651,7 +21651,7 @@ EXCEPT
 231
 774
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE e1 in (695,582,484,772,313,717,943,148,546,161,367,11)
       OR (602=e1 OR 607=c1)
@@ -21673,7 +21673,7 @@ UNION
 602
 646
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (177=c2 AND e2=428)
 INTERSECT
@@ -21696,7 +21696,7 @@ UNION
 711
 720
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE d1 in (215,0,319,863,254)
       OR (763=e1 AND 828=b1)
@@ -21726,7 +21726,7 @@ EXCEPT
 ----
 24 values hashing to 444717e1019141f244c032cc28a78fb6
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (e2=37 AND 186=a2 AND c2=24)
 INTERSECT
@@ -21770,7 +21770,7 @@ UNION
 ----
 21 values hashing to 4e85a9126cc96cdc71e7235c658245d1
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE c4 in (752,703,854,667,513,221,238,188)
       OR b4 in (480,635,408,319,892,660,765,76)
@@ -21786,7 +21786,7 @@ EXCEPT
 ----
 21 values hashing to ce08510689551564f6a3ca9147774a1c
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE d5 in (634,991,413,602,910,269,811,98)
       OR (674=b5 OR 922=c5)
@@ -21821,7 +21821,7 @@ UNION
 ----
 41 values hashing to f7bbb30e8d1793c740cedfa10f74a65b
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (459=b8 AND 678=e8 AND 608=d8 AND c8=965)
       OR (366=d8 AND b8=365)
@@ -21843,7 +21843,7 @@ EXCEPT
 ----
 13 values hashing to 16b0c6830534db5e3b8bd90941ce4e9e
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (299=c1)
       OR e1 in (546,880,95,779)
@@ -21885,7 +21885,7 @@ UNION ALL
 ----
 26 values hashing to a4aa6e9861fe24640415a6e229b37df2
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (d4=449 OR 471=c4 OR 778=e4)
 INTERSECT
@@ -21893,7 +21893,7 @@ INTERSECT
    WHERE NOT ((c3=900 OR 476=c3 OR a3=697))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE e7 in (197,782,31)
       OR (589=c7 AND d7=134 AND a7=433 AND b7=323)
@@ -21912,7 +21912,7 @@ UNION ALL
 ----
 22 values hashing to 8d22b677b7cabef1ce77dc59323ea192
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (d8=989 OR a8=70)
       OR (d8=197)
@@ -21951,7 +21951,7 @@ UNION ALL
 ----
 22 values hashing to 7657a36e1a12805a892602cfdcf63e56
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (988=d4)
       OR e4 in (486,415,35,977,631,381,512,596,698,767,554,38,123,37)
@@ -21991,7 +21991,7 @@ UNION ALL
 ----
 29 values hashing to f27bc3271db9c8fd14591496b4397b25
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (a6=211 OR 646=e6)
       OR (b6=541 AND 975=c6 AND a6=255 AND 154=e6)
@@ -22014,7 +22014,7 @@ EXCEPT
 ----
 11 values hashing to 889346cf88d41ec5402614e809954cf6
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (278=b2 AND c2=193 AND 317=d2 AND 10=a2 AND e2=282)
       OR (445=e2 OR c2=202)
@@ -22024,7 +22024,7 @@ INTERSECT
            OR c1 in (346,36,548,289,246))
 ----
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (84=c6)
       OR (a6=148 AND c6=399 AND 24=e6 AND d6=321 AND 650=b6)
@@ -22060,7 +22060,7 @@ EXCEPT
 ----
 48 values hashing to 38b9b3123896f9a3ef4b25c0e2b53ace
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (a8=347)
       OR (20=d8 AND a8=70 AND b8=523 AND e8=463 AND 979=c8)
@@ -22077,7 +22077,7 @@ INTERSECT
    WHERE NOT (b1 in (807,432,696,350))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE c7 in (478,432,301,709,948,232,966,92,954,529,934,482)
       OR (d7=594 AND b7=764 AND 288=e7)
@@ -22101,7 +22101,7 @@ UNION ALL
 ----
 16 values hashing to 653ef8e3e3c8af2d50cf6c085a6632c2
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (384=e8 OR 400=a8 OR b8=461)
 UNION
@@ -22125,7 +22125,7 @@ UNION ALL
 ----
 14 values hashing to e4c21dbb0f205d00846dcb5ac11fe41f
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (a3=380 OR 550=e3 OR b3=317)
 EXCEPT
@@ -22135,7 +22135,7 @@ EXCEPT
 149
 247
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE e6 in (622,439,761,972,794,574,707,503,257)
       OR (270=a6 OR d6=393 OR 692=a6)
@@ -22152,7 +22152,7 @@ UNION
 ----
 23 values hashing to 709ae165da6b77b2317fb1c8a25e3eab
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (a4=337 AND c4=220 AND 658=d4 AND 837=e4 AND 917=b4)
       OR (442=b4)
@@ -22180,7 +22180,7 @@ EXCEPT
 ----
 15 values hashing to 784aec9b3c07d556f9f466beec76c619
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (470=e5)
       OR c5 in (18,922,545,101,824,934,601,158,766)
@@ -22210,7 +22210,7 @@ UNION ALL
 ----
 32 values hashing to 45da682dec0927daf855c3712ebfd989
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE b9 in (74,578,759,285,211,210,751,855,893,77,525)
 EXCEPT
@@ -22220,7 +22220,7 @@ EXCEPT
 ----
 11 values hashing to 1c56f2241ea744bb8f436964c2aaa877
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE a2 in (796,186,304)
       OR b2 in (73,90,859,755,819,966,632,418,279,649,161,226,823)
@@ -22257,7 +22257,7 @@ EXCEPT
 ----
 25 values hashing to 068a6938341be6cfc044da56627ada15
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (544=a2 AND 351=d2)
       OR (779=c2 AND 351=d2 AND b2=846)
@@ -22286,7 +22286,7 @@ UNION ALL
 ----
 22 values hashing to 086b092011e2ffbaa709325ea93f4ced
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (529=c7)
 UNION ALL
@@ -22315,7 +22315,7 @@ UNION ALL
 ----
 21 values hashing to 46014cf3d85d13cf64f7e05d58fd071b
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (214=b9 AND 463=d9 AND e9=146 AND c9=457 AND a9=273)
 EXCEPT
@@ -22363,7 +22363,7 @@ UNION ALL
 ----
 68 values hashing to 5cbc18e65c76803c7269cd1df009ec57
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (e3=975 OR e3=281)
       OR (2=d3)
@@ -22395,7 +22395,7 @@ EXCEPT
 ----
 19 values hashing to 90af2f0aa760e043cc2229da46a850ed
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (694=c4 AND b4=407 AND a4=210 AND 565=e4 AND d4=60)
 EXCEPT
@@ -22459,7 +22459,7 @@ UNION ALL
 ----
 36 values hashing to 186a2b72e5f61693786a8bc0fdd02b26
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE a6 in (751,414,531,696)
       OR d6 in (493,147,172,366,60,467,457,321,561,729,489)
@@ -22491,7 +22491,7 @@ EXCEPT
 ----
 21 values hashing to 2d147a9ea0668899b2e805a72781cca4
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (e4=151 OR e4=931)
       OR (950=d4)
@@ -22561,7 +22561,7 @@ UNION
 ----
 33 values hashing to dd34fe41b2b855a13d046557d193c41f
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE d6 in (664,600,467,911,867,424)
       OR (255=a6 OR 414=a6)
@@ -22601,7 +22601,7 @@ EXCEPT
 ----
 38 values hashing to 4ccfbd64992495806b500597ef281a62
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (a9=413 OR b9=5)
       OR (118=b9 OR 737=e9)
@@ -22654,7 +22654,7 @@ UNION
 ----
 17 values hashing to e77bb70e7e32bdbc9df3c7a8fad0b2dc
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE c2 in (711,179,45,878,141,137,4,177,511,161,722,779)
 UNION ALL
@@ -22691,7 +22691,7 @@ EXCEPT
 ----
 27 values hashing to 3dcf0d75748b3d184612abab336521fe
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE (e5=558 AND 729=c5 AND d5=787)
       OR c5 in (585,934,12,797,721,723,31,250,44,799,198,18)
@@ -22720,7 +22720,7 @@ EXCEPT
 ----
 29 values hashing to ed5f3d230e70d8b31e7eccdf741346b7
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (851=a2 OR a2=980)
 UNION
@@ -22745,7 +22745,7 @@ UNION ALL
 ----
 12 values hashing to 066f0f647016dd9928074965bb4c703e
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (651=a8 OR 397=b8)
 INTERSECT
@@ -22762,7 +22762,7 @@ UNION
 ----
 13 values hashing to afc0a93b8b390e7f45ee672592402dea
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (564=e2 AND 992=c2 AND 315=a2 AND b2=532)
 INTERSECT
@@ -22839,7 +22839,7 @@ UNION ALL
 ----
 22 values hashing to 6c4464649bff757dcc2da6fa59bdcb61
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE a2 in (308,789,245,262,588,64,916,185,691,495,898)
 EXCEPT
@@ -22867,7 +22867,7 @@ EXCEPT
 ----
 15 values hashing to 4daa5253af86202064935b8dd7849812
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE e6 in (67,14,283,972,761,24,809,395,601,495,211,915,469,230)
       OR c6 in (446,864,490,328,146,729,718)
@@ -22886,7 +22886,7 @@ EXCEPT
 ----
 27 values hashing to 736efe073e81f16b4411e7766980cb21
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE a9 in (78,11,891,28,149,263)
 UNION ALL
@@ -22903,7 +22903,7 @@ EXCEPT
 ----
 9 values hashing to c21cfed15e3e7901aab32b7dfd59ee5e
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE d9 in (464,899,554,912,51,553,919)
       OR a9 in (683,764,304,318,811,662,149,830,535)
@@ -22919,7 +22919,7 @@ UNION
 ----
 12 values hashing to b5f99273500868f3221838a59ec9689e
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (b8=958)
       OR e8 in (608,273,186,41,944,204,38,866)
@@ -22959,7 +22959,7 @@ EXCEPT
 ----
 32 values hashing to 7cbff4f947ac48e596b3237a7a54cff8
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (443=c5 AND e5=587)
 INTERSECT
@@ -22976,7 +22976,7 @@ UNION
 544
 802
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (646=e6 OR b6=882 OR 286=d6)
 INTERSECT
@@ -23005,7 +23005,7 @@ UNION ALL
 ----
 35 values hashing to 48e9e097ca7aa012f2c4a54bb7476bfa
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE d2 in (860,86,351,723,836,790,209,854)
       OR (b2=784)
@@ -23032,7 +23032,7 @@ UNION ALL
 776
 885
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (a3=380 AND 890=c3 AND 932=b3 AND 260=e3)
       OR (801=c3)
@@ -23072,7 +23072,7 @@ UNION ALL
 ----
 27 values hashing to 553ba1c0c1522077972b38b37fc047ff
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (e9=291)
 UNION ALL
@@ -23100,7 +23100,7 @@ UNION ALL
 ----
 39 values hashing to 3724c77360e7ccfee4f536e5ffffa6cb
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE b8 in (308,922,459,511,52,8,469,705,397,313,640)
       OR d8 in (627,525,889,370,192,101,767,936,756)
@@ -23123,7 +23123,7 @@ EXCEPT
 ----
 32 values hashing to 0bf8ffdb9db7db2a1c57b8df39f7708c
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (488=d6 AND e6=678)
       OR (654=e6 AND 490=b6 AND 441=c6)
@@ -23146,7 +23146,7 @@ UNION
 ----
 20 values hashing to dcb4e383f7d3682a7b3b55c428c23189
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE d8 in (339,112,474,899,849,814,511,534,876,20,116,190,862,494)
       OR (a8=129 AND e8=320 AND b8=466 AND 466=d8 AND c8=88)
@@ -23183,7 +23183,7 @@ UNION
 ----
 32 values hashing to 0876cf2d4b2a57ede4a1085da43bbfb0
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE (c2=773 AND 547=e2 AND 433=b2 AND 310=d2)
 UNION
@@ -23224,7 +23224,7 @@ EXCEPT
 ----
 18 values hashing to a3c1527956980c1045a5ca8a5b858323
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE d4 in (979,31,680,44,264,376,86,549,491,794)
 EXCEPT
@@ -23239,7 +23239,7 @@ UNION ALL
 ----
 36 values hashing to bb57b1b2fa618e2874536a93ab7e79a1
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (631=d8 OR 254=a8 OR d8=989)
       OR c8 in (486,513,230,965,908)
@@ -23255,7 +23255,7 @@ EXCEPT
 ----
 26 values hashing to aa877d191fd52af28b535f1d5ce88d0a
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (b8=364)
 UNION ALL
@@ -23315,7 +23315,7 @@ UNION
 748
 838
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE d2 in (833,977,651,225,836,126,621,249)
       OR b2 in (846,599,113,938,966,635,643,139,275,729,519,509)
@@ -23334,7 +23334,7 @@ EXCEPT
 ----
 16 values hashing to 7f51feb113d4b01a29115558eed05373
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (e3=871)
       OR (b3=998 OR d3=665)
@@ -23364,7 +23364,7 @@ EXCEPT
 ----
 9 values hashing to 889736fd1f52bbc36fe29b08e35a004f
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (c1=97 AND d1=414)
       OR e1 in (181,255,313,779)
@@ -23396,7 +23396,7 @@ EXCEPT
 ----
 51 values hashing to 01a0a22a173eeb9c544f37a48d766824
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (a9=215)
 UNION
@@ -23415,7 +23415,7 @@ EXCEPT
 ----
 480
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (e9=263 OR a9=891 OR 312=b9)
       OR (b9=855 AND d9=967 AND 962=a9 AND 639=c9 AND e9=607)
@@ -23445,7 +23445,7 @@ UNION
 ----
 32 values hashing to ca89b56788973d169449b79fbc989f0e
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (d6=73 OR 534=c6 OR a6=64)
       OR (a6=811)
@@ -23479,7 +23479,7 @@ EXCEPT
 603
 878
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE d4 in (44,929,889,25,728,617,246,376)
 UNION
@@ -23517,7 +23517,7 @@ UNION ALL
 ----
 31 values hashing to c931f4d8182e0aba4f75aadc58f8652f
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (d2=555)
       OR (e2=777 OR c2=551)
@@ -23549,7 +23549,7 @@ EXCEPT
 ----
 24 values hashing to 649211f12cc7b21cbd5a9111e184d043
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (368=b3 OR 187=e3)
       OR (c3=641 AND 105=a3 AND 133=d3 AND 122=b3 AND 365=e3)
@@ -23602,7 +23602,7 @@ UNION ALL
 ----
 11 values hashing to 9b64820abd4536e50e33e787916b7964
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (e6=67 AND a6=211)
 INTERSECT
@@ -23638,7 +23638,7 @@ UNION
 ----
 39 values hashing to c70a98255a78fdef14366367127360e4
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (d7=902 OR 524=d7 OR 35=a7)
 UNION
@@ -23670,7 +23670,7 @@ UNION ALL
 ----
 32 values hashing to c12ea071f8bf578551265b764332c8f6
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE c4 in (0,675,723)
       OR (a4=778 AND b4=587 AND 317=d4 AND 393=c4)
@@ -23688,7 +23688,7 @@ EXCEPT
 ----
 17 values hashing to 264d395ce8029a674f002dff00fbe50d
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (b2=433 OR e2=547 OR 427=e2)
 UNION
@@ -23719,7 +23719,7 @@ UNION
 ----
 23 values hashing to 300f75e01eed8114a0274f0749a0da79
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE b9 in (64,122,803,128,410,122,880,74,848,171,456,900,103,214)
 UNION ALL
@@ -23778,7 +23778,7 @@ UNION
 ----
 9 values hashing to cb52679f1ec4ad31f82b24059d524309
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (645=b1 AND 966=c1 AND e1=497 AND 820=d1)
       OR (a1=521 AND c1=375 AND 281=b1)
@@ -23815,7 +23815,7 @@ EXCEPT
 ----
 36 values hashing to 1eb8b13470f68c1318bc87312014bedd
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE (761=e6 AND 21=d6 AND 320=c6 AND 610=a6 AND b6=825)
       OR (376=d6 AND 359=a6 AND e6=798 AND 942=c6 AND 0=b6)
@@ -23833,7 +23833,7 @@ INTERSECT
    WHERE NOT (a3 in (763,515,822,41))
 ----
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE a7 in (707,75,703,565,642,35,285,490,195,165,97)
 EXCEPT
@@ -23871,7 +23871,7 @@ UNION ALL
 ----
 54 values hashing to dc551fa12f621694f929c170b01dee1c
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (e6=439)
       OR e6 in (511,585,850,95,503,588)
@@ -23903,7 +23903,7 @@ EXCEPT
 ----
 14 values hashing to f40cd36a065b3acbed2e71f993eb4829
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (a4=151 OR c4=794 OR 575=e4)
 UNION
@@ -23936,7 +23936,7 @@ UNION
 ----
 65 values hashing to f43315b2532dd990d265bfc3f8289b0e
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE b7 in (159,820,670,166,52,808,178,679,424,627,924)
       OR (303=e7)
@@ -23968,7 +23968,7 @@ UNION
 ----
 31 values hashing to 964729407c52b43f0f2a41a56036e0d5
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE d7 in (924,675,164,315,916,395,805,673,772,436,346,278)
 INTERSECT
@@ -23997,7 +23997,7 @@ EXCEPT
 495
 555
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (e1=522 OR 468=e1 OR a1=32)
 UNION ALL
@@ -24021,7 +24021,7 @@ UNION ALL
 468
 522
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE d2 in (80,813,546,198,750)
       OR e2 in (223,147,939,428,808,512,564,510,820,433,524)
@@ -24055,7 +24055,7 @@ UNION
 ----
 41 values hashing to 85b31bcf0f29acf813a5bb7a897613b8
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE d4 in (141,18,665)
 UNION ALL
@@ -24090,7 +24090,7 @@ EXCEPT
 892
 941
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE (465=c1 AND 247=e1)
       OR (862=b1 OR 237=a1 OR b1=956)
@@ -24101,7 +24101,7 @@ INTERSECT
            OR c6 in (159,609,292,769,480))
 ----
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE b4 in (94,289,220,286,907,733,379,538,979,331,372,295)
       OR c4 in (860,832,723)
@@ -24120,7 +24120,7 @@ EXCEPT
 ----
 27 values hashing to 1f79ce810f342469501c0d210130c755
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (246=b3 AND a3=784)
       OR (c3=542 OR 305=c3)
@@ -24174,7 +24174,7 @@ UNION ALL
 ----
 16 values hashing to a3c988f1d954550195c0f40a0a418a72
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (58=d8 AND b8=755 AND a8=417)
       OR (e8=947)
@@ -24197,7 +24197,7 @@ EXCEPT
 ----
 16 values hashing to e4ae89306e1f4943620c9661391d5e14
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (a3=162 AND b3=266 AND 809=c3)
       OR b3 in (542,827,882,566,445)
@@ -24234,7 +24234,7 @@ EXCEPT
 ----
 28 values hashing to 3fa886c974eff3738d85a6f764e41da4
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE d4 in (985,105,491,820,597,844,31)
       OR (a4=968)
@@ -24268,7 +24268,7 @@ EXCEPT
 ----
 15 values hashing to 62dead13f3b069662358a1f70c7258a8
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE c9 in (222,257,323,469,240,87,457,487,146,687,37,370,613)
       OR (d9=164 AND 245=e9)
@@ -24297,7 +24297,7 @@ UNION ALL
 ----
 66 values hashing to ee9deeee0aff70450d2ff6eb01b47fcc
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (360=b7 OR 341=d7 OR b7=636)
       OR a7 in (9,442,85,706)
@@ -24321,7 +24321,7 @@ EXCEPT
 ----
 18 values hashing to 044f92eb89e421c03d7d7567dbdda3b6
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE e1 in (695,328,89)
 UNION ALL
@@ -24343,7 +24343,7 @@ EXCEPT
 768
 89
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE d7 in (324,902,671,134,781,196,328,225,842,673)
       OR (a7=416 OR c7=843)
@@ -24398,7 +24398,7 @@ UNION
 ----
 18 values hashing to 0ea67f3934e1182c90fa04e621beeb38
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (c3=542 AND d3=658 AND a3=349)
       OR (d3=2)
@@ -24421,7 +24421,7 @@ EXCEPT
 ----
 17 values hashing to daff8915cc0a7e586dfe943c3d3f8fd8
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (513=a5 OR 537=d5)
       OR b5 in (531,971,506)
@@ -24456,7 +24456,7 @@ EXCEPT
 ----
 14 values hashing to e538c1671aa76a660bdce1b1c9ab7a76
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (14=e8 OR 653=a8)
 UNION ALL
@@ -24482,7 +24482,7 @@ UNION
 ----
 41 values hashing to 6536a47a634d199417e6d3037f0c61f7
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE e5 in (104,13,807,937,995,708,386)
 UNION ALL
@@ -24523,7 +24523,7 @@ UNION ALL
 ----
 58 values hashing to bd26a7231e1da351fdde68d529232fdf
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE c8 in (374,230,79,943,117,851,656,225,844,151,250,790,720,521)
       OR (463=e8)
@@ -24537,7 +24537,7 @@ INTERSECT
 592
 833
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE b4 in (379,721,357,40,765,603,23,721,137,319,713,94,735)
 INTERSECT
@@ -24552,7 +24552,7 @@ EXCEPT
 ----
 735
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE c6 in (832,615,320,752,216,648)
 UNION ALL
@@ -24600,7 +24600,7 @@ UNION ALL
 ----
 27 values hashing to 5a1f73e385757ad33f434e6c017e2494
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (d8=682 OR 541=d8 OR c8=692)
       OR (b8=287 AND 859=e8 AND 332=c8)
@@ -24632,7 +24632,7 @@ UNION ALL
 ----
 31 values hashing to c8fc0d49ac90c46ae81a31ca805b3582
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (b2=864 OR a2=123 OR 139=a2)
       OR (805=a2 OR a2=709 OR c2=878)
@@ -24655,7 +24655,7 @@ EXCEPT
 ----
 14 values hashing to 6b3ba3ecce4b756aed270561d876fc75
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (e3=25 AND b3=713 AND 996=a3 AND 520=d3)
       OR (547=e3 OR b3=159 OR 145=b3)
@@ -24679,7 +24679,7 @@ UNION
 ----
 19 values hashing to 4c50e4de45f83be1cf445d16da09eac5
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (250=c5 AND 855=d5 AND 609=b5 AND 685=a5)
 UNION ALL
@@ -24705,7 +24705,7 @@ EXCEPT
 743
 855
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE e1 in (748,222,558,247,113,696,254,443,367,117,896,288,695)
       OR (a1=609)
@@ -24732,7 +24732,7 @@ EXCEPT
 ----
 12 values hashing to 8da95f6adc3934ef546c36c384b28ea0
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (490=a7 OR 826=e7)
 UNION ALL
@@ -24754,7 +24754,7 @@ EXCEPT
 788
 808
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE d5 in (565,685,957,111,437,841,634,835,964,858)
       OR a5 in (721,357,342,817,311,599,235,904,413)
@@ -24766,7 +24766,7 @@ INTERSECT
 352
 732
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (490=c3)
 UNION ALL
@@ -24797,7 +24797,7 @@ EXCEPT
 ----
 35 values hashing to 2a0e8eaca3b5486d863209f7f889c8d0
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (d4=441)
       OR (167=b4 AND 806=c4 AND e4=358 AND 277=d4 AND a4=708)
@@ -24826,7 +24826,7 @@ UNION ALL
 ----
 17 values hashing to 238a5e593568dca51b89566b8253c920
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (a6=2)
       OR (740=a6 OR 850=b6)
@@ -24842,7 +24842,7 @@ EXCEPT
 ----
 16 values hashing to 65274a60928933ed6cb1a7ea64262df6
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE d1 in (254,922,626,770,748)
       OR e1 in (210,897,962,558,117,693)
@@ -24873,7 +24873,7 @@ EXCEPT
 ----
 49 values hashing to 300b2a556558e7f5a9d48708abfecb09
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (b5=717)
 UNION ALL
@@ -24892,7 +24892,7 @@ EXCEPT
 ----
 13 values hashing to f582e1a517a967ffc871634a0a76ab51
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE a9 in (72,815,474,18,972,416,318,924,685,953)
 UNION
@@ -24925,7 +24925,7 @@ EXCEPT
 ----
 22 values hashing to e2904e1014360108508c2ba239c5670d
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE a9 in (549,685,349,611)
       OR c9 in (809,37,75,254,711,487)
@@ -24945,7 +24945,7 @@ UNION ALL
 ----
 19 values hashing to 92b6be3ed26d034acf369ecbb4b067c3
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE (e8=7 OR 442=e8)
       OR (5=c8 OR a8=591 OR d8=2)
@@ -24968,7 +24968,7 @@ EXCEPT
 ----
 31 values hashing to 066d96d6c02c792151b89820ac369aad
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (d8=190 OR 617=e8)
       OR (504=a8 OR d8=474 OR 792=e8)
@@ -25009,7 +25009,7 @@ UNION
 ----
 54 values hashing to 56dd80ac39e76f2f7210ebd9dc22ac88
 
-query T valuesort
+query I valuesort
   SELECT e2 FROM t2
    WHERE b2 in (329,819,226,864,796,888,380,725,311,113,585)
       OR c2 in (793,251,746,625,551)
@@ -25049,7 +25049,7 @@ UNION ALL
 ----
 10 values hashing to c7bdd0103014b7b80013ae9b3db147c5
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (455=c3 AND b3=827)
 UNION
@@ -25080,7 +25080,7 @@ UNION
 ----
 42 values hashing to b7cad216721dac2df68edb84cb4d57de
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (c9=39 AND 495=d9)
       OR e9 in (388,723,936,944,965,942,694,819)
@@ -25110,7 +25110,7 @@ EXCEPT
 ----
 22 values hashing to 8c09d9fe04cf4a06e4dd8ed85dc6b7ae
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (c6=282 AND e6=523 AND d6=256 AND a6=240 AND 158=b6)
       OR e6 in (100,972,646,439,5)
@@ -25133,7 +25133,7 @@ UNION ALL
 962
 974
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (b3=240 AND 825=d3 AND c3=863)
       OR (e3=818 OR 335=a3 OR 187=e3)
@@ -25160,7 +25160,7 @@ EXCEPT
 ----
 29 values hashing to 9b2980c9e68976efe50dee6706139c10
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (b4=982)
       OR d4 in (639,141,373,728,199,628,844,356,212,31,680,136)
@@ -25198,7 +25198,7 @@ UNION
 ----
 57 values hashing to ab715221a6c1dbb90986f9a2b0be3f3b
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE a6 in (121,604,474,692,540,251,45,270,40,469,818,240,46,255)
       OR c6 in (807,292,267,123,159,522,308,528,146,673,442,25,242,84)
@@ -25222,7 +25222,7 @@ UNION ALL
 ----
 28 values hashing to 953b4a20a6cf3396bbfce364bf4544a7
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (d6=196)
       OR (b6=232 OR 974=d6 OR 606=b6)
@@ -25259,7 +25259,7 @@ EXCEPT
 ----
 34 values hashing to f2ab2b32dc74fb841f08dd38d1b6ca1d
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (e6=798 AND d6=376 AND b6=0)
       OR d6 in (21,600,970,942,974)
@@ -25291,7 +25291,7 @@ EXCEPT
 ----
 17 values hashing to ac53af03467af937496cb5387efb620f
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (a9=559 OR e9=868)
 INTERSECT
@@ -25301,7 +25301,7 @@ INTERSECT
            OR (373=a5 AND b5=231 AND e5=549))
 ----
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE e6 in (646,95,469,731,255,439,794,90,324,274,24,31,634,969)
 EXCEPT
@@ -25318,7 +25318,7 @@ EXCEPT
 ----
 14 values hashing to c04ea51b65343d28a7c4ccfe8971dcb9
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE e4 in (619,951,184,147,465,372,123,737,491,1,350,273,835,543)
       OR b4 in (267,389,288,58,408,76,986,107,469,577,917,901,653,357)
@@ -25354,7 +25354,7 @@ EXCEPT
 ----
 17 values hashing to 33a529ca157b2be5c71a0277f1f08efd
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (852=d6)
       OR (e6=353 OR b6=606 OR d6=186)
@@ -25376,7 +25376,7 @@ UNION ALL
 ----
 13 values hashing to 445f2b2868f14ccc3ab911fe77fdd885
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (513=c8)
       OR (e8=7 OR 882=a8)
@@ -25438,7 +25438,7 @@ UNION ALL
 ----
 61 values hashing to 622781ff665ce0652bf04b4dace6e88d
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (809=c9)
       OR (c9=64 AND d9=855 AND e9=653 AND b9=783)
@@ -25474,7 +25474,7 @@ UNION ALL
 ----
 35 values hashing to 7c5b0a417782c7268b244b6efa7cbe02
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE e4 in (179,554,273,958,738,85,6,132,763,486)
       OR (557=e4 OR d4=728 OR 543=e4)
@@ -25510,7 +25510,7 @@ UNION ALL
 ----
 25 values hashing to ca81d594a7fab0ac345cd687ef6c8267
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (e9=452)
       OR (880=b9 AND c9=253 AND 647=e9 AND d9=808 AND 326=a9)
@@ -25544,7 +25544,7 @@ UNION ALL
 ----
 20 values hashing to ed1863ade53e9266f002bf414603e6ca
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE (942=e9 AND 467=d9 AND c9=146 AND 297=a9 AND 848=b9)
       OR (811=a9 AND 178=b9)
@@ -25605,7 +25605,7 @@ UNION
 ----
 65 values hashing to 7e6b263f0305fb7437eff21333a76961
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (164=d9 OR a9=764 OR 171=c9)
 INTERSECT
@@ -25638,7 +25638,7 @@ UNION ALL
 ----
 45 values hashing to d9341e5badde73fce37b0c0e85c15bd2
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (66=c6)
       OR e6 in (395,731,738,257,750,5,90,946,489,531,915)
@@ -25665,7 +25665,7 @@ UNION
 ----
 43 values hashing to 7ff42eceac848f3d6943d2b46a57b263
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE (e1=122 AND d1=335)
 UNION
@@ -25698,7 +25698,7 @@ UNION ALL
 ----
 36 values hashing to b44be021da567eab4a216c566ba59c20
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (e8=423)
       OR c8 in (188,656,149)
@@ -25721,7 +25721,7 @@ EXCEPT
 623
 683
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE (e1=602 OR b1=266 OR a1=866)
 EXCEPT
@@ -25760,7 +25760,7 @@ UNION
 ----
 15 values hashing to 43dc374cdcfdb5019f907cb1b5327b70
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (971=e7 OR 460=e7 OR d7=666)
       OR (682=c7)
@@ -25780,7 +25780,7 @@ EXCEPT
 ----
 21 values hashing to 85c58df9cac22d6d1e564ab719beed94
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (579=e8 OR 310=e8 OR 919=e8)
       OR (c8=691 AND 946=a8 AND e8=510 AND 951=b8 AND d8=811)
@@ -25799,7 +25799,7 @@ UNION ALL
 ----
 19 values hashing to 6830371d4375ef9d17a979f6dc98ea53
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (979=b7 AND d7=296 AND 557=c7)
 EXCEPT
@@ -25832,7 +25832,7 @@ EXCEPT
 ----
 37 values hashing to cabaa08b87383bd8451bad85ff93068e
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE c3 in (299,580,555,592,800,117,929,29)
 UNION ALL
@@ -25852,7 +25852,7 @@ EXCEPT
 ----
 17 values hashing to 279b566dae80900b864ffd1179054e39
 
-query T valuesort
+query I valuesort
   SELECT d1 FROM t1
    WHERE c1 in (252,765,388,736,272,636,465,15)
       OR d1 in (565,619,837,294)
@@ -25876,7 +25876,7 @@ UNION ALL
 973
 982
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE d3 in (81,423,825,482,913,889,958,782)
 INTERSECT
@@ -25918,7 +25918,7 @@ UNION ALL
 709
 944
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE (335=a5 OR 235=a5 OR d5=555)
       OR (609=b5)
@@ -25949,7 +25949,7 @@ EXCEPT
 965
 982
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE d8 in (525,690,835,534,767,474,511,711,101,743)
 UNION
@@ -25982,7 +25982,7 @@ UNION
 ----
 57 values hashing to 525e8fdbfb297f138204cf827d90d75d
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (b3=927)
       OR (b3=57 AND d3=711 AND 727=a3 AND 108=e3)
@@ -26012,7 +26012,7 @@ EXCEPT
 ----
 11 values hashing to 55b31573fea4374645c4e9358389dc01
 
-query T valuesort
+query I valuesort
   SELECT b5 FROM t5
    WHERE (a5=586)
       OR c5 in (140,766,723,824,818)
@@ -26041,7 +26041,7 @@ EXCEPT
 ----
 23 values hashing to ad673a5682a86a3bcb9067b33918112d
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE d7 in (457,785,526,196,539,315,367)
       OR (a7=97 AND b7=579)
@@ -26056,7 +26056,7 @@ UNION ALL
 ----
 23 values hashing to 9e8f77c50aef8c4d128a5ffcd442a454
 
-query T valuesort
+query I valuesort
   SELECT a9 FROM t9
    WHERE (c9=87 AND e9=263)
       OR (936=e9 OR a9=318 OR b9=95)
@@ -26070,7 +26070,7 @@ EXCEPT
 463
 811
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (11=e1 AND c1=683 AND 914=b1 AND 170=a1 AND d1=863)
       OR e1 in (210,733,113,254,904,602,72,731,696,815,12,122,110)
@@ -26096,7 +26096,7 @@ EXCEPT
 ----
 9 values hashing to 661a652f25fd6d7f52259ae2e531c342
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE c3 in (792,986,439,175,887,467,477,887)
 EXCEPT
@@ -26105,7 +26105,7 @@ EXCEPT
 ----
 10 values hashing to db93109cbd654042b3d96bfda2aba34d
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE a1 in (702,584,607,479,330,445,513,678,406,314,880,953,75,268)
       OR d1 in (213,55,992,922,619,972,654,130,88,141,679,761)
@@ -26140,7 +26140,7 @@ UNION
 ----
 67 values hashing to 8e5e9e845f4fc5bbf3f1cae45819580d
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE d3 in (607,524,501,437,520,134,364,729,642,170,1,17,336)
       OR (c3=53 OR d3=81 OR 651=c3)
@@ -26183,7 +26183,7 @@ UNION ALL
 ----
 17 values hashing to 1a37c4562cf000cca9779ccb6013367f
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (347=a3 AND e3=959)
       OR e3 in (774,914,600,265,853,318,272,814,578)
@@ -26207,7 +26207,7 @@ UNION ALL
 ----
 30 values hashing to 50b1ff702fa8a795e17995d7a77e3587
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE c3 in (40,476,243,863,677,929,490,75)
       OR a3 in (913,892,145,651,696,997,566,720,699,34,70,581,429)
@@ -26241,7 +26241,7 @@ EXCEPT
 ----
 46 values hashing to ea359559a4c7fa8423e43919f61a3c8b
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (a4=271 AND b4=810 AND c4=483 AND 491=d4 AND 12=e4)
 EXCEPT
@@ -26272,7 +26272,7 @@ EXCEPT
 485
 586
 
-query T valuesort
+query I valuesort
   SELECT a8 FROM t8
    WHERE (953=d8 AND 421=e8 AND b8=155)
       OR (d8=81 AND a8=961)
@@ -26302,7 +26302,7 @@ UNION ALL
 ----
 17 values hashing to a0ad5428bb48478c076f8dba499869ad
 
-query T valuesort
+query I valuesort
   SELECT b7 FROM t7
    WHERE (146=c7 AND 956=d7 AND 183=e7 AND 634=b7)
       OR (e7=462)
@@ -26325,7 +26325,7 @@ UNION ALL
 ----
 33 values hashing to b6e12ce8a6c2e01e3d8ba8e7c170ee2d
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE c1 in (670,620,299,637,387,482,703,654,870,680,629,417,980,626)
       OR (828=b1 OR c1=284 OR 949=e1)
@@ -26357,7 +26357,7 @@ UNION ALL
 ----
 30 values hashing to 20e82e933e2011b2961c064ed85267a2
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (677=b8 AND 297=c8 AND 822=a8 AND d8=422)
       OR (d8=706 AND e8=579)
@@ -26390,7 +26390,7 @@ EXCEPT
 186
 579
 
-query T valuesort
+query I valuesort
   SELECT e1 FROM t1
    WHERE a1 in (237,231,931)
       OR (d1=951 OR 121=d1 OR b1=149)
@@ -26420,7 +26420,7 @@ EXCEPT
 512
 56
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (d3=923 OR 708=d3)
 UNION
@@ -26469,7 +26469,7 @@ UNION ALL
 ----
 26 values hashing to 8c145631398e4d1904e88a8e6c748222
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE (d4=268 AND 33=b4 AND c4=221)
       OR (b4=331 OR 473=a4 OR 631=c4)
@@ -26497,7 +26497,7 @@ UNION ALL
 ----
 37 values hashing to df1b43e0fed2e758b47b31c19552fab3
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (a9=830 OR a9=251 OR a9=240)
       OR c9 in (935,402,534,391,836)
@@ -26533,7 +26533,7 @@ EXCEPT
 ----
 49 values hashing to b10c68c40777660d922be594af39bed7
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE e3 in (211,702,821,192,914,690,981,829,993)
       OR a3 in (763,818,265,457,696,727,30)
@@ -26551,7 +26551,7 @@ EXCEPT
 ----
 25 values hashing to bd1023683eb9391bb9828386715928b5
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE e8 in (411,632,416,944,431,392,38,729,260,933,22,272)
       OR (c8=656 OR b8=870)
@@ -26588,7 +26588,7 @@ EXCEPT
 ----
 33 values hashing to 6d5bf4e99b1604ecfb0188e66b22427e
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (e4=482 AND 981=a4 AND b4=607 AND 55=d4 AND 904=c4)
       OR a4 in (509,92,281,605,598,919,74,81,422,51,968)
@@ -26627,7 +26627,7 @@ UNION ALL
 ----
 33 values hashing to fc11ac0c7a7cf741ec176129c8c4d7a9
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE b3 in (355,457,113,617,685,234,876,269,127)
       OR (927=b3 OR d3=665)
@@ -26657,7 +26657,7 @@ EXCEPT
 ----
 23 values hashing to c48f5f1840e91ea1920feb7d763fea6d
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (521=a1 OR d1=900 OR a1=492)
       OR (105=d1 AND a1=738)
@@ -26684,7 +26684,7 @@ EXCEPT
 762
 807
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (186=d6 OR 731=e6)
       OR e6 in (6,682,329,211)
@@ -26725,7 +26725,7 @@ EXCEPT
 ----
 18 values hashing to be4ffe61b6ed9977364cfbb84a15c555
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (a7=325 AND 478=c7 AND e7=688)
       OR c7 in (966,146,145,954,857,249,843,725,174,523,206,585,22,853)
@@ -26736,7 +26736,7 @@ INTERSECT
 ----
 549
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE e9 in (267,477,687,607,264,426,947)
       OR (c9=95)
@@ -26771,7 +26771,7 @@ UNION ALL
 ----
 9 values hashing to e3fd7999a1848f6fa65439823874eac4
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE e3 in (119,913,135,578,728)
       OR (b3=334 OR 472=c3 OR a3=255)
@@ -26785,7 +26785,7 @@ EXCEPT
 ----
 12 values hashing to b926983a0e29d237cfc7bedf2477525e
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE b8 in (862,466,878)
       OR a8 in (153,920,807,327,794,402,210,331,417,184,628,400,882)
@@ -26827,7 +26827,7 @@ UNION ALL
 ----
 27 values hashing to 527622d8d23a01833f28c6b2939368a9
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE e4 in (257,885,324,252)
 EXCEPT
@@ -26839,7 +26839,7 @@ EXCEPT
 85
 989
 
-query T valuesort
+query I valuesort
   SELECT c4 FROM t4
    WHERE (752=a4 AND 85=e4 AND 0=c4 AND d4=665)
 INTERSECT
@@ -26856,7 +26856,7 @@ EXCEPT
 ----
 12 values hashing to 287fc74a8b49018fbe43c6cf57acab91
 
-query T valuesort
+query I valuesort
   SELECT c7 FROM t7
    WHERE (706=a7 OR 288=c7)
       OR c7 in (14,146,102,906,206)
@@ -26875,7 +26875,7 @@ EXCEPT
 ----
 12 values hashing to 92272ec0c83354365795020d9e659fe4
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (353=e6 AND 923=b6)
       OR e6 in (466,673,915,847,588,274,668,67,175,489,67)
@@ -26908,7 +26908,7 @@ UNION ALL
 ----
 73 values hashing to 82eda9cd3d1ca58c68e5b3dcc0cca00a
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE c4 in (153,964,584,674,319,433,513,749,667,398)
 UNION ALL
@@ -26931,7 +26931,7 @@ EXCEPT
 ----
 16 values hashing to abe609b541ccac4cf4ea7ac15a194dde
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (456=e7 AND b7=627 AND 344=c7)
       OR (707=a7 AND d7=177)
@@ -26950,7 +26950,7 @@ UNION
 ----
 23 values hashing to f8149cbbd4759d87c75029f9bfef1a64
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE (418=d1 AND 956=b1 AND 381=e1 AND a1=536 AND c1=417)
 UNION ALL
@@ -26974,7 +26974,7 @@ UNION ALL
 557
 987
 
-query T valuesort
+query I valuesort
   SELECT c9 FROM t9
    WHERE (c9=347)
       OR (d9=899 OR e9=146)
@@ -27013,7 +27013,7 @@ EXCEPT
 ----
 41 values hashing to f2a833f92e08b5f9e4f0495d967c06c7
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE d8 in (615,580,833,542,651,811,781,466,715,101,48,192)
 INTERSECT
@@ -27041,7 +27041,7 @@ UNION ALL
 102
 73
 
-query T valuesort
+query I valuesort
   SELECT a1 FROM t1
    WHERE a1 in (324,215,609,330,380,810,460)
       OR (d1=212 OR e1=300 OR 462=b1)
@@ -27096,7 +27096,7 @@ UNION ALL
 ----
 29 values hashing to 880109fe3c0001eba0458dc9a8e1946e
 
-query T valuesort
+query I valuesort
   SELECT d5 FROM t5
    WHERE e5 in (130,287,585,802,9,554,812,885,522,157,587,929)
 EXCEPT
@@ -27119,7 +27119,7 @@ UNION
 ----
 13 values hashing to 23713eeda999c090b77da80bc6f0b59c
 
-query T valuesort
+query I valuesort
   SELECT b8 FROM t8
    WHERE d8 in (223,534,542,472,761,989,482)
       OR (864=e8 AND c8=973 AND 704=b8 AND 620=a8 AND d8=60)
@@ -27149,7 +27149,7 @@ EXCEPT
 ----
 18 values hashing to b5a7ccc69bcfde2ec731c416cd586395
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE d4 in (25,628,821,323,713)
       OR (e4=237 OR b4=860 OR d4=907)
@@ -27165,7 +27165,7 @@ EXCEPT
 ----
 10 values hashing to d38129b5c45c70b4a6ac8593d265ae8e
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE (c9=975 AND 127=e9)
       OR (252=c9 AND b9=789 AND 426=e9 AND d9=226)
@@ -27183,7 +27183,7 @@ UNION
 ----
 19 values hashing to e2ef3a95f14abfefa18a39a44cf94825
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE a7 in (706,134,180,995,945,62,884)
       OR (735=b7 OR 878=b7)
@@ -27207,7 +27207,7 @@ UNION
 ----
 14 values hashing to 75119968ec84d0847b16565d87088a2f
 
-query T valuesort
+query I valuesort
   SELECT a4 FROM t4
    WHERE (297=c4 OR e4=511 OR c4=581)
       OR (903=b4 OR a4=235 OR c4=794)
@@ -27236,7 +27236,7 @@ EXCEPT
 ----
 15 values hashing to 3a3d0207b4a76ec5ce23c7ed6349f397
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE e7 in (31,983,624,372,506)
       OR e7 in (815,319,595,851,782,624,816,860,561,887)
@@ -27268,7 +27268,7 @@ UNION
 ----
 25 values hashing to c46f2ffb926436f878dfdda448044ddc
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (d8=60 AND 973=c8 AND b8=704)
       OR (624=d8)
@@ -27294,7 +27294,7 @@ UNION
 736
 857
 
-query T valuesort
+query I valuesort
   SELECT c3 FROM t3
    WHERE (a3=244 OR a3=30)
       OR (118=d3 AND b3=437 AND a3=135 AND 218=e3 AND 368=c3)
@@ -27323,7 +27323,7 @@ UNION
 424
 434
 
-query T valuesort
+query I valuesort
   SELECT e8 FROM t8
    WHERE (d8=116 AND 431=c8 AND a8=239 AND 223=e8 AND b8=725)
 EXCEPT
@@ -27372,7 +27372,7 @@ UNION ALL
 ----
 39 values hashing to 2c3c87bbca45f17f27ba4ca93b07fc7e
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE c5 in (485,766,820,927,599,756,544,668,894,18,147,56,299)
 UNION ALL
@@ -27399,7 +27399,7 @@ UNION
 ----
 53 values hashing to 16459627685bc07abadb31788c09b0f0
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE (159=c6 AND 396=a6 AND e6=531 AND b6=461)
 UNION ALL
@@ -27424,7 +27424,7 @@ EXCEPT
 ----
 43 values hashing to 99a14f91e636cbfff807ccc7e34ca51d
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (827=b3)
       OR (a3=376)
@@ -27449,7 +27449,7 @@ UNION
 ----
 20 values hashing to c4f8de2a408fde8aac88b35f670046d5
 
-query T valuesort
+query I valuesort
   SELECT b4 FROM t4
    WHERE e4 in (1,575,885,719,739,151,820,600,377,858,252,596,12)
       OR (617=d4 OR 293=c4)
@@ -27494,7 +27494,7 @@ EXCEPT
 ----
 46 values hashing to 438588ec05b593cf74143d2292aa49c2
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (945=e2 AND b2=634)
 EXCEPT
@@ -27516,7 +27516,7 @@ UNION
 ----
 13 values hashing to 5ee58ccf47db330571f971c33ccf324b
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (d1=691)
       OR c1 in (97,690,775,15,172,680,136,871,654,346,88,481,523,208)
@@ -27556,7 +27556,7 @@ UNION ALL
 ----
 56 values hashing to 620d5f5afea639214516edefb3785e81
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (556=b1)
       OR b1 in (26,447,42,259,266)
@@ -27570,7 +27570,7 @@ UNION
 ----
 16 values hashing to 605bb8dafa25d87f85867cee7d26cefd
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (777=c3 OR 988=d3)
 UNION
@@ -27590,7 +27590,7 @@ EXCEPT
 ----
 21 values hashing to 1bf1bebb21dea1d53c0f443389ad021d
 
-query T valuesort
+query I valuesort
   SELECT c1 FROM t1
    WHERE e1 in (763,125,247,268,646,221,667,949,181)
       OR c1 in (420,67,253,465,272,498,207,172,617,675,441)
@@ -27605,7 +27605,7 @@ EXCEPT
 ----
 26 values hashing to 864cecc550be90b47fe8414b41dfff17
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE b3 in (124,927,437,595,434,983,701,302,392,566)
       OR (711=d3 AND e3=108 AND b3=57 AND a3=727)
@@ -27658,7 +27658,7 @@ UNION
 ----
 13 values hashing to 621af9a9e801011bbce1474bc77b1b22
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE e9 in (942,418,445,267,291,799,35,388)
 UNION
@@ -27694,7 +27694,7 @@ UNION ALL
 ----
 29 values hashing to e9ad9c488697693b49c350e481a7f05d
 
-query T valuesort
+query I valuesort
   SELECT b2 FROM t2
    WHERE (d2=373)
       OR (e2=923)
@@ -27734,7 +27734,7 @@ UNION
 ----
 67 values hashing to f08e84d3429e4b2332eb90d5e4521b34
 
-query T valuesort
+query I valuesort
   SELECT d4 FROM t4
    WHERE (296=e4 AND 201=c4 AND 781=d4 AND a4=589 AND 979=b4)
       OR a4 in (558,105,625,139,159,621,469,804,509)
@@ -27752,7 +27752,7 @@ EXCEPT
 ----
 17 values hashing to e99fcaea7cd2152995e9407053bc4609
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE a7 in (452,97,6,430,134,240,706,715,592,748)
       OR (b7=973 OR c7=843)
@@ -27781,7 +27781,7 @@ UNION ALL
 ----
 34 values hashing to 5d803ecf8eb5be1a6a3982ca861abefd
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (148=d7 AND c7=626)
       OR e7 in (344,503,31,422,689,462,455,319,291,793,782,79,302,562)
@@ -27811,7 +27811,7 @@ EXCEPT
 ----
 37 values hashing to 08a40e3810c0d942fca2b834e72ca482
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE b8 in (105,405,647,244)
       OR b8 in (981,454,155,313,564,665,963,852,563)
@@ -27849,7 +27849,7 @@ UNION ALL
 ----
 31 values hashing to 3d35014dfeee5cd1cd1a560635d64dfc
 
-query T valuesort
+query I valuesort
   SELECT e3 FROM t3
    WHERE (a3=129 AND e3=794)
       OR (e3=818 OR d3=1 OR b3=505)
@@ -27864,7 +27864,7 @@ INTERSECT
 602
 818
 
-query T valuesort
+query I valuesort
   SELECT d8 FROM t8
    WHERE (394=c8)
       OR e8 in (186,422,384)
@@ -27890,7 +27890,7 @@ UNION
 ----
 44 values hashing to cdc1807629f588dd5331306bb0740482
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE (d6=197 AND 861=a6)
 INTERSECT
@@ -27915,7 +27915,7 @@ UNION ALL
 ----
 16 values hashing to 6328507f720925eb2e9d8c6521d937c7
 
-query T valuesort
+query I valuesort
   SELECT b1 FROM t1
    WHERE (c1=690 OR c1=636 OR d1=874)
 UNION
@@ -27960,7 +27960,7 @@ UNION ALL
 ----
 17 values hashing to cda6daba9f1c38d80ad92b4febeff59a
 
-query T valuesort
+query I valuesort
   SELECT b6 FROM t6
    WHERE (c6=620 AND e6=972)
       OR d6 in (869,34,489,852,277,956,488,376)
@@ -27995,7 +27995,7 @@ EXCEPT
 ----
 29 values hashing to 31f683cdc6b37eb392a48b1a8478e006
 
-query T valuesort
+query I valuesort
   SELECT a6 FROM t6
    WHERE a6 in (870,359,522,2,386,148,821,116,643,45,564)
       OR (b6=601 AND e6=431 AND 269=d6 AND 28=c6 AND a6=540)
@@ -28034,7 +28034,7 @@ UNION ALL
 ----
 40 values hashing to 86d7a4a808615bcb19ba295b98dd649a
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE b3 in (339,551,340,224,124,269,810)
       OR (a3=244)
@@ -28072,7 +28072,7 @@ EXCEPT
 ----
 21 values hashing to 832fdb6dd07d2bcd82950427d509d4f3
 
-query T valuesort
+query I valuesort
   SELECT a3 FROM t3
    WHERE (727=a3 AND d3=642)
       OR (542=b3)
@@ -28104,7 +28104,7 @@ EXCEPT
 349
 727
 
-query T valuesort
+query I valuesort
   SELECT c6 FROM t6
    WHERE e6 in (257,489,711,668,731)
 EXCEPT
@@ -28124,7 +28124,7 @@ EXCEPT
 ----
 31 values hashing to ae1c29cf8aee0f14cd737f9c57dc466a
 
-query T valuesort
+query I valuesort
   SELECT d2 FROM t2
    WHERE (e2=535 AND 543=a2)
       OR (161=c2 OR 548=e2 OR 516=d2)
@@ -28158,7 +28158,7 @@ EXCEPT
 743
 833
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (c8=979 AND 124=d8)
 INTERSECT
@@ -28200,7 +28200,7 @@ EXCEPT
 721
 765
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (722=d7 OR 596=c7)
       OR (291=e7 AND c7=626 AND b7=374 AND d7=148 AND 542=a7)
@@ -28242,7 +28242,7 @@ UNION
 ----
 21 values hashing to e32fb86428c3f20aa504d9f14e847934
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (276=b6 AND d6=911 AND 807=c6 AND e6=847)
 INTERSECT
@@ -28255,7 +28255,7 @@ UNION
 ----
 11 values hashing to 02a0d162ad76abc96c568645ee24075d
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (142=d7 AND b7=222 AND a7=288)
 UNION ALL
@@ -28276,7 +28276,7 @@ UNION
 ----
 20 values hashing to a550e915d63a409187331dadda54a72a
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (966=c3 AND 814=e3 AND b3=246)
       OR e3 in (929,221,120,25,470,321,393,494,932,131)
@@ -28297,7 +28297,7 @@ EXCEPT
 651
 882
 
-query T valuesort
+query I valuesort
   SELECT b3 FROM t3
    WHERE (b3=816 AND a3=245)
 UNION
@@ -28386,7 +28386,7 @@ UNION ALL
 ----
 81 values hashing to 3a53b938f4b4ae58df57dda92aa74679
 
-query T valuesort
+query I valuesort
   SELECT d7 FROM t7
    WHERE (306=b7 OR 816=c7 OR 508=c7)
       OR b7 in (923,670,220,841,996,764,308,813,861,832,59,234,517)
@@ -28415,7 +28415,7 @@ UNION ALL
 391
 667
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE (a4=746)
       OR c4 in (433,471,658,489,712,358,794,513,201,998,74,725)
@@ -28472,7 +28472,7 @@ UNION
 ----
 40 values hashing to d3bc81ba2e320179a49d4183447d7ea2
 
-query T valuesort
+query I valuesort
   SELECT e9 FROM t9
    WHERE d9 in (235,104,332,818,763,111,960,525,495,95,681,554)
       OR (50=b9 AND 853=c9 AND e9=699 AND d9=145 AND a9=924)
@@ -28509,7 +28509,7 @@ UNION ALL
 ----
 40 values hashing to a60ed26c01d28120f1feb092f7d8c42a
 
-query T valuesort
+query I valuesort
   SELECT e5 FROM t5
    WHERE e5 in (327,225,661,594,150,929)
       OR e5 in (390,437,104,352,621,661,640,702)
@@ -28535,7 +28535,7 @@ UNION ALL
 ----
 38 values hashing to 321277d6063fb07b19d71f1e86036ba5
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (945=d8 AND 56=e8 AND 321=c8 AND 862=b8 AND 312=a8)
       OR c8 in (998,656,136,93)
@@ -28572,7 +28572,7 @@ EXCEPT
 255
 459
 
-query T valuesort
+query I valuesort
   SELECT d9 FROM t9
    WHERE (388=e9 OR 82=e9 OR 125=b9)
 UNION ALL
@@ -28589,7 +28589,7 @@ UNION
 ----
 31 values hashing to 9b36c0ca63b5413a0d571ca6855f9234
 
-query T valuesort
+query I valuesort
   SELECT d6 FROM t6
    WHERE e6 in (750,1,466,654,225,74,969,798,395)
       OR e6 in (257,588,329)
@@ -28607,7 +28607,7 @@ EXCEPT
 ----
 23 values hashing to 2586988bbe7c8a76b6c87de66d414ede
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE d2 in (772,843,14,723,317,887,351,663)
       OR (222=a2 OR 389=d2)
@@ -28623,7 +28623,7 @@ INTERSECT
 691
 725
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (590=d7)
       OR c7 in (648,333,764)
@@ -28665,7 +28665,7 @@ EXCEPT
 ----
 53 values hashing to 4a602fd9036f5f1a90b927fdeafa398f
 
-query T valuesort
+query I valuesort
   SELECT e7 FROM t7
    WHERE (a7=869 AND b7=868 AND c7=523 AND 979=e7)
       OR b7 in (655,305,514,861,813,813,24,424)
@@ -28688,7 +28688,7 @@ UNION
 ----
 31 values hashing to dcef4b83d4a0efe42c6cd4f06314777a
 
-query T valuesort
+query I valuesort
   SELECT a5 FROM t5
    WHERE (b5=772 OR b5=506)
       OR (d5=814 OR d5=419)
@@ -28708,7 +28708,7 @@ UNION
 ----
 13 values hashing to c2304ef02005ea21db5fa00cd7ff69e5
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE b7 in (280,362,921)
       OR (c7=934 AND 599=d7)
@@ -28738,7 +28738,7 @@ UNION ALL
 ----
 11 values hashing to c37f4fa70e811aa29f8d96fed521c741
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE b6 in (461,825,230,392,629)
       OR (876=b6 AND 237=e6 AND c6=522)
@@ -28764,7 +28764,7 @@ UNION ALL
 ----
 18 values hashing to f7a61fc7b8d046d8eacfcc4e94b831fd
 
-query T valuesort
+query I valuesort
   SELECT c8 FROM t8
    WHERE (790=b8 OR e8=736 OR 513=c8)
       OR e8 in (980,242,106,175,966,972,579,223,864,273,421)
@@ -28787,7 +28787,7 @@ UNION ALL
 ----
 34 values hashing to 38145e7acc71c6d32c9ef025f0dcc717
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (e6=673 OR 211=a6)
 EXCEPT
@@ -28820,7 +28820,7 @@ EXCEPT
 ----
 23 values hashing to 4045a09ddf58b5df9fe19c3840fa3bac
 
-query T valuesort
+query I valuesort
   SELECT a7 FROM t7
    WHERE (b7=562 OR 79=d7 OR a7=6)
       OR c7 in (441,22,301,853,795,860,249,966,691,435,954,488)
@@ -28860,7 +28860,7 @@ EXCEPT
 ----
 28 values hashing to 42279c66fe84a92432cbaeec5f73bb8d
 
-query T valuesort
+query I valuesort
   SELECT d3 FROM t3
    WHERE (677=b3)
       OR a3 in (651,500,865,386,364,763,234,788,70,611)
@@ -28889,7 +28889,7 @@ UNION
 ----
 14 values hashing to 5d3db96e8989632f29e40ae1f232f5d9
 
-query T valuesort
+query I valuesort
   SELECT a2 FROM t2
    WHERE (d2=743)
 INTERSECT
@@ -28897,7 +28897,7 @@ INTERSECT
    WHERE NOT ((787=c1 OR d1=274))
 ----
 
-query T valuesort
+query I valuesort
   SELECT b9 FROM t9
    WHERE d9 in (332,161,439,23,601,960,389,608,399)
 UNION ALL
@@ -28934,7 +28934,7 @@ EXCEPT
 ----
 41 values hashing to 0bd4a8b628cbcba4e08032ed5a724a5b
 
-query T valuesort
+query I valuesort
   SELECT c2 FROM t2
    WHERE (813=d2 OR d2=547)
       OR (e2=148 AND d2=332 AND b2=546 AND 415=a2)
@@ -28969,7 +28969,7 @@ UNION ALL
 ----
 51 values hashing to 1592e08c559b402e6f5106b523390ce7
 
-query T valuesort
+query I valuesort
   SELECT e4 FROM t4
    WHERE c4 in (74,658,273,690,513,586,274,319,417,0,768)
       OR (821=d4 OR d4=881)
@@ -28994,7 +28994,7 @@ UNION
 ----
 28 values hashing to ad5440a6e3b946b0aee911b4c7c5da2d
 
-query T valuesort
+query I valuesort
   SELECT c5 FROM t5
    WHERE (551=c5)
       OR (e5=708 OR 599=c5)
@@ -29022,7 +29022,7 @@ UNION ALL
 ----
 9 values hashing to 95e3c4b9c11661c5b188b389f58ce979
 
-query T valuesort
+query I valuesort
   SELECT e6 FROM t6
    WHERE (d6=269 AND 601=b6 AND a6=540 AND c6=28)
       OR (c6=12)
