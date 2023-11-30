@@ -21,12 +21,23 @@ halt
 # EVIDENCE-OF: R-10346-40046 The CREATE TRIGGER statement is used to add
 # triggers to the database schema.
 
+skipif mysql
 statement ok
 CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
 
 # already exists
+skipif mysql
 statement error
 CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r1 AFTER UPDATE ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+# already exists
+statement error
+CREATE TRIGGER t1r1 AFTER UPDATE ON t1 FOR EACH ROW BEGIN END;
 
 # TBD-EVIDENCE-OF: R-49475-10767 Triggers are database operations that are
 # automatically performed when a specified database event occurs.
@@ -36,12 +47,15 @@ CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
 # whenever an UPDATE occurs on on one or more specified columns of a
 # table.
 
+skipif mysql # mysql requires "BEFORE" or "AFTER"
 statement ok
 CREATE TRIGGER t1r2 DELETE ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "BEFORE" or "AFTER"
 statement ok
 CREATE TRIGGER t1r3 INSERT ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "BEFORE" or "AFTER"
 statement ok
 CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END;
 
@@ -77,23 +91,55 @@ CREATE TRIGGER t1r4 UPDATE ON t1 BEGIN SELECT 1; END;
 # the trigger actions will be executed relative to the insertion,
 # modification or removal of the associated row.
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r5 AFTER DELETE ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r6 AFTER INSERT ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r7 AFTER UPDATE ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r8 BEFORE DELETE ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r9 BEFORE INSERT ON t1 BEGIN SELECT 1; END;
 
+skipif mysql # mysql requires "FOR EACH ROW"
 statement ok
 CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END;
+
+
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r5 AFTER DELETE ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r6 AFTER INSERT ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r7 AFTER UPDATE ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r8 BEFORE DELETE ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r9 BEFORE INSERT ON t1 FOR EACH ROW BEGIN END;
+
+onlyif mysql
+statement ok
+CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 FOR EACH ROW BEGIN END;
 
 # TBD-EVIDENCE-OF: R-57724-61571 An ON CONFLICT clause may be specified as
 # part of an UPDATE or INSERT action within the body of the trigger.
@@ -191,12 +237,15 @@ CREATE TRIGGER t1r10 BEFORE UPDATE ON t1 BEGIN SELECT 1; END;
 statement ok
 DROP TRIGGER t1r1
 
+skipif mysql
 statement ok
 DROP TRIGGER t1r2
 
+skipif mysql
 statement ok
 DROP TRIGGER t1r3
 
+skipif mysql
 statement ok
 DROP TRIGGER t1r4
 

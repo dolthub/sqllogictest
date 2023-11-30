@@ -22,7 +22,7 @@ halt
 # trigger created by the CREATE TRIGGER statement.
 
 statement ok
-CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
+CREATE TRIGGER t1r1 AFTER UPDATE ON t1 FOR EACH ROW BEGIN END;
 
 statement ok
 DROP TRIGGER t1r1
@@ -42,7 +42,7 @@ DROP TRIGGER tXrX
 # dropped when the associated table is dropped.
 
 statement ok
-CREATE TRIGGER t1r1 UPDATE ON t1 BEGIN SELECT 1; END;
+CREATE TRIGGER t1r1 AFTER UPDATE ON t1 FOR EACH ROW BEGIN END;
 
 statement ok
 DROP TABLE t1
