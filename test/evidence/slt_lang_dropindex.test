@@ -21,14 +21,14 @@ CREATE INDEX t1i1 ON t1(x)
 
 skipif mssql
 statement ok
-DROP INDEX t1i1;
+DROP INDEX t1i1 on t1;
 
 # this should error, as already dropped
 skipif mssql
 statement error
-DROP INDEX t1i1;
+DROP INDEX t1i1 on t1;
 
 # this should error, as never existed
 skipif mssql
 statement error
-DROP INDEX tXiX;
+DROP INDEX tXiX on t1;
