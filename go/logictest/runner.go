@@ -48,6 +48,11 @@ func SetTimeout(d time.Duration) {
 	timeout.Store(d.Milliseconds())
 }
 
+// GetCurrentFileName returns path to the test file that is currently executing.
+func GetCurrentFileName() string {
+	return testFilePath(currTestFile)
+}
+
 // RunTestFiles runs the test files found under any of the paths given. Can specify individual test files, or directories that
 // contain test files somewhere underneath. All files named *.test encountered under a directory will be attempted to be
 // parsed as a test file, and will panic for malformed test files or paths that don't exist.
