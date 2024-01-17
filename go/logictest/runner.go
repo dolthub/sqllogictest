@@ -26,20 +26,27 @@ import (
 	"strconv"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	"github.com/dolthub/sqllogictest/go/logictest/parser"
 )
+
+const defaultTimeout = time.Minute * 20
 
 var currTestFile string
 var currRecord *parser.Record
 var _, TruncateQueriesInLog = os.LookupEnv("SQLLOGICTEST_TRUNCATE_QUERIES")
 
 var startTime time.Time
-var timeout = time.Minute * 20
+var timeout *int64
 var testTimeoutError = errors.New("test in file timed out")
 
-// Runs the test files found under any of the paths given. Can specify individual test files, or directories that
+func SetTimeout(d time.Duration) {
+	atomic.StoreInt64(timeout, d.Milliseconds())
+}
+
+// RunTestFiles runs the test files found under any of the paths given. Can specify individual test files, or directories that
 // contain test files somewhere underneath. All files named *.test encountered under a directory will be attempted to be
 // parsed as a test file, and will panic for malformed test files or paths that don't exist.
 func RunTestFiles(harness Harness, paths ...string) {
@@ -152,7 +159,7 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 		// currRecord is used by logMessagePrefix, so needs to be set as we iterate
 		currRecord = record
 
-		ctx, cancel := context.WithTimeout(context.Background(), timeout)
+		ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*timeout))
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		schema, records, _, err := executeRecord(lockCtx, cancel, harness, record)
@@ -283,7 +290,7 @@ func runTestFile(harness Harness, file string) {
 		currRecord = record
 		startTime = time.Now()
 
-		ctx, cancel := context.WithTimeout(context.Background(), timeout)
+		ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*timeout))
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		if dnr {
