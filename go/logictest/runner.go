@@ -42,6 +42,8 @@ var startTime time.Time
 var timeout atomic.Int64
 var testTimeoutError = errors.New("test in file timed out")
 
+// SetTimeout sets the global variable, |timeout|.
+// It's not used, the logictest uses the default timeout of 20min.
 func SetTimeout(d time.Duration) {
 	timeout.Store(d.Milliseconds())
 }
