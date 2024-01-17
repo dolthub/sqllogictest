@@ -39,11 +39,11 @@ var currRecord *parser.Record
 var _, TruncateQueriesInLog = os.LookupEnv("SQLLOGICTEST_TRUNCATE_QUERIES")
 
 var startTime time.Time
-var timeout *int64
+var timeout atomic.Int64
 var testTimeoutError = errors.New("test in file timed out")
 
 func SetTimeout(d time.Duration) {
-	atomic.StoreInt64(timeout, d.Milliseconds())
+	timeout.Store(d.Milliseconds())
 }
 
 // RunTestFiles runs the test files found under any of the paths given. Can specify individual test files, or directories that
@@ -155,11 +155,16 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 		}
 	}()
 
+	curTimeout := defaultTimeout
+	if t := timeout.Load(); t != 0 {
+		curTimeout = time.Duration(t)
+	}
+
 	for _, record := range testRecords {
 		// currRecord is used by logMessagePrefix, so needs to be set as we iterate
 		currRecord = record
 
-		ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*timeout))
+		ctx, cancel := context.WithTimeout(context.Background(), curTimeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		schema, records, _, err := executeRecord(lockCtx, cancel, harness, record)
@@ -285,12 +290,17 @@ func runTestFile(harness Harness, file string) {
 		panic(err)
 	}
 
+	curTimeout := defaultTimeout
+	if t := timeout.Load(); t != 0 {
+		curTimeout = time.Duration(t)
+	}
+
 	dnr := false
 	for _, record := range testRecords {
 		currRecord = record
 		startTime = time.Now()
 
-		ctx, cancel := context.WithTimeout(context.Background(), time.Duration(*timeout))
+		ctx, cancel := context.WithTimeout(context.Background(), curTimeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		if dnr {
