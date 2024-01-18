@@ -40,4 +40,7 @@ type Harness interface {
 	// err: queries are never expected to return errors, so any error returned is counted as a failure.
 	// For more information, see: https://www.sqlite.org/sqllogictest/doc/trunk/about.wiki
 	ExecuteQuery(statement string) (schema string, results []string, err error)
+
+	// GetTimeout returns timeout defined in the harness. The value is in seconds.
+	GetTimeout() int64
 }

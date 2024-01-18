@@ -26,7 +26,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"sync/atomic"
 	"time"
 
 	"github.com/dolthub/sqllogictest/go/logictest/parser"
@@ -39,14 +38,7 @@ var currRecord *parser.Record
 var _, TruncateQueriesInLog = os.LookupEnv("SQLLOGICTEST_TRUNCATE_QUERIES")
 
 var startTime time.Time
-var timeout atomic.Int64
 var testTimeoutError = errors.New("test in file timed out")
-
-// SetTimeout sets the global variable, |timeout|.
-// It's not used, the logictest uses the default timeout of 20min.
-func SetTimeout(d time.Duration) {
-	timeout.Store(d.Milliseconds())
-}
 
 // GetCurrentFileName returns path to the test file that is currently executing.
 func GetCurrentFileName() string {
@@ -163,8 +155,8 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 	}()
 
 	curTimeout := defaultTimeout
-	if t := timeout.Load(); t != 0 {
-		curTimeout = time.Duration(t)
+	if t := harness.GetTimeout(); t != 0 {
+		curTimeout = time.Second * time.Duration(t)
 	}
 
 	for _, record := range testRecords {
@@ -298,8 +290,8 @@ func runTestFile(harness Harness, file string) {
 	}
 
 	curTimeout := defaultTimeout
-	if t := timeout.Load(); t != 0 {
-		curTimeout = time.Duration(t)
+	if t := harness.GetTimeout(); t != 0 {
+		curTimeout = time.Second * time.Duration(t)
 	}
 
 	dnr := false
@@ -312,6 +304,7 @@ func runTestFile(harness Harness, file string) {
 
 		if dnr {
 			logResult(lockCtx, DidNotRun, "")
+			cancel()
 			continue
 		}
 
