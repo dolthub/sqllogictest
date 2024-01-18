@@ -1,4 +1,3 @@
-
 // Copyright 2019-2020 Dolthub, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,7 +37,7 @@ func NewMysqlHarness(dsn string) *MysqlHarness {
 	if err != nil {
 		panic(err)
 	}
-	return &MysqlHarness{db:db}
+	return &MysqlHarness{db: db}
 }
 
 // See Harness.EngineStr
@@ -89,6 +88,10 @@ func (h *MysqlHarness) ExecuteQuery(statement string) (schema string, results []
 	}
 
 	return schema, results, nil
+}
+
+func (h *MysqlHarness) GetTimeout() int64 {
+	return 0
 }
 
 func (h *MysqlHarness) dropAllTables() error {
@@ -156,7 +159,6 @@ func (h *MysqlHarness) dropAllViews() error {
 
 	return nil
 }
-
 
 // Returns the string representation of the column value given
 func stringVal(col interface{}) string {
