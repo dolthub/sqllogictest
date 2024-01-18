@@ -31,15 +31,21 @@ import (
 	"github.com/dolthub/sqllogictest/go/logictest/parser"
 )
 
+const defaultTimeout = time.Minute * 20
+
 var currTestFile string
 var currRecord *parser.Record
 var _, TruncateQueriesInLog = os.LookupEnv("SQLLOGICTEST_TRUNCATE_QUERIES")
 
 var startTime time.Time
-var timeout = time.Minute * 20
 var testTimeoutError = errors.New("test in file timed out")
 
-// Runs the test files found under any of the paths given. Can specify individual test files, or directories that
+// GetCurrentFileName returns path to the test file that is currently executing.
+func GetCurrentFileName() string {
+	return testFilePath(currTestFile)
+}
+
+// RunTestFiles runs the test files found under any of the paths given. Can specify individual test files, or directories that
 // contain test files somewhere underneath. All files named *.test encountered under a directory will be attempted to be
 // parsed as a test file, and will panic for malformed test files or paths that don't exist.
 func RunTestFiles(harness Harness, paths ...string) {
@@ -148,11 +154,16 @@ func generateTestFile(harness Harness, f string, filterOutFailedTests bool) {
 		}
 	}()
 
+	curTimeout := defaultTimeout
+	if t := harness.GetTimeout(); t != 0 {
+		curTimeout = time.Second * time.Duration(t)
+	}
+
 	for _, record := range testRecords {
 		// currRecord is used by logMessagePrefix, so needs to be set as we iterate
 		currRecord = record
 
-		ctx, cancel := context.WithTimeout(context.Background(), timeout)
+		ctx, cancel := context.WithTimeout(context.Background(), curTimeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		schema, records, _, err := executeRecord(lockCtx, cancel, harness, record)
@@ -278,16 +289,22 @@ func runTestFile(harness Harness, file string) {
 		panic(err)
 	}
 
+	curTimeout := defaultTimeout
+	if t := harness.GetTimeout(); t != 0 {
+		curTimeout = time.Second * time.Duration(t)
+	}
+
 	dnr := false
 	for _, record := range testRecords {
 		currRecord = record
 		startTime = time.Now()
 
-		ctx, cancel := context.WithTimeout(context.Background(), timeout)
+		ctx, cancel := context.WithTimeout(context.Background(), curTimeout)
 		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
 
 		if dnr {
 			logResult(lockCtx, DidNotRun, "")
+			cancel()
 			continue
 		}
 
