@@ -15,6 +15,7 @@
 package mysql
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 	"github.com/dolthub/sqllogictest/go/logictest"
@@ -88,6 +89,40 @@ func (h *MysqlHarness) ExecuteQuery(statement string) (schema string, results []
 	}
 
 	return schema, results, nil
+}
+
+func (h *MysqlHarness) ExecuteQueryContext(ctx context.Context, statement string) (schema string, results []string, err error) {
+	rows, err := h.db.QueryContext(ctx, statement)
+	if err != nil {
+		return "", nil, err
+	}
+
+	schema, columns, err := columns(rows)
+	if err != nil {
+		return "", nil, err
+	}
+
+	for rows.Next() {
+		err := rows.Scan(columns...)
+		if err != nil {
+			return "", nil, err
+		}
+
+		for _, col := range columns {
+			results = append(results, stringVal(col))
+		}
+	}
+
+	if rows.Err() != nil {
+		return "", nil, rows.Err()
+	}
+
+	return schema, results, nil
+}
+
+func (h *MysqlHarness) ExecuteStatementContext(ctx context.Context, statement string) error {
+	_, err := h.db.ExecContext(ctx, statement)
+	return err
 }
 
 func (h *MysqlHarness) GetTimeout() int64 {
