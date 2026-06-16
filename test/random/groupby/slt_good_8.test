@@ -1,5 +1,6 @@
 hash-threshold 8
 
+onlyif mysql
 statement ok
 SET SESSION sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''))
 
