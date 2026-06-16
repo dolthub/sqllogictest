@@ -19,16 +19,30 @@ CREATE INDEX t1i1 ON t1(x)
 # EVIDENCE-OF: R-42037-15614 The DROP INDEX statement removes an index
 # added with the CREATE INDEX statement.
 
-skipif mssql
+onlyif mysql
 statement ok
 DROP INDEX t1i1 on t1;
 
+skipif mysql
+statement ok
+DROP INDEX t1i1;
+
 # this should error, as already dropped
-skipif mssql
+onlyif mysql
 statement error
 DROP INDEX t1i1 on t1;
 
+# this should error, as already dropped
+skipif mysql
+statement error
+DROP INDEX t1i1;
+
 # this should error, as never existed
-skipif mssql
+onlyif mysql
 statement error
 DROP INDEX tXiX on t1;
+
+# this should error, as never existed
+skipif mysql
+statement error
+DROP INDEX tXiX;
