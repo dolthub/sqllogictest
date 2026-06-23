@@ -38,6 +38,20 @@ var currRecord *parser.Record
 var _, TruncateQueriesInLog = os.LookupEnv("SQLLOGICTEST_TRUNCATE_QUERIES")
 
 var startTime time.Time
+
+// runStateKey is a context key for per-goroutine state during concurrent test execution.
+type runStateKey struct{}
+
+// outputMuKey is a context key for the shared output mutex during concurrent test execution.
+type outputMuKey struct{}
+
+// runState holds per-goroutine state needed for logging in concurrent test execution.
+type runState struct {
+	testFile  string
+	record    *parser.Record
+	startTime time.Time
+}
+
 var testTimeoutError = errors.New("test in file timed out")
 
 // GetCurrentFileName returns path to the test file that is currently executing.
@@ -537,44 +551,65 @@ func logResult(ctx context.Context, rt ResultType, message string, args ...inter
 
 	switch rt {
 	case Ok:
-		logSuccess()
+		logSuccess(ctx)
 	case NotOk:
-		logFailure(message, args...)
+		logFailure(ctx, message, args...)
 	case Skipped:
-		logSkip()
+		logSkip(ctx)
 	case Timeout:
-		logTimeout()
+		logTimeout(ctx)
 	case DidNotRun:
-		logDidNotRun()
+		logDidNotRun(ctx)
 	}
 
 	lock.logged = true
 }
 
-func logFailure(message string, args ...interface{}) {
-	newMsg := logMessagePrefix() + " not ok: " + message
+// printLine writes a log line to stdout. When an outputMuKey mutex is present in ctx
+// (set by RunTestFilesConcurrently) it serializes writes across goroutines.
+func printLine(ctx context.Context, line string) {
+	if mu, ok := ctx.Value(outputMuKey{}).(*sync.Mutex); ok && mu != nil {
+		mu.Lock()
+		defer mu.Unlock()
+	}
+	fmt.Println(line)
+}
+
+func logFailure(ctx context.Context, message string, args ...interface{}) {
+	newMsg := logMessagePrefix(ctx) + " not ok: " + message
 	failureMessage := fmt.Sprintf(newMsg, args...)
 	failureMessage = strings.ReplaceAll(failureMessage, "\n", " ")
-	fmt.Println(failureMessage)
+	printLine(ctx, failureMessage)
 }
 
-func logSkip() {
-	fmt.Println(logMessagePrefix(), "skipped")
+func logSkip(ctx context.Context) {
+	printLine(ctx, logMessagePrefix(ctx)+" skipped")
 }
 
-func logSuccess() {
-	fmt.Println(logMessagePrefix(), "ok")
+func logSuccess(ctx context.Context) {
+	printLine(ctx, logMessagePrefix(ctx)+" ok")
 }
 
-func logTimeout() {
-	fmt.Println(logMessagePrefix(), "timeout")
+func logTimeout(ctx context.Context) {
+	printLine(ctx, logMessagePrefix(ctx)+" timeout")
 }
 
-func logDidNotRun() {
-	fmt.Println(logMessagePrefix(), "did not run")
+func logDidNotRun(ctx context.Context) {
+	printLine(ctx, logMessagePrefix(ctx)+" did not run")
 }
 
-func logMessagePrefix() string {
+// logMessagePrefix returns the standard log line prefix. When a runStateKey is present in ctx
+// (set by runTestFileConcurrent) it reads from per-goroutine state; otherwise it falls back to
+// the package-level globals used by the serial RunTestFiles path.
+func logMessagePrefix(ctx context.Context) string {
+	if state, ok := ctx.Value(runStateKey{}).(*runState); ok && state != nil {
+		return fmt.Sprintf("%s %d %s:%d: %s",
+			time.Now().Format(time.RFC3339Nano),
+			time.Since(state.startTime).Milliseconds(),
+			testFilePath(state.testFile),
+			state.record.LineNum(),
+			truncateQuery(state.record.Query()))
+	}
 	return fmt.Sprintf("%s %d %s:%d: %s",
 		time.Now().Format(time.RFC3339Nano),
 		time.Now().Sub(startTime).Milliseconds(),
@@ -605,4 +640,79 @@ func truncateQuery(query string) string {
 		return query[:47] + "..."
 	}
 	return query
+}
+
+// RunTestFilesConcurrently runs the test files found under paths using up to workers goroutines in
+// parallel. makeHarness is called once per worker goroutine; that harness instance handles multiple
+// test files sequentially within the goroutine. A channel-based queue provides natural load
+// balancing so workers pull the next file as soon as they finish the current one.
+//
+// Output lines are serialized with a shared mutex so concurrent goroutines do not interleave
+// partial lines. The log format is identical to RunTestFiles and can be parsed by ParseResultFile.
+func RunTestFilesConcurrently(makeHarness func() Harness, workers int, paths ...string) {
+	testFiles := collectTestFiles(paths)
+
+	queue := make(chan string, len(testFiles))
+	for _, f := range testFiles {
+		queue <- f
+	}
+	close(queue)
+
+	outMu := &sync.Mutex{}
+	var wg sync.WaitGroup
+	for i := 0; i < workers; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			h := makeHarness()
+			for file := range queue {
+				runTestFileConcurrent(h, file, outMu)
+			}
+		}()
+	}
+	wg.Wait()
+}
+
+func runTestFileConcurrent(harness Harness, file string, outMu *sync.Mutex) {
+	err := harness.Init()
+	if err != nil {
+		panic(err)
+	}
+
+	testRecords, err := parser.ParseTestFile(file)
+	if err != nil {
+		panic(err)
+	}
+
+	curTimeout := defaultTimeout
+	if t := harness.GetTimeout(); t != 0 {
+		curTimeout = time.Second * time.Duration(t)
+	}
+
+	state := &runState{testFile: file}
+	dnr := false
+	for _, record := range testRecords {
+		state.record = record
+		state.startTime = time.Now()
+
+		baseCtx := context.WithValue(context.Background(), runStateKey{}, state)
+		baseCtx = context.WithValue(baseCtx, outputMuKey{}, outMu)
+		ctx, cancel := context.WithTimeout(baseCtx, curTimeout)
+		lockCtx := context.WithValue(ctx, "lock", &loggingLock{})
+
+		if dnr {
+			logResult(lockCtx, DidNotRun, "")
+			cancel()
+			continue
+		}
+
+		_, _, cont, err := executeRecord(lockCtx, cancel, harness, record)
+		if err == testTimeoutError {
+			dnr = true
+		}
+
+		if !cont {
+			break
+		}
+	}
 }
