@@ -20,6 +20,7 @@ import (
 	"crypto/md5"
 	"errors"
 	"fmt"
+	"math"
 	"os"
 	"path/filepath"
 	"runtime/debug"
@@ -412,8 +413,11 @@ func execute(ctx context.Context, harness Harness, record *parser.Record) (schem
 			return "", nil, true, err
 		}
 
-		// Only log one error per record, so if schema comparison fails don't bother with result comparison
-		if verifySchema(ctx, record, schemaStr) {
+		// Only log one error per record, so if schema comparison fails don't bother with result comparison.
+		// When both the expected and actual result sets are empty, skip the schema check, since SQLite returns
+		// SQLITE_NULL for every column when the result set is empty.
+		emptyResult := record.NumResults() == 0 && len(results) == 0
+		if emptyResult || verifySchema(ctx, record, schemaStr) {
 			verifyResults(ctx, record, schemaStr, results)
 		}
 		return schemaStr, results, true, nil
@@ -445,6 +449,10 @@ func verifyResults(ctx context.Context, record *parser.Record, schema string, re
 // the type of the expression `- - - 8` is decimal (float) as of MySQL 8.0. Rather than expect all databases to
 // duplicate these semantics, we allow integer types to be freely converted to floats. This means we need to format
 // integer results as float results, with three trailing zeros, where necessary.
+//
+// We also handle the reverse: SQLite-generated tests sometimes mark a column as I (integer) for expressions that
+// PostgreSQL (correctly) returns as float. When the expected type is I and the actual result is a whole-number float
+// (e.g., "3.000"), we coerce it to integer format ("3") so the value comparison succeeds.
 func normalizeResults(results []string, schema string) []string {
 	newResults := make([]string, len(results))
 	for i := range results {
@@ -453,6 +461,16 @@ func normalizeResults(results []string, schema string) []string {
 			_, err := strconv.Atoi(results[i])
 			if err == nil {
 				newResults[i] = results[i] + ".000"
+				continue
+			}
+		}
+		// When the test expects an integer but the engine returned a float, coerce to integer
+		// if and only if the value is a whole number. Non-whole floats remain as-is and will
+		// fail the comparison — they represent a genuine semantic difference.
+		if typ == 'I' && strings.Contains(results[i], ".") {
+			f, err := strconv.ParseFloat(results[i], 64)
+			if err == nil && math.Trunc(f) == f {
+				newResults[i] = fmt.Sprintf("%d", int64(f))
 				continue
 			}
 		}
@@ -527,11 +545,16 @@ func verifySchema(ctx context.Context, record *parser.Record, schemaStr string) 
 
 func compatibleSchemaTypes(expected, actual rune) bool {
 	if expected != actual {
+		// Allow integer results where a float is expected (and vice versa): SQLite-generated
+		// tests encode the schema based on SQLite's type affinity, which differs from
+		// MySQL and PostgreSQL. normalizeResults handles value coercion for both directions.
 		if expected == 'R' && actual == 'I' {
 			return true
-		} else {
-			return false
 		}
+		if expected == 'I' && actual == 'R' {
+			return true
+		}
+		return false
 	}
 	return true
 }
